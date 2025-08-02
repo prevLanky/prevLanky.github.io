@@ -1,9 +1,10 @@
 ---
 layout: default
 title: Code Snippets
-permalink: /snippets/
+permalink: /coding/
 ---
 
 # Code Snippets
 
 - [Python](python/python.md)
+
