@@ -17,6 +17,12 @@ html_static_path = ['_static']
 
 
 html_theme = 'sphinx_rtd_theme'
+html_theme_options = {
+    "collapse_navigation": True,  # Makes TOC collapsible
+    "sticky_navigation": True,    # Keeps sidebar while scrolling
+    "navigation_depth": 4,        # How deep to show nested pages
+}
+
 # ablog settings
 blog_baseurl = "https://prevLanky.github.io/prevLanky.github.io/"
 blog_title = "My Blog"
