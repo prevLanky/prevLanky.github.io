@@ -8,7 +8,6 @@ author = 'prevLanky'
 #extensions = ["ablog", "myst_parser"]  # myst_parser if using Markdown
 extensions = [
     'myst_parser',
-    #'ablog',
     'sphinx.ext.intersphinx',
     'sphinx.ext.extlinks',
     'sphinx.ext.todo',
@@ -16,7 +15,8 @@ extensions = [
 html_static_path = ['_static']
 
 
-html_theme = 'sphinx_rtd_theme'
+#html_theme = 'sphinx_rtd_theme'
+html_theme = 'furo'
 html_theme_options = {
     "navigation_with_keys": True, # optional: allow keyboard navigation
 }

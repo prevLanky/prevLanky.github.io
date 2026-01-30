@@ -1,12 +1,5 @@
-
-Code Snippets
-==================
-
-Some content about this page
-
-# Utility functions
+# Codesnippets
 Some introductory text for the project.
-
 ## Custom Classes
 asd
 ### std::Expected
