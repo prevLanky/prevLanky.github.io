@@ -11,4 +11,4 @@ venv/
 .env
 
 # Ignore Sphinx build output
-docs/build/
+#docs/build/

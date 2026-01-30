@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <id>https://prevLanky.github.io/prevLanky.github.io/</id>
+  <title>My Blog</title>
+  <updated>2026-01-30T16:49:30.340257+00:00</updated>
+  <link href="https://prevLanky.github.io/prevLanky.github.io/"/>
+  <link href="https://prevLanky.github.io/prevLanky.github.io/blog/atom.xml" rel="self"/>
+  <generator uri="https://ablog.readthedocs.io/" version="0.11.13">ABlog</generator>
+</feed>
