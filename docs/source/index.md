@@ -8,5 +8,6 @@ Some text here
 
 pages/about
 pages/page1
+coding/coding
 wiki/wiki
 ```
