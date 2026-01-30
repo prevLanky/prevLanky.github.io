@@ -1,4 +1,4 @@
-Coding
+C++
 ==================
 
 Some content about this wiki page 
@@ -6,7 +6,4 @@ Some content about this wiki page
 ```{toctree}
 :maxdepth: 2
 :caption: Table of Contents
-
-cpp/cpp
-python/python
 ```
