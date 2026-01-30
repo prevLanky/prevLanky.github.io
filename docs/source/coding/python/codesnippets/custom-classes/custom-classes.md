@@ -6,7 +6,7 @@ Code:
 def hello():
     print("Hello World")
 ```
-## std::optional
+## std::Optional
 ```python
 def hello():
     print("Hello World")
