@@ -1,7 +1,8 @@
 # mygithubpages documentation
 
 Add your content using Markdown syntax. See the
-[Markdown documentation](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html) for details.
+[reStructuredText documentation](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html) 
+for details.
 
 ```{toctree}
 :maxdepth: 2
@@ -9,4 +10,4 @@ Add your content using Markdown syntax. See the
 
 pages/about
 blog/index
-blog/test
+```

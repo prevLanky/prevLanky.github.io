@@ -1,32 +1,27 @@
-# Configuration file for the Sphinx documentation builder.
-#
-# For the full list of built-in configuration values, see the documentation:
-# https://www.sphinx-doc.org/en/master/usage/configuration.html
-
-# -- Project information -----------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+import os
+import sys
+import ablog
+import alabaster
 
 project = 'mygithubpages'
 copyright = '2026, prevLanky'
 author = 'prevLanky'
 
-# -- General configuration ---------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
-
-templates_path = ['_templates']
-exclude_patterns = []
-
-
-
-# -- Options for HTML output -------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
-
-#html_theme = 'alabaster'
-html_theme = "furo"
+#templates_path = ['_templates']
+#exclude_patterns = []
+#extensions = ["ablog", "myst_parser"]  # myst_parser if using Markdown
+extensions = [
+    'myst_parser',
+    'ablog',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.extlinks',
+    'sphinx.ext.todo',
+]
 html_static_path = ['_static']
 
+
+html_theme = 'sphinx_rtd_theme'
 # ablog settings
-extensions = ["ablog", "myst_parser"]  # myst_parser if using Markdown
 blog_baseurl = "https://prevLanky.github.io/prevLanky.github.io/"
 blog_title = "My Blog"
 blog_path = "blog"
