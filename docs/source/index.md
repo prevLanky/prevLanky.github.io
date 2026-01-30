@@ -6,8 +6,9 @@ for details.
 
 ```{toctree}
 :maxdepth: 2
-:caption: Pages:
+:caption: Content
 
 pages/about
 blog/index
+pages/page1
 ```
