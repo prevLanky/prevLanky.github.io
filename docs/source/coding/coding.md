@@ -4,7 +4,7 @@ Coding
 Some content about this wiki page 
 
 ```{toctree}
-:maxdepth: 2
+:maxdepth: 10
 :caption: Table of Contents
 
 cpp/cpp
