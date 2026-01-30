@@ -8,5 +8,5 @@ Some text here
 
 pages/about
 pages/page1
-blog/index
+wiki/wiki
 ```

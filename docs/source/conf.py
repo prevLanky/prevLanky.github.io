@@ -8,7 +8,7 @@ author = 'prevLanky'
 #extensions = ["ablog", "myst_parser"]  # myst_parser if using Markdown
 extensions = [
     'myst_parser',
-    'ablog',
+    #'ablog',
     'sphinx.ext.intersphinx',
     'sphinx.ext.extlinks',
     'sphinx.ext.todo',
@@ -23,7 +23,7 @@ html_theme_options = {
 myst_heading_anchors = 5  # generates anchors for H1, H2, H3
 
 # ablog settings
-blog_baseurl = "https://prevLanky.github.io/prevLanky.github.io/"
-blog_title = "My Blog"
-blog_path = "blog"
-blog_authors = {"prevLanky": ("prevLanky", "https://github.com/prevLanky")}
+#blog_baseurl = "https://prevLanky.github.io/prevLanky.github.io/"
+#blog_title = "My Blog"
+#blog_path = "blog"
+#blog_authors = {"prevLanky": ("prevLanky", "https://github.com/prevLanky")}
