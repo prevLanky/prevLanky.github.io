@@ -1,7 +1,3 @@
-import os
-import sys
-import ablog
-import alabaster
 
 project = 'mygithubpages'
 copyright = '2026, prevLanky'
