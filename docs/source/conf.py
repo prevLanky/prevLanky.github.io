@@ -11,6 +11,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.extlinks',
     'sphinx.ext.todo',
+    'sphinx_rtd_dark_mode'
 ]
 html_static_path = ['_static']
 
@@ -20,8 +21,8 @@ html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
     "navigation_with_keys": True, # optional: allow keyboard navigation
 }
-myst_heading_anchors = 5  # generates anchors for H1, H2, H3
-
+myst_heading_anchors = 7  # generates anchors for H1, H2, H3
+default_dark_mode = True
 # ablog settings
 #blog_baseurl = "https://prevLanky.github.io/prevLanky.github.io/"
 #blog_title = "My Blog"
