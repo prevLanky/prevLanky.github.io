@@ -18,10 +18,9 @@ html_static_path = ['_static']
 
 html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
-    "collapse_navigation": False,
-    "navigation_depth": 4,
-    "includehidden": True,
-    "titles_only": False,  # Use full titles in TOC
+    "sidebar_hide_name": False,   # optional: show the page title
+    "navigation_with_keys": True, # optional: allow keyboard navigation
+    "toc_include_hidden": True,   # ensures all headers are included
 }
 myst_heading_anchors = 3  # generates anchors for H1, H2, H3
 

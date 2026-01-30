@@ -6,8 +6,9 @@ Some introductory text for the project.
 
 Step-by-step installation instructions.
 
-### Custom installation
-This is the Custom instalation
+### Custom Installation
+
+This is the custom installation.
 
 ## Usage
 
