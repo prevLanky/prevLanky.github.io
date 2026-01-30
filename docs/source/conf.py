@@ -18,9 +18,10 @@ html_static_path = ['_static']
 
 html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
-    "collapse_navigation": True,  # Makes TOC collapsible
-    "sticky_navigation": True,    # Keeps sidebar while scrolling
-    "navigation_depth": 4,        # How deep to show nested pages
+    "collapse_navigation": False,
+    "navigation_depth": 4,
+    "includehidden": True,
+    "titles_only": False,  # Use full titles in TOC
 }
 myst_heading_anchors = 3  # generates anchors for H1, H2, H3
 
