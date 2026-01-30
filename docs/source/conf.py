@@ -22,6 +22,7 @@ html_theme_options = {
     "sticky_navigation": True,    # Keeps sidebar while scrolling
     "navigation_depth": 4,        # How deep to show nested pages
 }
+myst_heading_anchors = 3  # generates anchors for H1, H2, H3
 
 # ablog settings
 blog_baseurl = "https://prevLanky.github.io/prevLanky.github.io/"

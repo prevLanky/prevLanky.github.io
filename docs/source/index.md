@@ -4,8 +4,9 @@ Some text here
 
 ```{toctree}
 :maxdepth: 2
-:caption: Content
+:caption: Table of Contents
 
 pages/about
+pages/page1
 blog/index
 ```
