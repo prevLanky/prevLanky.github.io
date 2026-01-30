@@ -7,21 +7,37 @@ Some content about this page
 # Utility functions
 Some introductory text for the project.
 
-## Custom std::Expected in python
+## Custom Classes
+asd
+### std::Expected
 Code:
 ```python
 def hello():
     print("Hello World")
 ```
-
-Figure:
-```markdown
-![Alt text](_static/coding/python/python.png)
+### std::optional
+```python
+def hello():
+    print("Hello World")
 ```
 
-```{image} _static/coding/python/python.png
+## File managment
+asd
+### Read files
+asd
+#### CSV
+a
+#### txt
+b
+#### word
+c
+#### pdf
+d
+
+```{image} ../../../_static/coding/python/python.png
 :alt: Alt text
 :align: center
 :width: 400px
+```
 
 Check out [GitHub](https://github.com/prevLanky) for more info.
