@@ -1,5 +1,15 @@
 # Codesnippets
 
+```{toctree}
+:maxdepth: 5
+:caption: Table of Contents
+
+custom-classes/custom-classes
+file-management/file-management
+```
+
+Some introductory text for the project.
+
 ## Custom Classes
 asd
 ### std::Expected
@@ -13,19 +23,3 @@ def hello():
 def hello():
     print("Hello World")
 ```
-## File managment
-asd
-### Read Files
-asd
-#### CSV
-a
-#### txt
-b
-#### word
-c
-#### pdf
-d
-### Write Files
-asd
-#### CSV
-a
