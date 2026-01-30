@@ -6,8 +6,8 @@ Some text here
 :maxdepth: 10
 :caption: Table of Contents
 
-pages/about
-pages/page1
+general-pages/about
 coding/coding
+cybersecurity/cybersecurity
 wiki/wiki
 ```

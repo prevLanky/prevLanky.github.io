@@ -6,7 +6,6 @@
 
 theory/theory
 codesnippets/codesnippets
-codesnippets/test
 ```
 
 Some content about this wiki page 

@@ -1,6 +1,6 @@
 
 # Build files
-python -m sphinx -b html docs/source docs/build/html
+rm -rf docs/build && python -m sphinx -b html docs/source docs/build/html
 
 # Setup github pages
 pip install sphinx
