@@ -9,31 +9,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout main branch
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      # 2. Setup Python
-      - name: Setup Python
-        uses: actions/setup-python@v4
+      - uses: actions/setup-python@v4
         with:
           python-version: 3.12
 
-      # 3. Install Sphinx, theme, extensions
-      - name: Install dependencies
-        run: |
+      - run: |
           pip install --upgrade pip
           pip install sphinx furo ablog myst-parser
 
-      # 4. Build HTML from source
-      - name: Build Sphinx HTML
-        run: sphinx-build -b html docs/source docs/build/html
+      - run: sphinx-build -b html docs/source docs/build/html
 
-      # 5. Deploy to gh-pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: docs/build/html
           publish_branch: gh-pages
-          force_orphan: true   # Important for first-time deployment
+          force_orphan: true
