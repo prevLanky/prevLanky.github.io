@@ -1,6 +1,4 @@
 # Codesnippets
-Some introductory text for the project.
-
 
 ```{toctree}
 :maxdepth: 5
@@ -9,3 +7,5 @@ Some introductory text for the project.
 custom-classes/custom-classes
 file-management/file-management
 ```
+
+Some introductory text for the project.
