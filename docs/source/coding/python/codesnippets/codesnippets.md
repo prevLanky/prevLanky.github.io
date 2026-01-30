@@ -3,7 +3,7 @@ Some introductory text for the project.
 
 
 ```{toctree}
-:maxdepth: 2
+:maxdepth: 5
 :caption: Table of Contents
 
 custom-classes/custom-classes
