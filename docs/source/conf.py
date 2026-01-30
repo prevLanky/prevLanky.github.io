@@ -13,8 +13,6 @@ author = 'prevLanky'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
-
 templates_path = ['_templates']
 exclude_patterns = []
 
@@ -26,3 +24,10 @@ exclude_patterns = []
 #html_theme = 'alabaster'
 html_theme = "furo"
 html_static_path = ['_static']
+
+# ablog settings
+extensions = ["ablog", "myst_parser"]  # myst_parser if using Markdown
+blog_baseurl = "https://prevLanky.github.io/prevLanky.github.io/"
+blog_title = "My Blog"
+blog_path = "blog"
+blog_authors = {"prevLanky": ("prevLanky", "https://github.com/prevLanky")}
