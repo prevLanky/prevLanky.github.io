@@ -18,14 +18,3 @@ touch .nojekyll
 Go to Repo → Settings → Pages
 Branch: gh-pages
 Folder: / (root)
-
-# create orphan branch
-git checkout --orphan gh-pages
-# remove all files
-git rm -rf .
-# make an empty commit
-git commit --allow-empty -m "Initialize gh-pages"
-# push to GitHub
-git push origin gh-pages
-# switch back to main
-git checkout main
