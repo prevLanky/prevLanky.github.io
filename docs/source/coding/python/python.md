@@ -7,5 +7,6 @@ Some content about this wiki page
 :maxdepth: 2
 :caption: Table of Contents
 
-codesnippets
+theory/theory
+codesnippets/codesnippets
 ```
