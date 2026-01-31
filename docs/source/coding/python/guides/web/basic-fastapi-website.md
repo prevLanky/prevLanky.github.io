@@ -1,21 +1,12 @@
 # How to setup basic FastAPI website
 
-Start with installing fastapi on yo system.
-You can create an virtual env if you feel like you need to.
-Command:
+Start with installing fastapi on your system. (You can create an virtual env (venv) if you feel like you need to.)
 ```bash
 pip install fastapi uvicorn 
 ```
-
-
 ## FastAPI and Uvicorn
 ### Overview
 FastAPI and Uvicorn are commonly used together to build and run high-performance web APIs in Python. FastAPI provides the application framework for defining API behavior, while Uvicorn acts as the server that executes and serves the application over HTTP.
-### Relationship Between FastAPI and Uvicorn
-FastAPI and Uvicorn serve different but complementary roles:
-- FastAPI defines the application logic, routes, and data validation
-- Uvicorn runs the application and handles HTTP communication
-- FastAPI applications require an ASGI server like Uvicorn to operate
 
 ## FastAPI
 FastAPI is a modern, high-performance Python web framework designed for building APIs. It is based on Python type hints and supports asynchronous programming using async and await.
@@ -42,3 +33,9 @@ Uvicorn is an ASGI (Asynchronous Server Gateway Interface) server for Python. It
 - Manages connections and concurrency
 - Forwards requests to the ASGI application
 - Returns responses to clients
+
+## Relationship Between FastAPI and Uvicorn
+FastAPI and Uvicorn serve different but complementary roles:
+- FastAPI defines the application logic, routes, and data validation
+- Uvicorn runs the application and handles HTTP communication
+- FastAPI applications require an ASGI server like Uvicorn to operate

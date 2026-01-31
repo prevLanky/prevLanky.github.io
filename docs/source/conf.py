@@ -13,7 +13,7 @@ extensions = [
 html_theme = 'sphinx_rtd_theme'
 
 html_theme_options = {
-    "navigation_depth": 5,
+    "navigation_depth": 10,
     "navigation_with_keys": True,
     "collapse_navigation": False,
     "sticky_navigation": True,
