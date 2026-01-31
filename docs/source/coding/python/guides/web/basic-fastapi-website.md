@@ -14,13 +14,8 @@ def func():
     print("test")
 ```
 
----
 ## Basic knowledge
-### FastAPI and Uvicorn
-FastAPI and Uvicorn are commonly used together to build and run high-performance web APIs in Python. FastAPI provides the application framework for defining API behavior, while Uvicorn acts as the server that executes and serves the application over HTTP.
----
-***
-___
+
 ### FastAPI
 FastAPI is a modern, high-performance Python web framework designed for building APIs. It is based on Python type hints and supports asynchronous programming using async and await.
 #### Key Features:
@@ -48,6 +43,7 @@ Uvicorn is an ASGI (Asynchronous Server Gateway Interface) server for Python. It
 - Returns responses to clients
 ---
 ### Relationship Between FastAPI and Uvicorn
+FastAPI and Uvicorn are commonly used together to build and run high-performance web APIs in Python. FastAPI provides the application framework for defining API behavior, while Uvicorn acts as the server that executes and serves the application over HTTP.
 FastAPI and Uvicorn serve different but complementary roles:
 - FastAPI defines the application logic, routes, and data validation
 - Uvicorn runs the application and handles HTTP communication
