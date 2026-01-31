@@ -6,6 +6,7 @@
 
 theory/theory
 codesnippets/codesnippets
+guides/guides
 ```
 
 Some content about this wiki page 
