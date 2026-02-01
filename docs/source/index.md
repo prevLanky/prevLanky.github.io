@@ -9,5 +9,6 @@ Some text here
 general-pages/about
 coding/coding
 cybersecurity/cybersecurity
+guides/guides
 wiki/wiki
 ```
