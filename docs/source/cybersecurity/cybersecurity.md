@@ -7,5 +7,7 @@ Some content about this wiki page
 :maxdepth: 10
 :caption: Table of Contents
 
+security-engineering/security-engineering
+standards/standards
 hacking/hacking
 ```

@@ -15,7 +15,7 @@ def func():
 ```
 ---
 ## Basic knowledge
----
+
 ### FastAPI
 FastAPI is a modern, high-performance Python web framework designed for building APIs. It is based on Python type hints and supports asynchronous programming using async and await.
 #### Key Features:
