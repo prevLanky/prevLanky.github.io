@@ -1,5 +1,3 @@
-Security engineering
-==================
 
 # CIA / DAD
 

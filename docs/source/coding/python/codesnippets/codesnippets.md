@@ -2,7 +2,7 @@
 
 ## Custom Classes
 asd
-### std::Expected
+### std::expected
 ```python
 from typing import Generic, TypeVar, Callable, Optional
 
@@ -19,7 +19,6 @@ class Expected(Generic[T, E]):
     __slots__ = ("_value", "_error", "_has_value")
 
     def __init__(self, value: Optional[T] = None, error: Optional[E] = None, *, has_value: Optional[bool] = None):
-        # Determine whether this is a value or error
         if has_value is None:
             has_value = error is None
 
@@ -37,35 +36,25 @@ class Expected(Generic[T, E]):
         self._has_value = has_value
 
     def has_value(self) -> bool:
-        """True if this Expected holds a value, False if it holds an error."""
         return self._has_value
 
     def value(self) -> T:
-        """Return the value, raises if Expected contains an error."""
         if not self._has_value:
             raise ValueError(f"No value present. Error: {self._error!r}")
         return self._value
 
     def error(self) -> E:
-        """Return the error, raises if Expected contains a value."""
         if self._has_value:
             raise ValueError(f"No error present. Value: {self._value!r}")
         return self._error
 
     def value_or(self, default: T) -> T:
-        """Return the value if present, else return the provided default."""
         return self._value if self._has_value else default
 
     def error_or(self, default: E) -> E:
-        """Return the error if present, else return the provided default."""
         return self._error if not self._has_value else default
 
     def and_then(self, fn: Callable[[T], "Expected[U, E]"]) -> "Expected[U, E]":
-        """
-        Chains another Expected-returning function if this has a value.
-        If this contains an error, it propagates automatically.
-        Exceptions in fn are caught and converted into an error Expected.
-        """
         if self._has_value:
             try:
                 result = fn(self._value)
@@ -77,11 +66,6 @@ class Expected(Generic[T, E]):
         return Expected(error=self._error)
 
     def or_else(self, fn: Callable[[E], "Expected[T, U]"]) -> "Expected[T, U]":
-        """
-        Chains another Expected-returning function if this contains an error.
-        If this contains a value, it propagates automatically.
-        Exceptions in fn are caught and converted into an error Expected.
-        """
         if not self._has_value:
             try:
                 result = fn(self._error)
