@@ -1,6 +1,3 @@
-Standards
-=========
-
 # ISO/IEC 19249:2017  
 Information technology – Security techniques – Catalogue of architectural and design principles for secure products, systems and applications
 
