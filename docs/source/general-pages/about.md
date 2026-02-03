@@ -1,5 +1,10 @@
 # About
 
+```{graphviz}
+:caption: Secure File Processing & Flashcard Architecture
+:align: center
+:engine: dot
+
 digraph architecture {
     rankdir=LR
     fontname="Helvetica"
@@ -58,7 +63,7 @@ digraph architecture {
        FILE INGESTION
        ======================= */
 
-    web -> minio [label="3. Stream upload\n→ incoming/"]
+    web -> minio [label="3. Stream upload → incoming/"]
     web -> postgres [label="4. Insert file row\nstatus=QUEUED\nuser_id"]
     web -> valkey [label="5. XADD scan job\n(file_id, user_id)"]
 
@@ -67,9 +72,7 @@ digraph architecture {
        ======================= */
 
     valkey -> jobmaster [label="6. XREADGROUP\n(one master claims job)"]
-
     jobmaster -> postgres [label="7. UPDATE status=SCANNING\n(atomic claim)"]
-
     jobmaster -> minio [label="8. GET object\nfrom incoming/"]
     jobmaster -> scanner [label="9. Stream bytes\n(scan request)"]
 
@@ -78,12 +81,9 @@ digraph architecture {
        ======================= */
 
     scanner -> jobmaster [label="10. Scan verdict\n(CLEAN / INFECTED)"]
-
     jobmaster -> postgres [label="11. UPDATE status\nCLEAN / INFECTED"]
-
     jobmaster -> minio [label="12a. Move to clean/\n(if CLEAN)"]
     jobmaster -> minio [label="12b. Move to quarantine/\n(if INFECTED)"]
-
     jobmaster -> valkey [label="13. XACK job\n(remove from stream)"]
 
     /* =======================
@@ -105,5 +105,5 @@ digraph architecture {
     browser -> web [label="20. GET /flashcards\n(JWT)"]
     web -> postgres [label="21. Fetch flashcards\n(user_id scoped)"]
     web -> browser [label="22. Flashcards\nPractice UI"]
-
 }
+```
