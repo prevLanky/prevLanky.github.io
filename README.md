@@ -1,4 +1,4 @@
-
+s
 # Build files
 rm -rf docs/build && python -m sphinx -b html docs/source docs/build/html
 
