@@ -1,7 +1,7 @@
 # About
 
 ```{graphviz}
-:caption: Secure File Processing & Flashcard Architecture
+:caption: Secure File Upload & Scanning Architecture
 :align: center
 
 digraph architecture {
@@ -21,7 +21,7 @@ digraph architecture {
         color="#FFE6E6"
 
         browser [label="User Browser\n(Anonymous / JWT-based)", fillcolor="#FFFFFF"]
-        web [label="Webserver (FastAPI)\n• Upload API\n• Status API\n• Flashcard API\n• JWT Issuer", fillcolor="#FFCCCC"]
+        web [label="Webserver (FastAPI)\n• Upload API\n• Status API\n• JWT Issuer", fillcolor="#FFCCCC"]
     }
 
     subgraph cluster_control {
@@ -31,7 +31,7 @@ digraph architecture {
 
         jobmaster [label="Job Master\n• Valkey consumer\n• Orchestrates scans\n• Updates DB\n• Moves files", fillcolor="#CCE5FF"]
         valkey [label="Valkey\n(Stream + Consumer Groups)", fillcolor="#CCE5FF"]
-        postgres [label="PostgreSQL\n• Files\n• Jobs\n• Flashcards\n• user_id ownership", fillcolor="#CCE5FF"]
+        postgres [label="PostgreSQL\n• Files\n• Jobs\n• user_id ownership", fillcolor="#CCE5FF"]
         minio [label="MinIO Object Storage\nBuckets:\n• incoming/\n• clean/\n• quarantine/", fillcolor="#CCE5FF"]
     }
 
@@ -41,14 +41,6 @@ digraph architecture {
         color="#FDEBD0"
 
         scanner [label="ClamAV Workers\n• Stateless\n• Stream-based scan\n• No DB/Storage access", fillcolor="#FAD7A0"]
-    }
-
-    subgraph cluster_ai {
-        label="AI Worker Node Pool (Trusted Compute)"
-        style="filled"
-        color="#E8F8F5"
-
-        aiworker [label="AI Processing Workers\n• Parse PDF/DOCX\n• Extract text\n• Generate flashcards\n• Apply user preferences", fillcolor="#D1F2EB"]
     }
 
     /* =======================
@@ -84,25 +76,5 @@ digraph architecture {
     jobmaster -> minio [label="12a. Move to clean/\n(if CLEAN)"]
     jobmaster -> minio [label="12b. Move to quarantine/\n(if INFECTED)"]
     jobmaster -> valkey [label="13. XACK job\n(remove from stream)"]
-
-    /* =======================
-       AI PROCESSING
-       ======================= */
-
-    postgres -> aiworker [label="14. Poll / Subscribe\nfor CLEAN files"]
-    aiworker -> minio [label="15. Read clean file"]
-    aiworker -> postgres [label="16. Store flashcards\n(JSON, user_id)"]
-
-    /* =======================
-       USER INTERACTION
-       ======================= */
-
-    browser -> web [label="17. GET /status\n(Authorization: JWT)"]
-    web -> postgres [label="18. Query file/job status\n(user_id scoped)"]
-    web -> browser [label="19. Return status"]
-
-    browser -> web [label="20. GET /flashcards\n(JWT)"]
-    web -> postgres [label="21. Fetch flashcards\n(user_id scoped)"]
-    web -> browser [label="22. Flashcards\nPractice UI"]
 }
 ```
