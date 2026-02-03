@@ -3,7 +3,6 @@
 ```{graphviz}
 :caption: Secure File Processing & Flashcard Architecture
 :align: center
-:engine: dot
 
 digraph architecture {
     rankdir=LR

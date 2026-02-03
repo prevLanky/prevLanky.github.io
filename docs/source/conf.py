@@ -35,3 +35,4 @@ html_static_path = ['_static']
 
 myst_heading_anchors = 7
 default_dark_mode = True
+graphviz_output_format = "png"

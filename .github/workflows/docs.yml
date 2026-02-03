@@ -19,6 +19,9 @@ jobs:
           pip install --upgrade pip
           pip install sphinx sphinx_rtd_theme myst-parser sphinx_rtd_dark_mode graphviz
 
+      - name: Install Graphviz
+        run: sudo apt-get update && sudo apt-get install -y graphviz
+
       - run: sphinx-build -b html docs/source docs/build/html
 
       - name: Deploy to GitHub Pages
