@@ -1,0 +1,625 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codesnippets &mdash; mygithubpages  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=8a448e45"></script>
+      <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../_static/dark_mode_js/default_dark.js?v=fd565c74"></script>
+      <script src="../../../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Guides" href="../guides/guides.html" />
+    <link rel="prev" title="Theory" href="../theory/theory.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            mygithubpages
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../general-pages/about.html">About</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../coding.html">Coding</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../cpp/cpp.html">C++</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../python.html">Python</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../theory/theory.html">Theory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../theory/theory.html#installation">Installation</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../theory/theory.html#custom-installation">Custom Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../theory/theory.html#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../theory/theory.html#faq">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Codesnippets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#custom-classes">Custom Classes</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#std-expected">std::expected</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#std-expected-unit-test">std::Expected unit test</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#logger">Logger</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#file-managment">File managment</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#read-files">Read Files</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#csv">CSV</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#txt">txt</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#word">word</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#pdf">pdf</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#write-files">Write Files</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#id1">CSV</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../guides/guides.html">Guides</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../guides/web/web.html">Web</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../guides/web/basic-fastapi-website.html">How to setup basic FastAPI website</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../guides/web/basic-fastapi-website.html#installation">Installation</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../guides/web/basic-fastapi-website.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../guides/web/basic-fastapi-website.html#main-fastapi-code">main FastAPI code</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../guides/web/basic-fastapi-website.html#basic-knowledge">Basic knowledge</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../guides/web/basic-fastapi-website.html#fastapi">FastAPI</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../guides/web/basic-fastapi-website.html#key-features">Key Features:</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../guides/web/basic-fastapi-website.html#core-components">Core Components</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="../guides/web/basic-fastapi-website.html#uvicorn">Uvicorn</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../guides/web/basic-fastapi-website.html#id1">Key Features</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../guides/web/basic-fastapi-website.html#responsibilities">Responsibilities</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="../guides/web/basic-fastapi-website.html#relationship-between-fastapi-and-uvicorn">Relationship Between FastAPI and Uvicorn</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../design/design.html">Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../design/design.html#user-upload-to-webapp">User upload to webapp</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cybersecurity/cybersecurity.html">Cybersecurity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../cybersecurity/security-engineering/security-engineering.html">Security Engineering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/theory.html">Theory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/cia-dad.html">CIA / DAD</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/cia-dad.html#confidentiality">Confidentiality</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/cia-dad.html#integrity">Integrity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/cia-dad.html#availability">Availability</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/cia-dad.html#authenticity">Authenticity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/cia-dad.html#nonrepudiation">Nonrepudiation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/cia-dad.html#disclosure">Disclosure</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/cia-dad.html#alteration">Alteration</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/cia-dad.html#destruction-denial">Destruction / Denial</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/security-models.html">Security Models</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/security-models.html#bell-lapadula-model">Bell-LaPadula Model</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/security-models.html#pros-cons">Pros &amp; Cons</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/security-models.html#the-biba-integrity-model">The Biba Integrity Model</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/security-models.html#id1">Pros &amp; Cons</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/security-models.html#the-clark-wilson-model">The Clark-Wilson Model</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/security-models.html#id2">Pros &amp; Cons</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/asset-management.html">Asset management</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/asset-management.html#cmdb">CMDB</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/asset-management.html#sbom">SBOM</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/security-assessment.html">Security Assessment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/security-by-design.html">Security By Design</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/security-by-design.html#defence-in-depth">Defence-In-Depth</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/security-by-design.html#pros-cons">Pros &amp; Cons</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/security-by-design.html#zero-trust-vs-trust-but-verify">Zero Trust vs Trust but Verify</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/security-by-design.html#zero-trust">Zero Trust</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/security-by-design.html#trust-but-verify">Trust but Verify</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/security-by-design.html#id1">Pros &amp; Cons</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/change-management.html">Change Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/grc.html">GRC</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/grc.html#governance">Governance</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/grc.html#cobit">COBIT</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/grc.html#risk">Risk</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/grc.html#nist-sp-800-risk-analysis-and-patch-management">NIST SP 800 – Risk analysis and patch management</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/grc.html#compliance">Compliance</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/grc.html#assurance">Assurance</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/grc.html#assurance-across-the-grc-framework">Assurance across the GRC framework</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/grc.html#assurance-in-governance">Assurance in Governance</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/grc.html#assurance-in-risk">Assurance in Risk</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../cybersecurity/security-engineering/theory/grc.html#assurance-in-compliance">Assurance in Compliance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../cybersecurity/security-engineering/practical/practical.html">Practical</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cybersecurity/standards/standards.html">Standards</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../cybersecurity/standards/iso-27001.html">ISO 27001 / ISO 27002</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../cybersecurity/standards/iso-iec-19249.html">ISO/IEC 19249:2017</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../cybersecurity/standards/iso-iec-19249.html#iso-iec-19249-architectural-principles">ISO/IEC 19249 architectural principles</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/standards/iso-iec-19249.html#domain-separation">Domain Separation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/standards/iso-iec-19249.html#layering">Layering</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/standards/iso-iec-19249.html#encapsulation">Encapsulation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/standards/iso-iec-19249.html#redundancy">Redundancy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/standards/iso-iec-19249.html#virtualization">Virtualization</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../cybersecurity/standards/iso-iec-19249.html#iso-iec-19249-design-principles">ISO/IEC 19249 design principles</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/standards/iso-iec-19249.html#least-privilege">Least Privilege</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/standards/iso-iec-19249.html#attack-surface-minimisation">Attack Surface Minimisation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/standards/iso-iec-19249.html#centralized-parameter-validation">Centralized Parameter Validation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/standards/iso-iec-19249.html#centralized-general-security-services">Centralized General Security Services</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cybersecurity/standards/iso-iec-19249.html#preparing-for-error-and-exception-handling">Preparing for Error and Exception Handling</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../cybersecurity/standards/nist-sp800.html">NIST SP 800</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../cybersecurity/standards/nis-2.html">NIS-2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../cybersecurity/standards/ksf.html">KSF (FMV)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../cybersecurity/standards/gdpr.html">GDPR</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cybersecurity/hacking/hacking.html">Hacking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../cybersecurity/hacking/webhacking/webhacking.html">Burp suite</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../cybersecurity/hacking/webhacking/webhacking.html#xss">XSS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../cybersecurity/hacking/webhacking/webhacking.html#xss-reflection">XSS Reflection</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guides/guides.html">Guides</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../wiki/wiki.html">Wiki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../wiki/cybersecurity/cybersecurity.html">Cybersecurity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../wiki/cybersecurity/authentication.html">About This Project</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../wiki/cybersecurity/authentication.html#installation">Installation</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../wiki/cybersecurity/authentication.html#custom-installation">Custom Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../wiki/cybersecurity/authentication.html#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../wiki/cybersecurity/authentication.html#faq">FAQ</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">mygithubpages</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../coding.html">Coding</a></li>
+          <li class="breadcrumb-item"><a href="../python.html">Python</a></li>
+      <li class="breadcrumb-item active">Codesnippets</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/coding/python/codesnippets/codesnippets.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="codesnippets">
+<h1>Codesnippets<a class="headerlink" href="#codesnippets" title="Link to this heading"></a></h1>
+<section id="custom-classes">
+<h2>Custom Classes<a class="headerlink" href="#custom-classes" title="Link to this heading"></a></h2>
+<p>asd</p>
+<section id="std-expected">
+<h3>std::expected<a class="headerlink" href="#std-expected" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Generic</span><span class="p">,</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">)</span>  <span class="c1"># Value type</span>
+<span class="n">E</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;E&quot;</span><span class="p">)</span>  <span class="c1"># Error type</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;U&quot;</span><span class="p">)</span>  <span class="c1"># Return type for and_then/or_else</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Expected</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">,</span> <span class="n">E</span><span class="p">]):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Python implementation of C++ std::expected.</span>
+<span class="sd">    Supports None as a valid value.</span>
+<span class="sd">    Provides value(), error(), value_or(), error_or(), and_then(), or_else().</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;_value&quot;</span><span class="p">,</span> <span class="s2">&quot;_error&quot;</span><span class="p">,</span> <span class="s2">&quot;_has_value&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">T</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">error</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">E</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">has_value</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">has_value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">has_value</span> <span class="o">=</span> <span class="n">error</span> <span class="ow">is</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">has_value</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">error</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Cannot have error when creating a value Expected&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_value</span> <span class="o">=</span> <span class="n">value</span>  <span class="c1"># None is valid</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_error</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Cannot have value when creating an error Expected&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_value</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_error</span> <span class="o">=</span> <span class="n">error</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_has_value</span> <span class="o">=</span> <span class="n">has_value</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">has_value</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_has_value</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">value</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_has_value</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No value present. Error: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_error</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_value</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">error</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">E</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_has_value</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No error present. Value: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_value</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_error</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">value_or</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_value</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_has_value</span> <span class="k">else</span> <span class="n">default</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">error_or</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="p">:</span> <span class="n">E</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">E</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_error</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_has_value</span> <span class="k">else</span> <span class="n">default</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">and_then</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">T</span><span class="p">],</span> <span class="s2">&quot;Expected[U, E]&quot;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="s2">&quot;Expected[U, E]&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_has_value</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_value</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">Expected</span><span class="p">):</span>
+                    <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;and_then function must return an Expected instance&quot;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">result</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">Expected</span><span class="p">(</span><span class="n">error</span><span class="o">=</span><span class="n">e</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Expected</span><span class="p">(</span><span class="n">error</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_error</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">or_else</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">E</span><span class="p">],</span> <span class="s2">&quot;Expected[T, U]&quot;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="s2">&quot;Expected[T, U]&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_has_value</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_error</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">Expected</span><span class="p">):</span>
+                    <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;or_else function must return an Expected instance&quot;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">result</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">Expected</span><span class="p">(</span><span class="n">error</span><span class="o">=</span><span class="n">e</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Expected</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_value</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_has_value</span><span class="p">:</span>
+            <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Expected(value=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_value</span><span class="si">!r}</span><span class="s2">)&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Expected(error=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_error</span><span class="si">!r}</span><span class="s2">)&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="std-expected-unit-test">
+<h3>std::Expected unit test<a class="headerlink" href="#std-expected-unit-test" title="Link to this heading"></a></h3>
+<p>You can add this if you want to ensure nothing changes in case the std::Expected class is changed.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="c1"># Add the Python package root dynamically</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">&quot;..&quot;</span><span class="p">)))</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">expected</span><span class="w"> </span><span class="kn">import</span> <span class="n">Expected</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_value_creation</span><span class="p">():</span>
+    <span class="n">e</span> <span class="o">=</span> <span class="n">Expected</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">e</span><span class="o">.</span><span class="n">has_value</span>
+    <span class="k">assert</span> <span class="n">e</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="mi">42</span>
+    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
+        <span class="n">_</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">error</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_none_value_creation</span><span class="p">():</span>
+    <span class="n">e</span> <span class="o">=</span> <span class="n">Expected</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">e</span><span class="o">.</span><span class="n">has_value</span>
+    <span class="k">assert</span> <span class="n">e</span><span class="o">.</span><span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span>
+    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
+        <span class="n">_</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">error</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_error_creation</span><span class="p">():</span>
+    <span class="n">e</span> <span class="o">=</span> <span class="n">Expected</span><span class="p">(</span><span class="n">error</span><span class="o">=</span><span class="s2">&quot;error occurred&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">e</span><span class="o">.</span><span class="n">has_value</span>
+    <span class="k">assert</span> <span class="n">e</span><span class="o">.</span><span class="n">error</span> <span class="o">==</span> <span class="s2">&quot;error occurred&quot;</span>
+    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
+        <span class="n">_</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">value</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_value_or</span><span class="p">():</span>
+    <span class="n">e_val</span> <span class="o">=</span> <span class="n">Expected</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">e_err</span> <span class="o">=</span> <span class="n">Expected</span><span class="p">(</span><span class="n">error</span><span class="o">=</span><span class="s2">&quot;fail&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">e_val</span><span class="o">.</span><span class="n">value_or</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span>
+    <span class="k">assert</span> <span class="n">e_err</span><span class="o">.</span><span class="n">value_or</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_error_or</span><span class="p">():</span>
+    <span class="n">e_val</span> <span class="o">=</span> <span class="n">Expected</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">e_err</span> <span class="o">=</span> <span class="n">Expected</span><span class="p">(</span><span class="n">error</span><span class="o">=</span><span class="s2">&quot;fail&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">e_val</span><span class="o">.</span><span class="n">error_or</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;default&quot;</span>
+    <span class="k">assert</span> <span class="n">e_err</span><span class="o">.</span><span class="n">error_or</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;fail&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_and_then_value</span><span class="p">():</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">next_step</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Expected</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">Expected</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">e</span> <span class="o">=</span> <span class="n">Expected</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">and_then</span><span class="p">(</span><span class="n">next_step</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">has_value</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="mi">10</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_and_then_error_propagates</span><span class="p">():</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">next_step</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Expected</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">Expected</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">e</span> <span class="o">=</span> <span class="n">Expected</span><span class="p">(</span><span class="n">error</span><span class="o">=</span><span class="s2">&quot;fail&quot;</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">and_then</span><span class="p">(</span><span class="n">next_step</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">result</span><span class="o">.</span><span class="n">has_value</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">error</span> <span class="o">==</span> <span class="s2">&quot;fail&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_or_else_error</span><span class="p">():</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">recover</span><span class="p">(</span><span class="n">err</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Expected</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">Expected</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span>
+
+    <span class="n">e</span> <span class="o">=</span> <span class="n">Expected</span><span class="p">(</span><span class="n">error</span><span class="o">=</span><span class="s2">&quot;fail&quot;</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">or_else</span><span class="p">(</span><span class="n">recover</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">has_value</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="mi">99</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_or_else_value_propagates</span><span class="p">():</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">recover</span><span class="p">(</span><span class="n">err</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Expected</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">Expected</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span>
+
+    <span class="n">e</span> <span class="o">=</span> <span class="n">Expected</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">or_else</span><span class="p">(</span><span class="n">recover</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">has_value</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="mi">42</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_and_then_exception_caught</span><span class="p">():</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">fail_fn</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;oops&quot;</span><span class="p">)</span>
+
+    <span class="n">e</span> <span class="o">=</span> <span class="n">Expected</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">and_then</span><span class="p">(</span><span class="n">fail_fn</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">result</span><span class="o">.</span><span class="n">has_value</span>
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">error</span><span class="p">,</span> <span class="ne">RuntimeError</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_or_else_exception_caught</span><span class="p">():</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">fail_fn</span><span class="p">(</span><span class="n">err</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;oops&quot;</span><span class="p">)</span>
+
+    <span class="n">e</span> <span class="o">=</span> <span class="n">Expected</span><span class="p">(</span><span class="n">error</span><span class="o">=</span><span class="s2">&quot;fail&quot;</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">or_else</span><span class="p">(</span><span class="n">fail_fn</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">result</span><span class="o">.</span><span class="n">has_value</span>
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">error</span><span class="p">,</span> <span class="ne">RuntimeError</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="logger">
+<h3>Logger<a class="headerlink" href="#logger" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">traceback</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">inspect</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">TODO: Add loglevel in order to control what is printed etc.</span>
+<span class="sd">        But how to remove the statements in production?</span>
+<span class="sd">        I dont even want to call the functions?</span>
+<span class="sd">        But it might not be an issue, since errors and warns does print that often?</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Logger</span><span class="p">:</span>
+    <span class="n">_instance</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+
+    <span class="n">COLORS</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;DEBUG&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[90m&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;INFO&quot;</span><span class="p">:</span>  <span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[92m&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;WARN&quot;</span><span class="p">:</span>  <span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[93m&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ERROR&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[91m&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;FATAL&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[95m&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;RESET&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[0m&quot;</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_instance</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">with</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_instance</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="bp">cls</span><span class="o">.</span><span class="n">_instance</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_instance</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">use_colors</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_caller_info</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_initialized&quot;</span><span class="p">):</span>
+            <span class="k">return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_colors</span> <span class="o">=</span> <span class="n">use_colors</span> <span class="ow">and</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">isatty</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">show_caller_info</span> <span class="o">=</span> <span class="n">show_caller_info</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_write_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_initialized</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_colorize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">level_name</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_colors</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">message</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">COLORS</span><span class="p">[</span><span class="n">level_name</span><span class="p">]</span><span class="si">}{</span><span class="n">message</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">COLORS</span><span class="p">[</span><span class="s1">&#39;RESET&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="c1">#def _get_caller_info(self):</span>
+    <span class="c1">#    &quot;&quot;&quot;Get file and line of the caller, without function name.&quot;&quot;&quot;</span>
+    <span class="c1">#    frame = inspect.stack()[3]  # skip logger internals</span>
+    <span class="c1">#    filename = frame.filename</span>
+    <span class="c1">#    lineno = frame.lineno</span>
+    <span class="c1">#    return f&quot;{filename}:{lineno}&quot;</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_get_caller_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get file, line, and optionally function of the caller.&quot;&quot;&quot;</span>
+        <span class="n">frame</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">stack</span><span class="p">()[</span><span class="mi">3</span><span class="p">]</span>  <span class="c1"># skip logger internals</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">filename</span>
+        <span class="n">lineno</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">lineno</span>
+        <span class="n">funcname</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">function</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">funcname</span><span class="si">}</span><span class="s2">():</span><span class="si">{</span><span class="n">lineno</span><span class="si">}</span><span class="s2">:&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">level_name</span><span class="p">,</span> <span class="n">fatal_extra</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="c1">#timestamp = datetime.utcnow().replace(microsecond=0).isoformat()</span>
+        <span class="n">caller_info</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot; </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_caller_info</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">show_caller_info</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">level_name</span><span class="si">}</span><span class="s2">]</span><span class="si">{</span><span class="n">caller_info</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">text</span><span class="si">}</span><span class="s2">&quot;</span>
+
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_write_lock</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_colorize</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">level_name</span><span class="p">))</span>
+
+            <span class="k">if</span> <span class="n">level_name</span> <span class="o">==</span> <span class="s2">&quot;FATAL&quot;</span> <span class="ow">and</span> <span class="n">fatal_extra</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== STACK TRACE ===&quot;</span><span class="p">)</span>
+                <span class="n">traceback</span><span class="o">.</span><span class="n">print_stack</span><span class="p">()</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;==================&quot;</span><span class="p">)</span>
+                <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">debug</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">_log</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="s2">&quot;DEBUG&quot;</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">_log</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="s2">&quot;INFO&quot;</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">warn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">_log</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="s2">&quot;WARN&quot;</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">error</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">_log</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="s2">&quot;ERROR&quot;</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">fatal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">_log</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="s2">&quot;FATAL&quot;</span><span class="p">)</span>
+
+<span class="n">log</span> <span class="o">=</span> <span class="n">Logger</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="file-managment">
+<h2>File managment<a class="headerlink" href="#file-managment" title="Link to this heading"></a></h2>
+<p>asd</p>
+<section id="read-files">
+<h3>Read Files<a class="headerlink" href="#read-files" title="Link to this heading"></a></h3>
+<p>asd</p>
+<section id="csv">
+<h4>CSV<a class="headerlink" href="#csv" title="Link to this heading"></a></h4>
+<p>a</p>
+</section>
+<section id="txt">
+<h4>txt<a class="headerlink" href="#txt" title="Link to this heading"></a></h4>
+<p>b</p>
+</section>
+<section id="word">
+<h4>word<a class="headerlink" href="#word" title="Link to this heading"></a></h4>
+<p>c</p>
+</section>
+<section id="pdf">
+<h4>pdf<a class="headerlink" href="#pdf" title="Link to this heading"></a></h4>
+<p>d</p>
+</section>
+</section>
+<section id="write-files">
+<h3>Write Files<a class="headerlink" href="#write-files" title="Link to this heading"></a></h3>
+<p>asd</p>
+<section id="id1">
+<h4>CSV<a class="headerlink" href="#id1" title="Link to this heading"></a></h4>
+<p>a</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../theory/theory.html" class="btn btn-neutral float-left" title="Theory" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../guides/guides.html" class="btn btn-neutral float-right" title="Guides" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, prevLanky.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
