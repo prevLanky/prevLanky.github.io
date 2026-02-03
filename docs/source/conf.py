@@ -7,7 +7,8 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.extlinks',
     'sphinx.ext.todo',
-    'sphinx_rtd_dark_mode'
+    'sphinx_rtd_dark_mode',
+    "sphinx.ext.graphviz"
 ]
 
 html_theme = 'sphinx_rtd_theme'
