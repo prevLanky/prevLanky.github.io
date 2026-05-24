@@ -1,0 +1,667 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building a Secure, Production-Grade Web Application (From Idea to Production) &mdash; mygithubpages  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=8a448e45"></script>
+      <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../_static/dark_mode_js/default_dark.js?v=fd565c74"></script>
+      <script src="../../../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="File Processing system" href="file-processing.html" />
+    <link rel="prev" title="Systems" href="systems.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            mygithubpages
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../general-pages/about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../coding/coding.html">Coding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/cpp/cpp.html">C++</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/python/python.html">Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../coding/python/theory/theory.html">Theory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../coding/python/theory/theory.html#installation">Installation</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../coding/python/theory/theory.html#custom-installation">Custom Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../coding/python/theory/theory.html#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../coding/python/theory/theory.html#faq">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../coding/python/codesnippets/codesnippets.html">Codesnippets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../coding/python/codesnippets/codesnippets.html#custom-classes">Custom Classes</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../coding/python/codesnippets/codesnippets.html#std-expected">std::expected</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../coding/python/codesnippets/codesnippets.html#std-expected-unit-test">std::Expected unit test</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../coding/python/codesnippets/codesnippets.html#logger">Logger</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../coding/python/codesnippets/codesnippets.html#file-managment">File managment</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../coding/python/codesnippets/codesnippets.html#read-files">Read Files</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../coding/python/codesnippets/codesnippets.html#csv">CSV</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../coding/python/codesnippets/codesnippets.html#txt">txt</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../coding/python/codesnippets/codesnippets.html#word">word</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../coding/python/codesnippets/codesnippets.html#pdf">pdf</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../coding/python/codesnippets/codesnippets.html#write-files">Write Files</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../coding/python/codesnippets/codesnippets.html#id1">CSV</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../coding/python/guides/guides.html">Guides</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../coding/python/guides/web/web.html">Web</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../coding/python/guides/web/basic-fastapi-website.html">How to setup basic FastAPI website</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../coding/python/guides/web/basic-fastapi-website.html#installation">Installation</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../coding/python/guides/web/basic-fastapi-website.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../coding/python/guides/web/basic-fastapi-website.html#main-fastapi-code">main FastAPI code</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../coding/python/guides/web/basic-fastapi-website.html#basic-knowledge">Basic knowledge</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../coding/python/guides/web/basic-fastapi-website.html#fastapi">FastAPI</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../../../coding/python/guides/web/basic-fastapi-website.html#key-features">Key Features:</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../coding/python/guides/web/basic-fastapi-website.html#core-components">Core Components</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="../../../coding/python/guides/web/basic-fastapi-website.html#uvicorn">Uvicorn</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../../../coding/python/guides/web/basic-fastapi-website.html#id1">Key Features</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../coding/python/guides/web/basic-fastapi-website.html#responsibilities">Responsibilities</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="../../../coding/python/guides/web/basic-fastapi-website.html#relationship-between-fastapi-and-uvicorn">Relationship Between FastAPI and Uvicorn</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/design/design.html">Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/design/design.html#user-upload-to-webapp">User upload to webapp</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../cybersecurity.html">Cybersecurity</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../security-engineering.html">Security Engineering</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../theory/theory.html">Theory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../theory/cia-dad.html">CIA / DAD</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../theory/cia-dad.html#confidentiality">Confidentiality</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../theory/cia-dad.html#integrity">Integrity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../theory/cia-dad.html#availability">Availability</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../theory/cia-dad.html#authenticity">Authenticity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../theory/cia-dad.html#nonrepudiation">Nonrepudiation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../theory/cia-dad.html#disclosure">Disclosure</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../theory/cia-dad.html#alteration">Alteration</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../theory/cia-dad.html#destruction-denial">Destruction / Denial</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../theory/security-models.html">Security Models</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../theory/security-models.html#bell-lapadula-model">Bell-LaPadula Model</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../theory/security-models.html#pros-cons">Pros &amp; Cons</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../theory/security-models.html#the-biba-integrity-model">The Biba Integrity Model</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../theory/security-models.html#id1">Pros &amp; Cons</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../theory/security-models.html#the-clark-wilson-model">The Clark-Wilson Model</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../theory/security-models.html#id2">Pros &amp; Cons</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../theory/asset-management.html">Asset management</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../theory/asset-management.html#cmdb">CMDB</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../theory/asset-management.html#sbom">SBOM</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../theory/security-assessment.html">Security Assessment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../theory/security-by-design.html">Security By Design</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../theory/security-by-design.html#defence-in-depth">Defence-In-Depth</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../theory/security-by-design.html#pros-cons">Pros &amp; Cons</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../theory/security-by-design.html#zero-trust-vs-trust-but-verify">Zero Trust vs Trust but Verify</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../theory/security-by-design.html#zero-trust">Zero Trust</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../theory/security-by-design.html#trust-but-verify">Trust but Verify</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../theory/security-by-design.html#id1">Pros &amp; Cons</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../theory/change-management.html">Change Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../theory/grc.html">GRC</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../theory/grc.html#governance">Governance</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../theory/grc.html#cobit">COBIT</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../theory/grc.html#risk">Risk</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../theory/grc.html#nist-sp-800-risk-analysis-and-patch-management">NIST SP 800 – Risk analysis and patch management</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../theory/grc.html#compliance">Compliance</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../theory/grc.html#assurance">Assurance</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../theory/grc.html#assurance-across-the-grc-framework">Assurance across the GRC framework</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../theory/grc.html#assurance-in-governance">Assurance in Governance</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../theory/grc.html#assurance-in-risk">Assurance in Risk</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../theory/grc.html#assurance-in-compliance">Assurance in Compliance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="systems.html">Systems</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Building a Secure, Production-Grade Web Application (From Idea to Production)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#table-of-contents">Table of Contents</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#roles-and-responsibilities">Roles and Responsibilities</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#architecture-engineering-and-implementation-across-levels">Architecture, Engineering, and Implementation Across Levels</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#web-application-level-system-of-systems">Web Application Level (System of Systems)</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#system-sub-system-level">System/Sub-System Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#component-application-level">Component / Application Level</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#threat-modeling-and-risk-analysis-across-levels">Threat Modeling and Risk Analysis Across Levels</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#web-application-level">Web Application Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#id1">System/Sub-System Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#component-implementation-level">Component / Implementation Level</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#qa-qa-automation-and-devsecops">QA, QA Automation, and DevSecOps</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#configuration-management-and-change-control">Configuration Management and Change Control</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#id2">Web Application Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#id3">System / Sub-System Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#component-level">Component Level</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#change-control">Change Control</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#id4">Web Application Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#system-level">System Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#id5">Component Level</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#tools-and-frameworks">Tools and Frameworks</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="file-processing.html">File Processing system</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="file-processing.html#requirements">Requirements</a></li>
+<li class="toctree-l5"><a class="reference internal" href="file-processing.html#security-principles">Security principles</a></li>
+<li class="toctree-l5"><a class="reference internal" href="file-processing.html#use-cases">Use Cases</a></li>
+<li class="toctree-l5"><a class="reference internal" href="file-processing.html#components">Components</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="file-processing.html#file-storage">File storage</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="file-processing.html#id1">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="file-processing.html#message-queue">Message queue</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="file-processing.html#id2">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="file-processing.html#file-processors-slave">File processors (Slave)</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="file-processing.html#id3">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="file-processing.html#job-orchestrator">Job orchestrator</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="file-processing.html#id4">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="file-processing.html#job-storage">Job storage</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="file-processing.html#id5">Requirements</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="seed-server.html">Seed/mgmt server</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="seed-server.html#what-is-a-seed-server">What is a seed server?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../standards/standards.html">Standards</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../standards/iso-27001.html">ISO 27001 / ISO 27002</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../standards/iso-iec-19249.html">ISO/IEC 19249:2017</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../standards/iso-iec-19249.html#iso-iec-19249-architectural-principles">ISO/IEC 19249 architectural principles</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../standards/iso-iec-19249.html#domain-separation">Domain Separation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../standards/iso-iec-19249.html#layering">Layering</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../standards/iso-iec-19249.html#encapsulation">Encapsulation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../standards/iso-iec-19249.html#redundancy">Redundancy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../standards/iso-iec-19249.html#virtualization">Virtualization</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../standards/iso-iec-19249.html#iso-iec-19249-design-principles">ISO/IEC 19249 design principles</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../standards/iso-iec-19249.html#least-privilege">Least Privilege</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../standards/iso-iec-19249.html#attack-surface-minimisation">Attack Surface Minimisation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../standards/iso-iec-19249.html#centralized-parameter-validation">Centralized Parameter Validation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../standards/iso-iec-19249.html#centralized-general-security-services">Centralized General Security Services</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../standards/iso-iec-19249.html#preparing-for-error-and-exception-handling">Preparing for Error and Exception Handling</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../standards/nist-sp800.html">NIST SP 800</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../standards/nis-2.html">NIS-2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../standards/ksf.html">KSF (FMV)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../standards/gdpr.html">GDPR</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../hacking/hacking.html">Hacking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hacking/webhacking/webhacking.html">Burp suite</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hacking/webhacking/webhacking.html#xss">XSS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../hacking/webhacking/webhacking.html#xss-reflection">XSS Reflection</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guides/guides.html">Guides</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../wiki/wiki.html">Wiki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../wiki/cybersecurity/cybersecurity.html">Cybersecurity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../wiki/cybersecurity/authentication.html">About This Project</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../wiki/cybersecurity/authentication.html#installation">Installation</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../wiki/cybersecurity/authentication.html#custom-installation">Custom Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../wiki/cybersecurity/authentication.html#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../wiki/cybersecurity/authentication.html#faq">FAQ</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">mygithubpages</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../cybersecurity.html">Cybersecurity</a></li>
+          <li class="breadcrumb-item"><a href="../security-engineering.html">Security Engineering</a></li>
+          <li class="breadcrumb-item"><a href="systems.html">Systems</a></li>
+      <li class="breadcrumb-item active">Building a Secure, Production-Grade Web Application (From Idea to Production)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/cybersecurity/security-engineering/systems/building-secure-system.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="building-a-secure-production-grade-web-application-from-idea-to-production">
+<h1>Building a Secure, Production-Grade Web Application (From Idea to Production)<a class="headerlink" href="#building-a-secure-production-grade-web-application-from-idea-to-production" title="Link to this heading"></a></h1>
+<p>This Markdown document provides a comprehensive guide on building a production-grade software system, web application, or production-grade product securely and maintainably from concept to production. It integrates architecture, engineering, and implementation practices at every level, along with threat modeling, QA, and DevSecOps considerations.</p>
+<hr class="docutils" />
+<section id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#roles-and-responsibilities">Roles and Responsibilities</a></p></li>
+<li><p><a class="reference internal" href="#architecture-engineering-and-implementation-across-levels">Architecture, Engineering, and Implementation Across Levels</a></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#platform-level--production-grade-architecture"><span class="xref myst">Platform-Level / Enterprise Architecture</span></a></p></li>
+<li><p><a class="reference internal" href="#system-sub-system-level"><span class="xref myst">System/Sub-System Level</span></a></p></li>
+<li><p><a class="reference internal" href="#component-application-level">Component / Application Level</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#threat-modeling-across-levels"><span class="xref myst">Threat Modeling Across Levels</span></a></p></li>
+<li><p><a class="reference internal" href="#qa-qa-automation-and-devsecops-integration"><span class="xref myst">QA, QA Automation, and DevSecOps Integration</span></a></p></li>
+<li><p><a class="reference internal" href="#tools-and-frameworks">Tools and Frameworks</a></p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="roles-and-responsibilities">
+<h2>Roles and Responsibilities<a class="headerlink" href="#roles-and-responsibilities" title="Link to this heading"></a></h2>
+<p>Building a secure production-grade-grade system requires clear delineation of roles:</p>
+<ul class="simple">
+<li><p><strong>Security Architect:</strong> Defines platform-wide architecture, business and security requirements, trust boundaries, and defense-in-depth strategies. Ensures alignment with production-grade compliance and governance.</p></li>
+<li><p><strong>Security Engineer / System Level:</strong> Designs and engineers subsystems to meet architecture requirements. Implements system-level controls and designs for maintainability and scalability.</p></li>
+<li><p><strong>AppSec / Implementation:</strong> Implements controls in code, ensures secure coding practices, validates controls, and monitors runtime security.</p></li>
+<li><p><strong>QA / QA Automation:</strong> Validates both functional and security requirements, creates automated tests to enforce quality and security continuously.</p></li>
+<li><p><strong>DevSecOps:</strong> Integrates security in CI/CD, automates scanning, enforces policies, and ensures continuous monitoring and deployment practices.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="architecture-engineering-and-implementation-across-levels">
+<h2>Architecture, Engineering, and Implementation Across Levels<a class="headerlink" href="#architecture-engineering-and-implementation-across-levels" title="Link to this heading"></a></h2>
+<section id="web-application-level-system-of-systems">
+<h3>Web Application Level (System of Systems)<a class="headerlink" href="#web-application-level-system-of-systems" title="Link to this heading"></a></h3>
+<p>Think of the web application as <em>the system</em>. It is made up of several other systems (authentication, storage, secrets, background jobs, APIs, integrations, etc). This level is where you decide <strong>what must exist</strong>, <strong>how things are allowed to talk</strong>, and <strong>what security guarantees the whole app must uphold</strong>.</p>
+<p><strong>Architecture (Web App Level):</strong></p>
+<ul class="simple">
+<li><p>Capture business goals and non-functional requirements (security, availability, compliance, performance).</p></li>
+<li><p>Decide what subsystems exist and why.</p></li>
+<li><p>Define trust boundaries between subsystems and between users and the system.</p></li>
+<li><p>Define data sensitivity and where sensitive data is allowed to live.</p></li>
+<li><p>Define global security requirements (authentication, authorization, auditability, availability).</p></li>
+</ul>
+<p>This is where security requirements are born. Not <em>how</em> they are implemented, but <em>what must always be true</em>.</p>
+<p><strong>Engineering (Web App Level):</strong></p>
+<ul class="simple">
+<li><p>Turn requirements into concrete design decisions.</p></li>
+<li><p>Decide authentication and authorization models (sessions, tokens, roles, claims).</p></li>
+<li><p>Decide how subsystems communicate (sync vs async, internal APIs, events).</p></li>
+<li><p>Define logging, monitoring, alerting, and incident response expectations.</p></li>
+<li><p>Decide failure modes and recovery strategies.</p></li>
+</ul>
+<p>Engineering here is about <strong>designing solutions that satisfy the architecture</strong>.</p>
+<p><strong>Implementation (Web App Level):</strong></p>
+<ul class="simple">
+<li><p>Establish shared libraries, conventions, and defaults.</p></li>
+<li><p>Implement cross-cutting concerns like auth middleware, logging, metrics, and error handling.</p></li>
+<li><p>Set up CI/CD with security checks baked in.</p></li>
+<li><p>Enforce baseline configuration across environments.</p></li>
+</ul>
+<p><strong>Tools &amp; frameworks:</strong> OWASP ASVS, STRIDE, OWASP Threat Dragon, OAuth/OIDC frameworks, logging/metrics stacks, CI/CD tooling.</p>
+</section>
+<section id="system-sub-system-level">
+<h3>System/Sub-System Level<a class="headerlink" href="#system-sub-system-level" title="Link to this heading"></a></h3>
+<p><strong>Architecture (System Level):</strong></p>
+<ul class="simple">
+<li><p>Define subsystem objectives, constraints, and interfaces.</p></li>
+<li><p>Establish subsystem trust boundaries and data isolation requirements.</p></li>
+<li><p>Capture subsystem-specific security requirements derived from platform architecture.</p></li>
+</ul>
+<p><strong>Engineering (System Level):</strong></p>
+<ul class="simple">
+<li><p>Design concrete subsystem controls such as TLS, MFA, audit logging, encryption, and rate limiting.</p></li>
+<li><p>Plan secure communication between components and integration points.</p></li>
+<li><p>Design scalability, redundancy, and fault-tolerance within the subsystem.</p></li>
+<li><p>Consider maintainability: modular design, versioning, and upgrade paths.</p></li>
+</ul>
+<p><strong>Implementation (System Level):</strong></p>
+<ul class="simple">
+<li><p>Implement subsystem controls in code, configuration, and deployment.</p></li>
+<li><p>Apply secure configuration management, secrets management, and dependency validation.</p></li>
+<li><p>Perform automated system-level security tests (unit, integration, API security tests).</p></li>
+<li><p>Ensure deployment automation and compliance with platform security standards.</p></li>
+</ul>
+<p><strong>Example Tools/Frameworks:</strong> OWASP ASVS, STRIDE, MITRE ATT&amp;CK, OWASP Threat Dragon, SAST/DAST tools.</p>
+</section>
+<section id="component-application-level">
+<h3>Component / Application Level<a class="headerlink" href="#component-application-level" title="Link to this heading"></a></h3>
+<p><strong>Architecture (Component Level):</strong></p>
+<ul class="simple">
+<li><p>Define module-level responsibilities and interactions.</p></li>
+<li><p>Determine security responsibilities of each component (input validation, access control, data handling).</p></li>
+<li><p>Establish clear contracts for API endpoints, data flows, and error handling.</p></li>
+</ul>
+<p><strong>Engineering (Component Level):</strong></p>
+<ul class="simple">
+<li><p>Translate component architecture into concrete code patterns, libraries, and configurations.</p></li>
+<li><p>Plan for secure handling of secrets, parameter validation, and minimal permissions.</p></li>
+<li><p>Incorporate logging, monitoring hooks, and runtime security checks.</p></li>
+</ul>
+<p><strong>Implementation (Component Level):</strong></p>
+<ul class="simple">
+<li><p>Implement code-level security controls: input/output validation, secure storage, error handling, and dependency management.</p></li>
+<li><p>Integrate static and dynamic analysis into development pipelines.</p></li>
+<li><p>Automate tests for component security compliance.</p></li>
+<li><p>Conduct code reviews focusing on security, maintainability, and adherence to engineering design.</p></li>
+</ul>
+<p><strong>Example Tools/Frameworks:</strong> OWASP Top 10, SonarQube, Checkmarx, Fortify, OWASP ZAP, Burp Suite, dependency scanning tools like Snyk or WhiteSource.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="threat-modeling-and-risk-analysis-across-levels">
+<h2>Threat Modeling and Risk Analysis Across Levels<a class="headerlink" href="#threat-modeling-and-risk-analysis-across-levels" title="Link to this heading"></a></h2>
+<p>(Continues below)</p>
+<p>Threat modeling and risk analysis are closely related but serve different purposes. Threat modeling focuses on <em>what can go wrong</em> and <em>how</em>, while risk analysis focuses on <em>how bad it would be</em> and <em>how likely it is</em>. Both are performed at every level.</p>
+<section id="web-application-level">
+<h3>Web Application Level<a class="headerlink" href="#web-application-level" title="Link to this heading"></a></h3>
+<p><strong>Threat modeling:</strong></p>
+<ul class="simple">
+<li><p>Identify systemic threats affecting the whole webapp.</p></li>
+<li><p>Focus on trust boundaries, shared services, authentication flows, and data movement.</p></li>
+<li><p>Typical questions:</p>
+<ul>
+<li><p>What happens if this subsystem is compromised?</p></li>
+<li><p>Can an attacker move laterally?</p></li>
+<li><p>What shared components are high-value targets?</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Risk analysis:</strong></p>
+<ul class="simple">
+<li><p>Assess business impact if core capabilities are unavailable or compromised.</p></li>
+<li><p>Classify data sensitivity and regulatory exposure.</p></li>
+<li><p>Decide which risks are acceptable, which must be mitigated, and which require monitoring.</p></li>
+</ul>
+<p>Output at this level is <em>prioritization</em>: not everything needs the same level of protection.</p>
+<p><strong>Tools &amp; frameworks:</strong> STRIDE, OWASP Risk Rating, FAIR, simple likelihood × impact matrices.</p>
+</section>
+<section id="id1">
+<h3>System/Sub-System Level<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<p><strong>Threat modeling:</strong></p>
+<ul class="simple">
+<li><p>Identify threats specific to one subsystem.</p></li>
+<li><p>Focus on API misuse, privilege escalation, insecure integrations, and misconfiguration.</p></li>
+<li><p>Model attacker paths inside the system boundary.</p></li>
+</ul>
+<p><strong>Risk analysis:</strong></p>
+<ul class="simple">
+<li><p>Evaluate how exploitable each threat is.</p></li>
+<li><p>Consider blast radius: what else breaks if this system fails or leaks data?</p></li>
+<li><p>Decide where strong controls are needed vs where lighter controls are acceptable.</p></li>
+</ul>
+<p>This level is where many security tradeoffs are made consciously.</p>
+<p><strong>Tools &amp; frameworks:</strong> STRIDE, OWASP ASVS, MITRE ATT&amp;CK, DREAD-style scoring (lightweight).</p>
+</section>
+<section id="component-implementation-level">
+<h3>Component / Implementation Level<a class="headerlink" href="#component-implementation-level" title="Link to this heading"></a></h3>
+<p><strong>Threat modeling:</strong></p>
+<ul class="simple">
+<li><p>Identify concrete vulnerabilities in code and configuration.</p></li>
+<li><p>Focus on input handling, secrets, authorization checks, and error behavior.</p></li>
+</ul>
+<p><strong>Risk analysis:</strong></p>
+<ul class="simple">
+<li><p>Decide which findings block releases and which are acceptable short-term.</p></li>
+<li><p>Weigh exploitability, exposure, and ease of remediation.</p></li>
+<li><p>Feed results back to system and webapp level if patterns emerge.</p></li>
+</ul>
+<p>This prevents “fix everything” thinking and keeps security sustainable.</p>
+<p><strong>Tools &amp; frameworks:</strong> OWASP Top 10, SAST/DAST tools, dependency scanners, vulnerability management tools.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="qa-qa-automation-and-devsecops">
+<h2>QA, QA Automation, and DevSecOps<a class="headerlink" href="#qa-qa-automation-and-devsecops" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>QA:</strong> Validates functional and security requirements at all levels. Designs test cases reflecting architecture and engineering designs.</p></li>
+<li><p><strong>QA Automation:</strong> Implements automated unit, integration, and security tests. Ensures continuous verification of system behavior against security and functional requirements.</p></li>
+<li><p><strong>DevSecOps:</strong> Integrates security into CI/CD pipelines, enforces security gates, runs SAST/DAST scans, dependency scanning, configuration validation, and automated deployment. Monitors production for security anomalies.</p></li>
+</ul>
+<p><strong>Example Tools/Frameworks:</strong> Selenium, Cypress, JUnit, PyTest, SonarQube, ZAP, Checkmarx, Jenkins, GitLab CI/CD, GitHub Actions, Aqua Security, Snyk.</p>
+</section>
+<hr class="docutils" />
+<section id="configuration-management-and-change-control">
+<h2>Configuration Management and Change Control<a class="headerlink" href="#configuration-management-and-change-control" title="Link to this heading"></a></h2>
+<p>Configuration and change control are critical for keeping a system secure over time. Many incidents are caused not by bad code, but by untracked configuration changes or unclear ownership.</p>
+<section id="id2">
+<h3>Web Application Level<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<p><strong>Architecture:</strong></p>
+<ul class="simple">
+<li><p>Decide what configuration is allowed to change at runtime vs deploy time.</p></li>
+<li><p>Define environment separation and promotion rules.</p></li>
+<li><p>Require auditability and rollback capability.</p></li>
+</ul>
+<p><strong>Engineering:</strong></p>
+<ul class="simple">
+<li><p>Design configuration ownership and approval flows.</p></li>
+<li><p>Decide how config moves between environments.</p></li>
+<li><p>Define how secrets, feature flags, and runtime config are handled.</p></li>
+</ul>
+<p><strong>Implementation:</strong></p>
+<ul class="simple">
+<li><p>Store configuration as code where possible.</p></li>
+<li><p>Enforce immutable builds.</p></li>
+<li><p>Ensure all changes are traceable.</p></li>
+</ul>
+<p><strong>Tools &amp; frameworks:</strong> Git workflows, feature flags, secrets managers, IaC tools.</p>
+</section>
+<section id="id3">
+<h3>System / Sub-System Level<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<p><strong>Architecture:</strong></p>
+<ul class="simple">
+<li><p>Define security-critical configuration.</p></li>
+<li><p>Define safe defaults.</p></li>
+</ul>
+<p><strong>Engineering:</strong></p>
+<ul class="simple">
+<li><p>Design validation rules.</p></li>
+<li><p>Define rollout strategies.</p></li>
+</ul>
+<p><strong>Implementation:</strong></p>
+<ul class="simple">
+<li><p>Validate configuration at startup.</p></li>
+<li><p>Fail fast on insecure config.</p></li>
+</ul>
+<p><strong>Tools &amp; frameworks:</strong> Terraform, Ansible, Helm, Kubernetes admission controls.</p>
+</section>
+<section id="component-level">
+<h3>Component Level<a class="headerlink" href="#component-level" title="Link to this heading"></a></h3>
+<p><strong>Architecture:</strong></p>
+<ul class="simple">
+<li><p>Define non-configurable security properties.</p></li>
+</ul>
+<p><strong>Engineering:</strong></p>
+<ul class="simple">
+<li><p>Design configuration schemas.</p></li>
+</ul>
+<p><strong>Implementation:</strong></p>
+<ul class="simple">
+<li><p>Enforce strict parsing.</p></li>
+</ul>
+<p><strong>Tools &amp; frameworks:</strong> Schema validation, typed config libraries.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="change-control">
+<h2>Change Control<a class="headerlink" href="#change-control" title="Link to this heading"></a></h2>
+<p>Change control ensures changes are intentional, reviewed, and reversible.</p>
+<section id="id4">
+<h3>Web Application Level<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Define what constitutes a significant change.</p></li>
+<li><p>Require traceability.</p></li>
+</ul>
+</section>
+<section id="system-level">
+<h3>System Level<a class="headerlink" href="#system-level" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Require peer review.</p></li>
+<li><p>Automate policy checks.</p></li>
+</ul>
+</section>
+<section id="id5">
+<h3>Component Level<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Enforce PRs and automated gates.</p></li>
+</ul>
+<p><strong>Tools &amp; frameworks:</strong> Git, CI/CD pipelines, policy-as-code tools.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="tools-and-frameworks">
+<h2>Tools and Frameworks<a class="headerlink" href="#tools-and-frameworks" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Architecture &amp; Modeling:</strong> SABSA, TOGAF, ArchiMate, Microsoft Threat Modeling Tool, OWASP Threat Dragon</p></li>
+<li><p><strong>Threat Modeling:</strong> STRIDE, MITRE ATT&amp;CK, OWASP ASVS</p></li>
+<li><p><strong>Static &amp; Dynamic Analysis:</strong> SonarQube, Checkmarx, Fortify, OWASP ZAP, Burp Suite</p></li>
+<li><p><strong>QA Automation:</strong> Selenium, Cypress, JUnit, PyTest</p></li>
+<li><p><strong>DevSecOps &amp; CI/CD:</strong> GitHub Actions, GitLab CI/CD, Jenkins, Aqua Security, Snyk, Terraform</p></li>
+<li><p><strong>Dependency &amp; Secrets Management:</strong> Snyk, WhiteSource, HashiCorp Vault</p></li>
+</ul>
+<hr class="docutils" />
+<p>This guide provides an end-to-end framework for building production-grade-grade software systems from concept through development and production, integrating architecture, engineering, and implementation practices at every level, and embedding security, QA, and DevSecOps throughout the lifecycle.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="systems.html" class="btn btn-neutral float-left" title="Systems" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="file-processing.html" class="btn btn-neutral float-right" title="File Processing system" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, prevLanky.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
