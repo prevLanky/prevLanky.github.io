@@ -4,8 +4,6 @@ Security Engineering
 :maxdepth: 10
 :caption: Table of Contents
 
-theory/theory
-practical/practical
-systems/systems
-systems/seed-server
+building-secure-system
+file-processing
 ```

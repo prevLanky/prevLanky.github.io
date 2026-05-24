@@ -12,6 +12,13 @@ In practice, governance includes:
 
 Sometimes business requirements make it impractical to fully follow a policy. In these cases, a formal exception process is used. Exceptions must be approved by the appropriate authority, documented, time-limited, and supported by compensating controls to reduce risk.
 
+Policies: A formal statement that outlines an organisation's goals, principles, and guidelines for achieving specific objectives.
+Standards: A document establishing specific requirements or specifications for a particular process, product, or service.
+Guidelines: A document that provides recommendations and best practices (non-mandatory) for achieving specific goals or objectives.
+Procedures: Set of specific steps for undertaking a particular task or process.
+Baselines: A set of minimum security standards or requirements that an organisation or system must meet.
+
+
 ### COBIT
 COBIT is a governance framework that focuses on aligning IT and security with business goals. It defines processes, control objectives, and performance metrics to ensure effective governance.
 
