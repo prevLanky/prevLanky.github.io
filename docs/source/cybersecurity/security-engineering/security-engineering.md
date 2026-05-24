@@ -6,5 +6,4 @@ Security Engineering
 
 theory/theory
 practical/practical
-systems/systems
 ```
