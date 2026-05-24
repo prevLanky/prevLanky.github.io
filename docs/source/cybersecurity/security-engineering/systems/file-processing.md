@@ -2,7 +2,7 @@
 
 This is a design/architecture for how to securely handle files that are uploaded to a webserver from internet.
 
-# Requirements 
+## Requirements 
 - The system needs to be plug-n-play for all kinds of webapps;
 - Each file needs to be sanitized;
 - Each file need be considered untrustworhy and never be executed;
@@ -11,7 +11,7 @@ This is a design/architecture for how to securely handle files that are uploaded
 - The system need to be configurable to fit different deploment models;
 - The system need to be DoS resistant;
 
-# Security principles
+## Security principles
 - principle of Least privlige
 - Separation of concerns
 - Trust boundries
@@ -24,21 +24,21 @@ This is a design/architecture for how to securely handle files that are uploaded
 - Store artefact/metadata
 
 
-# Use Cases
+## Use Cases
 
-# Components
-## File storage
-### Requirements
+## Components
+### File storage
+#### Requirements
 
-## Message queue
-### Requirements
+### Message queue
+#### Requirements
 
-## File processors (Slave)
-### Requirements
+### File processors (Slave)
+#### Requirements
 
-## Job orchestrator
-### Requirements
+### Job orchestrator
+#### Requirements
 
-## Job storage
-### Requirements
+### Job storage
+#### Requirements
 

@@ -5,5 +5,5 @@ Security Engineering
 :caption: Table of Contents
 
 theory/theory
-practical/practical
+systems/systems
 ```
