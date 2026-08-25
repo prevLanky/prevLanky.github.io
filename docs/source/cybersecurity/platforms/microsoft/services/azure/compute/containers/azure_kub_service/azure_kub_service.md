@@ -8,7 +8,7 @@ How to design the component?
 How to design the supporting infrastructure?
 
 ```{graphviz}
-:caption: AKS Confidential Containers – Secure Azure Architecture
+:caption: Simple AKS Confidential Container High-Level Architecture
 :align: center
 
 digraph architecture {
@@ -19,111 +19,108 @@ digraph architecture {
     edge [fontname="Helvetica"]
 
     /* =======================
-       INTERNET / EDGE
+       INTERNET
        ======================= */
 
-    internet [label="INTERNET", fillcolor="#FFFFFF"]
+    internet [label="Internet", fillcolor="#FFFFFF"]
 
-    frontdoor [label="Azure Front Door / WAF\n• TLS\n• WAF\n• DDoS protection", fillcolor="#FFCCCC"]
-
-    appgw [label="Application Gateway / Ingress\n• Routing\n• TLS\n• Application ingress", fillcolor="#FFCCCC"]
+    frontend [label="Azure Front Door\n/ WAF", fillcolor="#FFCCCC"]
 
     /* =======================
-       PRIVATE VNET
+       AZURE
        ======================= */
 
-    subgraph cluster_vnet {
-        label="Private VNet"
+    subgraph cluster_azure {
+        label="Azure"
         style="filled"
         color="#E6F2FF"
-
-        /* =======================
-           AKS
-           ======================= */
 
         subgraph cluster_aks {
             label="Azure Kubernetes Service (AKS)"
             style="filled"
             color="#CCE5FF"
 
-            api [label="Private AKS API Server\n• Private endpoint\n• Entra ID\n• RBAC", fillcolor="#FFFFFF"]
+            app [label="Application", fillcolor="#D7BDE2"]
 
-            subgraph cluster_confidential {
-                label="Confidential Workload"
-                style="filled"
-                color="#E8DAEF"
-
-                application [label="Application\n• Container\n• Non-root\n• Minimal privileges", fillcolor="#D7BDE2"]
-
-                kata [label="Kata Confidential Containers\n• Confidential VM isolation\n• Workload isolation", fillcolor="#D7BDE2"]
-
-                tee [label="Hardware TEE\nAMD SEV-SNP\n• Encrypted memory\n• Hardware-backed isolation", fillcolor="#BB8FCE"]
-            }
-
-            controls [label="AKS Security Controls\n• NetworkPolicy\n• Pod Security\n• Workload Identity\n• Azure Policy", fillcolor="#CCE5FF"]
+            confidential [label="Confidential Container\nProtected workload", fillcolor="#D7BDE2"]
         }
 
-        /* =======================
-           DATA SERVICES
-           ======================= */
+        keyvault [label="Azure Key Vault\nSecrets", fillcolor="#D5F5E3"]
 
-        keyvault [label="Azure Key Vault\n• Secrets\n• Keys\n• Certificates\n• Private Endpoint", fillcolor="#D5F5E3"]
-
-        database [label="Azure Database\n• PostgreSQL / SQL\n• Private Endpoint\n• Encryption at rest", fillcolor="#D5F5E3"]
+        database [label="Database\nApplication data", fillcolor="#D5F5E3"]
     }
 
     /* =======================
-       ATTESTATION
+       TRUST
        ======================= */
 
-    subgraph cluster_attestation {
-        label="Confidential Computing Trust"
-        style="filled"
-        color="#FCF3CF"
-
-        attestation [label="Azure Attestation\n• Verify TEE evidence\n• Validate workload state\n• Attestation token", fillcolor="#F9E79F"]
-    }
+    attestation [label="Attestation\nVerify workload", fillcolor="#F9E79F"]
 
     /* =======================
-       INGRESS FLOW
+       FLOWS
        ======================= */
 
-    internet -> frontdoor [label="HTTPS"]
-    frontdoor -> appgw [label="HTTPS"]
-    appgw -> application [label="Application traffic"]
+    internet -> frontend [label="1. HTTPS"]
+    frontend -> app [label="2. Request"]
 
-    /* =======================
-       AKS INTERNAL FLOW
-       ======================= */
+    app -> confidential [label="3. Runs inside"]
 
-    application -> kata [label="Execute"]
-    kata -> tee [label="Protected execution"]
+    confidential -> database [label="4. Read / write data"]
 
-    /* =======================
-       AKS CONTROL PLANE
-       ======================= */
+    confidential -> attestation [label="5. Prove it's trusted"]
 
-    api -> application [label="Kubernetes control"]
+    attestation -> keyvault [label="6. Allow secret access"]
 
-    /* =======================
-       SECURITY CONTROLS
-       ======================= */
+    keyvault -> confidential [label="7. Secret"]
+}
+```
 
-    controls -> application [label="Enforce security policy"]
+```{graphviz}
+---
+:caption: What Makes a Container Confidential?
+:align: center
 
-    /* =======================
-       DATA ACCESS
-       ======================= */
+digraph architecture {
+    rankdir=TB
+    fontname="Helvetica"
 
-    application -> keyvault [label="Private access\nvia Private Endpoint"]
-    application -> database [label="Private access\nvia Private Endpoint"]
+    node [shape=box style="rounded,filled" fontname="Helvetica"]
+    edge [fontname="Helvetica"]
 
-    /* =======================
-       ATTESTATION / SECRET RELEASE
-       ======================= */
+    application [label="Application\nSensitive data", fillcolor="#D7BDE2"]
 
-    tee -> attestation [label="TEE evidence"]
-    attestation -> keyvault [label="Verified workload\n→ release secret"]
+    container [label="Confidential Container", fillcolor="#D7BDE2"]
 
+    tee [label="Protected Environment\nHardware-backed protection", fillcolor="#F9E79F"]
+
+    host [label="Underlying Infrastructure", fillcolor="#FFFFFF"]
+
+    application -> container [label="Runs inside"]
+    container -> tee [label="Protected by"]
+    tee -> host [label="Isolated from"]
+}
+```
+
+---
+```{graphviz}
+:caption: Attestation and Secret Access
+:align: center
+
+digraph architecture {
+    rankdir=LR
+    fontname="Helvetica"
+
+    node [shape=box style="rounded,filled" fontname="Helvetica"]
+    edge [fontname="Helvetica"]
+
+    workload [label="Confidential\nContainer", fillcolor="#D7BDE2"]
+
+    attestation [label="Attestation\nIs this a trusted\nworkload?", fillcolor="#F9E79F"]
+
+    keyvault [label="Azure Key Vault\nSecret / Key", fillcolor="#D5F5E3"]
+
+    workload -> attestation [label="1. Prove workload"]
+    attestation -> keyvault [label="2. If trusted"]
+    keyvault -> workload [label="3. Release secret"]
 }
 ```
