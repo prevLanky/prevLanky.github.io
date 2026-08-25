@@ -75,8 +75,9 @@ digraph architecture {
 }
 ```
 
-```{graphviz}
 ---
+
+```{graphviz}
 :caption: What Makes a Container Confidential?
 :align: center
 
