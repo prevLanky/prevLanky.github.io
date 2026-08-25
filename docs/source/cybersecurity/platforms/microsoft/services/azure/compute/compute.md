@@ -6,5 +6,4 @@ Compute
 
 virtual_machines/virtual_machines
 containers/containers
-azure_kub_service/azure_kub_service
 ```
