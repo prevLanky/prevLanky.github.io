@@ -7,8 +7,7 @@ Some text here
 :caption: Table of Contents
 
 general-pages/about
-coding/coding
+programming/programming
 cybersecurity/cybersecurity
-guides/guides
 wiki/wiki
 ```

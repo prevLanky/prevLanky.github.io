@@ -7,7 +7,6 @@ Some content about this wiki page
 :maxdepth: 10
 :caption: Table of Contents
 
+platforms/platforms
 security-engineering/security-engineering
-standards/standards
-hacking/hacking
 ```

@@ -3,6 +3,18 @@
 rm -rf docs/build && python -m sphinx -b html docs/source docs/build/html
 
 # Setup github pages
+# Install/update pip
+python -m pip install --upgrade pip
+
+# Install Sphinx and Furo
+python -m pip install sphinx
+python -m pip install furo
+python -m pip install myst-parser sphinx-rtd-theme sphinx-rtd-dark-mode
+
+
+# Create Sphinx project
+sphinx-quickstart
+python -m pip install --upgrade pip
 pip install sphinx
 pip install furo
 mkdir docs

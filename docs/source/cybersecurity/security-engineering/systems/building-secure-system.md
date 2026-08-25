@@ -2,22 +2,6 @@
 
 This Markdown document provides a comprehensive guide on building a production-grade software system, web application, or production-grade product securely and maintainably from concept to production. It integrates architecture, engineering, and implementation practices at every level, along with threat modeling, QA, and DevSecOps considerations.
 
----
-
-## Table of Contents
-
-1. [Roles and Responsibilities](#roles-and-responsibilities)
-2. [Architecture, Engineering, and Implementation Across Levels](#architecture-engineering-and-implementation-across-levels)
-
-   * [Platform-Level / Enterprise Architecture](#platform-level--production-grade-architecture)
-   * [System/Sub-System Level](#system-sub-system-level)
-   * [Component / Application Level](#component--application-level)
-3. [Threat Modeling Across Levels](#threat-modeling-across-levels)
-4. [QA, QA Automation, and DevSecOps Integration](#qa-qa-automation-and-devsecops-integration)
-5. [Tools and Frameworks](#tools-and-frameworks)
-
----
-
 ## Roles and Responsibilities
 
 Building a secure production-grade-grade system requires clear delineation of roles:
@@ -282,7 +266,3 @@ Change control ensures changes are intentional, reviewed, and reversible.
 * **QA Automation:** Selenium, Cypress, JUnit, PyTest
 * **DevSecOps & CI/CD:** GitHub Actions, GitLab CI/CD, Jenkins, Aqua Security, Snyk, Terraform
 * **Dependency & Secrets Management:** Snyk, WhiteSource, HashiCorp Vault
-
----
-
-This guide provides an end-to-end framework for building production-grade-grade software systems from concept through development and production, integrating architecture, engineering, and implementation practices at every level, and embedding security, QA, and DevSecOps throughout the lifecycle.

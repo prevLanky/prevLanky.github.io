@@ -1,13 +1,9 @@
-Coding
+Platforms
 ==================
-
-Some content about this wiki page 
 
 ```{toctree}
 :maxdepth: 10
 :caption: Table of Contents
 
-cpp/cpp
-python/python
-design/design
+microsoft/microsoft
 ```

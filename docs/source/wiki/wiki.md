@@ -7,5 +7,4 @@ Some content about this wiki page
 :maxdepth: 10
 :caption: Table of Contents
 
-cybersecurity/cybersecurity
 ```

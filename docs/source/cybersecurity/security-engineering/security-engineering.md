@@ -4,6 +4,5 @@ Security Engineering
 :maxdepth: 10
 :caption: Table of Contents
 
-theory/theory
 systems/systems
 ```
