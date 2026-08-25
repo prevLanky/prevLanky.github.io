@@ -1,9 +1,10 @@
-Microsoft
+Security
 ==================
 ```{toctree}
 :maxdepth: 10
 :caption: Table of Contents
 
-services/services
-cve_writeups/cve_writeups
+defender/defender
+sentinel/sentinel
+key_vault/key_vault
 ```

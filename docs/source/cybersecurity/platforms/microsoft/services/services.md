@@ -1,9 +1,8 @@
-Microsoft
+Microsoft services
 ==================
 ```{toctree}
 :maxdepth: 10
 :caption: Table of Contents
 
-services/services
-cve_writeups/cve_writeups
+azure/azure
 ```
