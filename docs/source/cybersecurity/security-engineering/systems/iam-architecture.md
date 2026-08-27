@@ -1,0 +1,319 @@
+IAM Architecture
+What is IAM Architecture?
+
+IAM (Identity and Access Management) is the architecture used to manage identities, authentication, authorization, access lifecycle, and accountability across an organization's systems.
+
+A mature IAM architecture separates several different responsibilities:
+
+Identity management
+Authentication
+Authorization
+Identity governance
+Privileged access management
+Directory services
+Federation and SSO
+Network authentication
+Auditing and accountability
+
+One of the most important principles in IAM is to centralize identity and identity lifecycle management while allowing individual systems to enforce their own authorization policies.
+
+The central identity infrastructure maintains the user's identity and relevant attributes, while individual systems decide what that user is allowed to do within their own environment. This keeps the IAM architecture manageable and avoids forcing one central system to understand every permission and business rule across the organization.
+
+A useful way to think about this is that identity should be centralized, but authorization does not necessarily need to be.
+
+Authentication and authorization should also remain separate concepts. Authentication establishes the identity of a user, while authorization determines what that identity is permitted to access or perform.
+
+Why use it?
+
+Without a centralized IAM architecture, organizations can end up managing identities separately across applications, databases, infrastructure, networks, and other systems.
+
+As the organization grows, this becomes increasingly difficult to manage securely. Different systems can end up with different accounts, different access rules, and different processes for removing access.
+
+The identity lifecycle is particularly important. When someone joins the organization, they need the appropriate access. When their responsibilities change, their access needs to change as well. When they leave, their access needs to be removed.
+
+Without proper lifecycle management, accounts can remain active after they are no longer required. These are commonly referred to as orphaned accounts and can become an unnecessary attack path.
+
+A centralized IAM architecture provides a consistent way to manage this lifecycle while also making it easier to enforce security controls such as strong authentication, MFA, least privilege, access reviews, separation of duties, and privileged access management.
+
+The goal is not to centralize every security decision. Instead, the goal is to centralize the parts of identity management where central control provides the most value.
+
+When to use it?
+
+IAM architecture should be used whenever an organization has multiple users, systems, applications, networks, or resources that require controlled access.
+
+It becomes increasingly important as the organization grows and the number of identities and systems increases.
+
+IAM is particularly important when an organization has:
+
+Large numbers of users
+Multiple applications
+Multiple environments
+Cloud and on-premises systems
+External users
+Contractors
+Privileged administrators
+Sensitive information
+Regulatory requirements
+Complex authorization requirements
+Multiple organizations or security domains
+
+It is especially important for systems containing:
+
+Financial information
+Customer information
+Intellectual property
+Administrative interfaces
+Production infrastructure
+Security infrastructure
+Sensitive business systems
+
+IAM should be designed around principles such as least privilege, separation of duties, strong authentication, centralized lifecycle management, and continuous monitoring.
+
+Provisioning vs Just-In-Time
+
+There are two common approaches to providing identities and access to systems: provisioning and Just-In-Time (JIT) provisioning.
+
+Provisioning / Synchronization
+
+With provisioning, the IAM or IGA system creates, updates, or removes an account or access assignment in a target system.
+
+This is useful when the target system requires a local account to exist before access can be provided, or when the organization needs explicit control over the complete account lifecycle.
+
+Provisioning provides strong lifecycle control because changes can be automatically propagated to connected systems.
+
+The main drawback is the additional synchronization dependency. Every connected system introduces another integration that can fail, become outdated, or require maintenance.
+
+For security-critical access, provisioning and deprovisioning should therefore be monitored and regularly tested.
+
+Just-In-Time Provisioning
+
+With Just-In-Time provisioning, a local account can be created when a user successfully authenticates to a target system.
+
+This can reduce the number of accounts that need to exist before they are actually required and can simplify access to systems that support federation.
+
+However, JIT provisioning should not be considered a replacement for identity lifecycle management.
+
+There must still be a reliable mechanism for ensuring that an identity that is no longer valid cannot continue accessing the system.
+
+It is also important to distinguish between JIT provisioning and JIT privileged access.
+
+JIT provisioning concerns when an account is created.
+
+JIT privileged access concerns when elevated privileges are granted and how long those privileges remain active.
+
+These are separate security mechanisms that solve different problems.
+
+Central Identity vs Local Authorization
+
+A key architectural decision is determining which responsibilities belong in the central IAM infrastructure and which should remain within individual systems.
+
+The central IAM infrastructure should generally be responsible for:
+
+Identity
+Identity lifecycle
+Authentication
+Relevant identity attributes
+Organizational relationships
+Central access governance
+
+Individual systems should generally remain responsible for:
+
+Resource-specific authorization
+Application roles
+Business rules
+Resource permissions
+Context-specific authorization decisions
+
+This creates a useful separation between identity authority and resource authorization.
+
+The central IAM system does not need to understand every permission and business rule within every application. Instead, it provides the identity and relevant context to the target system, while the target system evaluates whether the requested operation should be allowed.
+
+This is particularly important because individual applications understand their own resources and business logic better than a central IAM system ever could.
+
+A good general principle is:
+
+Centralize identity and governance, while keeping resource-specific authorization close to the resource being protected.
+
+This also reduces unnecessary coupling between applications and the central IAM infrastructure.
+
+Drawbacks
+
+Centralizing IAM provides significant security and operational benefits, but it also introduces several risks.
+
+Central IAM becomes a high-value target
+
+The central identity infrastructure becomes a critical security boundary.
+
+If it is compromised, an attacker may potentially gain access to multiple applications and systems.
+
+IAM infrastructure should therefore receive strong security controls, including:
+
+Strong administrative authentication
+Least privilege
+Privileged access management
+Network protection
+Continuous monitoring
+Security logging
+Configuration protection
+Regular security assessments
+
+The administrative layer protecting IAM should itself be treated as highly sensitive.
+
+Availability dependency
+
+Applications that depend on centralized authentication can be affected if the IAM infrastructure becomes unavailable.
+
+This makes the availability and resilience of IAM particularly important.
+
+The architecture should consider:
+
+High availability
+Redundancy
+Disaster recovery
+Backup and recovery
+Monitoring
+Dependency management
+Emergency access procedures
+
+The organization should also understand which systems depend on centralized authentication and what the consequences would be if that authentication service became unavailable.
+
+Excessive centralization
+
+Centralizing too much can also become a problem.
+
+Trying to manage every authorization decision centrally can create a highly complex system with strong dependencies between the IAM infrastructure and individual applications.
+
+It is generally better to centralize identity, authentication, and governance while allowing applications and resource owners to manage their own resource-specific authorization policies.
+
+This creates a more modular architecture and reduces the impact of changes within individual applications.
+
+Synchronization failures
+
+Provisioning and synchronization introduce additional failure modes.
+
+If an identity or access change is not successfully propagated to a target system, that system may contain outdated access information.
+
+This is particularly concerning during deprovisioning because an account may remain active after access should have been revoked.
+
+Provisioning and deprovisioning should therefore be monitored, logged, and regularly tested.
+
+How to configure it according to security best practices?
+
+The exact implementation depends on the organization's environment, but the architecture should generally follow these principles:
+
+Establish a clearly defined authoritative source for identities.
+Give every identity a unique and stable identifier.
+Separate authentication from authorization.
+Use strong authentication, especially for privileged access.
+Apply MFA where the risk justifies it.
+Use SSO and federation where appropriate.
+Minimize the identity attributes shared with applications.
+Follow the principle of least privilege.
+Use role-based or attribute-based authorization where appropriate.
+Keep application-specific authorization policies within the application or resource domain.
+Use automated provisioning and deprovisioning where possible.
+Make deprovisioning reliable and observable.
+Prefer temporary privileged access over permanent administrative privileges.
+Implement regular access reviews for sensitive access.
+Implement separation of duties for critical operations.
+Protect emergency and break-glass access separately.
+Log authentication, authorization, provisioning, deprovisioning, and privilege changes.
+Monitor IAM infrastructure as a critical security boundary.
+Protect service identities using least-privilege principles.
+Avoid unnecessary synchronization of identity data.
+Encrypt sensitive identity information in transit and at rest.
+Design the IAM infrastructure for high availability and recovery.
+Regularly test account revocation and privilege-removal processes.
+Regularly review integrations and remove unused or obsolete connections.
+Strongly protect administrative access to the IAM infrastructure.
+Monitor changes to IAM configuration and authorization policies.
+Ensure that access decisions can be traced back to an identity, policy, and authorization event.
+
+The overall goal should be to minimize unnecessary trust.
+
+Applications should receive only the identity information they actually need, and authorization decisions should be based on the minimum information and privileges necessary to perform the requested operation.
+
+
+How to design the component?
+
+The IAM architecture should be separated into logical security domains.
+
+```{graphviz}
+:caption: High-Level IAM Architecture
+:align: center
+digraph architecture {
+
+    rankdir=TB
+
+    fontname="Helvetica"
+
+    node [
+        shape=box
+        style="rounded,filled"
+        fontname="Helvetica"
+    ]
+
+    edge [
+        fontname="Helvetica"
+    ]
+
+    identity [
+        label="Central Identity\nIdentity + Attributes",
+        fillcolor="#D5F5E3"
+    ]
+
+    authentication [
+        label="Authentication\nMFA / SSO / Federation",
+        fillcolor="#D7BDE2"
+    ]
+
+    iga [
+        label="IGA\nIdentity Governance\n& Lifecycle",
+        fillcolor="#F9E79F"
+    ]
+
+    provisioning [
+        label="Provisioning\nCreate / Update / Revoke",
+        fillcolor="#F9E79F"
+    ]
+
+    application [
+        label="Application / Resource",
+        fillcolor="#D7BDE2"
+    ]
+
+    authorization [
+        label="Local Authorization\nRBAC / ABAC / Policy",
+        fillcolor="#F9E79F"
+    ]
+
+    identity -> authentication [
+        label="Identity"
+    ]
+
+    identity -> iga [
+        label="Lifecycle"
+    ]
+
+    iga -> provisioning [
+        label="Access lifecycle"
+    ]
+
+    provisioning -> application [
+        label="Provision / revoke"
+    ]
+
+    authentication -> application [
+        label="Authentication result"
+    ]
+
+    application -> authorization [
+        label="Evaluate access"
+    ]
+
+    authorization -> application [
+        label="Allow / deny"
+    ]
+
+}
+```
