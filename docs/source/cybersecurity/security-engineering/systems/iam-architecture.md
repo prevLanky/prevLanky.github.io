@@ -285,3 +285,241 @@ digraph architecture {
 
 }
 ```
+
+# Centralized Authorization Architecture
+
+In a centralized authorization architecture, authorization decisions are handled by a central policy decision component rather than being implemented independently inside every application.
+
+The applications still enforce the final decision, but they rely on the central authorization service to determine whether access should be allowed.
+
+This can be useful when an organization wants consistent authorization policies across many applications and resources.
+
+```{graphviz}
+:caption: Centralized Authorization Architecture
+:align: center
+digraph architecture {
+
+    rankdir=TB
+
+    fontname="Helvetica"
+
+    node [
+        shape=box
+        style="rounded,filled"
+        fontname="Helvetica"
+    ]
+
+    edge [
+        fontname="Helvetica"
+    ]
+
+    identity [
+        label="Central Identity",
+        fillcolor="#D5F5E3"
+    ]
+
+    policy [
+        label="Central Authorization\nPolicy Engine",
+        fillcolor="#F9E79F"
+    ]
+
+    app1 [
+        label="Application A",
+        fillcolor="#D7BDE2"
+    ]
+
+    app2 [
+        label="Application B",
+        fillcolor="#D7BDE2"
+    ]
+
+    resource [
+        label="Protected Resources",
+        fillcolor="#D5F5E3"
+    ]
+
+    identity -> policy [
+        label="Identity / Attributes"
+    ]
+
+    app1 -> policy [
+        label="Authorization request"
+    ]
+
+    app2 -> policy [
+        label="Authorization request"
+    ]
+
+    policy -> app1 [
+        label="Allow / Deny"
+    ]
+
+    policy -> app2 [
+        label="Allow / Deny"
+    ]
+
+    app1 -> resource [
+        label="Access"
+    ]
+
+    app2 -> resource [
+        label="Access"
+    ]
+
+}
+```
+
+The main advantage is consistency. Authorization policies can be managed centrally, making it easier to apply common rules across many systems.
+
+The main drawback is that applications become more dependent on the central authorization infrastructure. Availability, performance, and policy-engine security therefore become important considerations.
+
+This architecture is most useful when authorization rules need to be consistent across many systems or when the organization wants centralized control over sensitive access policies.
+
+# Decentralized / Federated IAM Architecture
+
+In a decentralized or federated architecture, multiple identity domains or organizations maintain their own identity infrastructure while establishing trust between them.
+
+Instead of forcing every identity into one central system, each security domain remains responsible for its own users.
+
+Federation allows users to authenticate in their own domain while accessing resources in another trusted domain.
+
+```{graphviz}
+:caption: Decentralized / Federated IAM Architecture
+:align: center
+digraph architecture {
+
+    rankdir=LR
+
+    fontname="Helvetica"
+
+    node [
+        shape=box
+        style="rounded,filled"
+        fontname="Helvetica"
+    ]
+
+    edge [
+        fontname="Helvetica"
+    ]
+
+    domainA [
+        label="Identity Domain A\nUsers + Identity",
+        fillcolor="#D5F5E3"
+    ]
+
+    domainB [
+        label="Identity Domain B\nUsers + Identity",
+        fillcolor="#D5F5E3"
+    ]
+
+    trust [
+        label="Federation / Trust",
+        fillcolor="#F9E79F"
+    ]
+
+    resourceA [
+        label="Resources\nDomain A",
+        fillcolor="#D7BDE2"
+    ]
+
+    resourceB [
+        label="Resources\nDomain B",
+        fillcolor="#D7BDE2"
+    ]
+
+    domainA -> trust [
+        label="Trusted identity"
+    ]
+
+    domainB -> trust [
+        label="Trusted identity"
+    ]
+
+    trust -> resourceA [
+        label="Access"
+    ]
+
+    trust -> resourceB [
+        label="Access"
+    ]
+
+}
+```
+
+The advantage is that each organization or security domain can maintain control over its own identities without having to merge identity databases.
+
+This is particularly useful in environments involving:
+- Multiple organizations
+- Business partners
+- Mergers and acquisitions
+- External users
+- Multi-tenant environments
+- Large organizations with independent security domains
+
+The main challenge is trust management.
+
+Once two identity domains establish a federation relationship, each side needs to carefully define what identities, attributes, and authentication claims it is willing to trust.
+
+# Comparison of IAM Architectures
+
+## 1. Centralized Identity + Local Authorization
+### Pros
+- Simple separation of responsibilities
+- Flexible
+- Applications control their own access rules
+
+### Cons
+- Authorization can become inconsistent
+- Each application must implement authorization correctly
+
+### When to use
+- Most organizations
+- Many applications with different access requirements
+
+### When not to use
+- When the same authorization policies must be enforced everywhere
+
+## Best for
+- Most organizations
+
+## 2. Centralized Identity + Centralized Authorization
+### Pros
+- Consistent policies
+- Centralized control
+- Easier to manage common access rules
+
+### Cons
+- Central dependency
+- More complex
+- Central authorization becomes a high-value target
+
+### When to use
+- When consistent authorization is important
+- Highly sensitive resources
+
+### When not to use
+When applications have very different authorization requirements
+
+### Best for
+- Consistent policies
+
+## 3. Federated / Decentralized IAM
+### Pros
+- Works across organizations
+- Each organization keeps control of its identities
+- Good for external users and partners
+
+### Cons
+- More complex
+- Requires careful trust management
+
+### When to use
+- Multiple organizations
+- Partners
+- Multiple independent identity domains
+
+### When not to use
+- Small environments with one identity domain
+
+### Best for
+- Multiple organizations
