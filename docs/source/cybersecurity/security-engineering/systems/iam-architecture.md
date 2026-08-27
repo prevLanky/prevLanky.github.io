@@ -22,6 +22,49 @@ A useful way to think about this is that identity should be centralized, but aut
 
 Authentication and authorization should also remain separate concepts. Authentication establishes the identity of a user, while authorization determines what that identity is permitted to access or perform.
 
+## Security Benefits
+
+A well-designed IAM architecture can provide several important security benefits:
+- Reduced attack surface: Centralized identity management reduces the need for independent accounts and credentials across many systems.
+- Least privilege: Access can be controlled based on what a user actually needs to perform their role.
+- Stronger authentication: Authentication policies such as MFA can be applied consistently.
+- Reliable deprovisioning: Access can be removed when an identity is disabled or no longer requires access.
+- Reduced credential exposure: SSO and federation can reduce the number of credentials users need to manage.
+- Better visibility: Authentication, authorization, and access changes can be logged and monitored centrally.
+- Privileged access protection: Administrative access can be separated, restricted, monitored, and made temporary where appropriate.
+- Improved accountability: Access and administrative actions can be associated with specific identities.
+- Better access governance: Access reviews and separation of duties can help prevent excessive or inappropriate access.
+
+The security benefit comes primarily from having consistent control over the identity lifecycle and access, rather than simply having a centralized identity database.
+
+## Security Implications
+
+IAM is also a critical security boundary and therefore needs to be protected accordingly.
+
+Because many systems may depend on the central identity infrastructure, compromising it can have a significant impact. An attacker who gains control of privileged IAM accounts may be able to access multiple applications and resources.
+
+This makes IAM infrastructure itself a high-value target.
+
+Important security considerations include:
+- Protect privileged IAM administration with strong authentication and least privilege.
+- Separate administrative identities from normal user identities where appropriate.
+- Monitor authentication and privileged activity.
+- Protect service and machine identities.
+- Carefully control federation and trust relationships.
+- Minimize the identity information shared with applications.
+- Regularly review access and privileges.
+- Ensure deprovisioning works reliably.
+- Monitor provisioning and synchronization failures.
+- Protect emergency and break-glass access.
+- Design IAM for high availability and recovery.
+- Regularly test identity revocation and privilege removal.
+
+Centralization also creates an availability consideration. If many systems depend on the same authentication infrastructure, an IAM outage can affect access across the organization. High availability, redundancy, recovery procedures, and appropriate emergency access therefore become important parts of the architecture.
+
+The central IAM system should also not automatically be treated as the authority for every authorization decision. Applications and resource owners still need to enforce their own security policies where appropriate.
+
+A good IAM architecture therefore tries to balance centralized control, local enforcement, security, availability, and operational simplicity.
+
 ## Why use it?
 
 Without a centralized IAM architecture, organizations can end up managing identities separately across applications, databases, infrastructure, networks, and other systems.
@@ -294,6 +337,45 @@ The applications still enforce the final decision, but they rely on the central 
 
 This can be useful when an organization wants consistent authorization policies across many applications and resources.
 
+## Why use it?
+
+As an organization grows, having authorization logic implemented independently across many applications can lead to inconsistent policies and duplicated logic.
+Centralized authorization provides a common place to manage and evaluate authorization policies.
+This can make it easier to apply consistent security requirements across multiple applications and resources while reducing duplicated authorization logic.
+
+## Security Benefits
+
+A well-designed centralized authorization architecture can provide several security benefits:
+- Consistent authorization policies
+- Centralized control over access rules
+- Easier auditing of authorization decisions
+- Reduced duplicated authorization logic
+- Easier enforcement of least privilege
+- Better visibility into access decisions
+- Easier policy changes across multiple systems
+- Reduced risk of applications implementing different versions of the same access policy
+
+Centralized authorization can also make authorization policies easier to review and govern because policies are not completely scattered across individual applications.
+
+## Security Implications
+
+Centralized authorization also introduces additional security considerations.
+The authorization infrastructure becomes a high-value security component because multiple applications may depend on it.
+
+Important considerations include:
+- Protect the authorization service itself
+- Apply strong administrative access controls
+- Use least privilege for policy administration
+- Monitor policy changes
+- Log authorization decisions
+- Protect communication between applications and the authorization service
+- Design for high availability
+- Consider what happens if the authorization service becomes unavailable
+- Carefully validate identity attributes and authorization context
+- Prevent applications from bypassing centralized authorization decisions
+
+Authorization policies should also be carefully designed. A central policy engine should not automatically become responsible for every application-specific business rule.
+
 ```{graphviz}
 :caption: Centralized Authorization Architecture
 :align: center
@@ -382,6 +464,47 @@ In a decentralized or federated architecture, multiple identity domains or organ
 Instead of forcing every identity into one central system, each security domain remains responsible for its own users.
 
 Federation allows users to authenticate in their own domain while accessing resources in another trusted domain.
+
+## Why use it?
+
+Federation is useful when users need to access resources outside their own organization or security domain.
+It avoids the need to create and maintain separate identities for the same user in every organization or environment they need to access.
+This can simplify access management across organizational boundaries while allowing each organization to maintain control over its own users.
+Federation is particularly useful when organizations need to collaborate without merging their identity infrastructures.
+
+## Security Benefits
+
+A well-designed federated IAM architecture can provide several security benefits:
+
+- Reduced credential duplication: Users do not need separate credentials for every trusted organization or service.
+- Centralized identity control: Each organization maintains control over its own identities and lifecycle.
+- Reduced password exposure: Applications do not need to directly manage credentials belonging to external users.
+- Improved lifecycle management: Access can depend on the user's identity remaining valid in their home organization.
+- Strong authentication: The identity provider can enforce authentication requirements before issuing a trusted authentication result.
+- Clear trust boundaries: Organizations can explicitly define which identity domains they trust.
+- Better scalability: New services or organizations can be integrated without creating completely separate identities for every user.
+- Improved user experience: Users can access trusted resources using their existing organizational identity.
+
+## Security Implications
+
+Federation introduces a significant trust relationship between otherwise independent security domains.
+If one identity domain is trusted by another, the receiving organization is relying on that identity domain to authenticate identities correctly and provide trustworthy information.
+
+Important security considerations include:
+- Carefully define trust relationships.
+- Only trust required identity providers.
+- Minimize the attributes and permissions accepted from external domains.
+- Validate authentication and authorization information.
+- Protect federation configuration.
+- Strongly protect administrators managing federation.
+- Monitor federation activity.
+- Monitor changes to trust relationships.
+- Regularly review established trust relationships.
+- Ensure compromised or deactivated identities cannot continue accessing trusted resources.
+- Clearly define responsibilities between the participating organizations.
+- Consider the impact of a compromise of a trusted identity domain.
+
+A particularly important point is that federation does not automatically mean authorization is shared.
 
 ```{graphviz}
 :caption: Decentralized / Federated IAM Architecture
