@@ -6,6 +6,7 @@ Systems
 
 internal_dev_platform/internal_dev_platform
 iam_system/iam_system
+workout_app/workout_app
 
 provisioning-platform
 seed-server

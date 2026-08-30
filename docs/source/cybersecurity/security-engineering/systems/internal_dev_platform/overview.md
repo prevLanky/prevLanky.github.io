@@ -11,7 +11,6 @@ The primary design objective is not simply to automate infrastructure provisioni
 The platform is designed to provide developers with self-service capabilities while keeping the underlying infrastructure and organizational boundaries tightly controlled.
 
 The core idea is:
-
 > **Centralized standards and governance, independently deployed and strongly isolated developer platforms.**
 
 ---
