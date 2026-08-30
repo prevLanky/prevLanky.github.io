@@ -1,0 +1,2358 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Internal Developer Platform &mdash; mygithubpages  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=8a448e45"></script>
+      <script src="../../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../../_static/dark_mode_js/default_dark.js?v=fd565c74"></script>
+      <script src="../../../../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="IAM architecture" href="../iam_system/iam_system.html" />
+    <link rel="prev" title="Internal Development Platform" href="internal_dev_platform.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            mygithubpages
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../cybersecurity.html">Cybersecurity</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../platforms/platforms.html">Platforms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../platforms/microsoft/microsoft.html">Microsoft</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../platforms/microsoft/services/services.html">Microsoft services</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../platforms/microsoft/services/azure/azure.html">Azure</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/compute.html">Compute</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/virtual_machines/virtual_machines.html">Virtual machines</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/containers.html">Containers</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/container/container.html">Container</a><ul>
+<li class="toctree-l9"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/container/container.html#some-more-title">Some more title</a></li>
+</ul>
+</li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html">Azure Kubernetes Service (AKS) Confidential Containers</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#what-is-azure-kubernetes-service-aks-confidential-containers">What is Azure Kubernetes Service (AKS) Confidential Containers?</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#why-use-it">Why use it?</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#when-to-use-it">When to use it?</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#drawbacks">Drawbacks</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#real-life-use-cases">Real life use cases</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#how-to-configure-it-according-to-security-best-practices">How to configure it according to security best practices?</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#how-to-design-the-component">How to design the component?</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#how-to-design-the-supporting-infrastructure">How to design the supporting infrastructure?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/services/azure/networking/networking.html">Networking</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/services/azure/identity/identity.html">Entra ID</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/services/azure/security/security.html">Security</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/services/azure/security/defender/defender.html">Defender</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/services/azure/security/sentinel/sentinel.html">Sentinel</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/services/azure/security/key_vault/key_vault.html">key Vault</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../platforms/microsoft/services/defender/defender.html">Defender</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/services/defender/endpoint/endpoint.html">Microsoft Defender for Endpoints</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/cve_writeups.html">CVE Writeups</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html">CVE-2024-21403</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#cve-description">CVE description</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#which-services-are-vulnerable">Which services are vulnerable</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#what-is-it">What is it?</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#how-does-these-services-interact-with-other">How does these services interact with other</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#what-type-of-vulnerability">What type of vulnerability</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#attack-vector">Attack vector</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#impact">Impact</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#affected-assets">Affected assets</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#direct-affected">Direct affected</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#indirect-affected">Indirect affected</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#exploitation-scenario">Exploitation scenario</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#detection">Detection</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#azure">Azure</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#kubernetes">Kubernetes</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#host">Host</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#patching-remediation">Patching/Remediation</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#compensating-controls">Compensating controls</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#reduce-exposure">Reduce exposure</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#kubernetes-hardening">Kubernetes hardening</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#azure-identity">Azure identity</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#monitoring">Monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#verification">Verification</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#how-could-architecture-or-design-decisions-have-prevented-or-minimized-it">How could architecture or design decisions have prevented or minimized it?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#how-to-know-if-exploited">How to know if exploited?</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#id1">Kubernetes</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#id2">Azure</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#network">Network</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../security-engineering.html">Security Engineering</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../systems.html">Systems</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="internal_dev_platform.html">Internal Development Platform</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Secure Internal Developer Platform</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#overview">Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#what-is-this-platform">What is this platform?</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#problem-statement">Problem Statement</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#relationship-to-other-platforms">Relationship to Other Platforms</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#platform-boundaries">Platform Boundaries</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#internal-developer-platform">Internal Developer Platform</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#infrastructure-platform">Infrastructure Platform</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#tooling-platform">Tooling Platform</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#identity-platform">Identity Platform</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#source-control">Source Control</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#purpose">Purpose</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#multi-department-architecture">Multi-Department Architecture</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#central-governance-local-execution">Central Governance, Local Execution</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#templates">Templates</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#template-governance">Template Governance</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#golden-paths">Golden Paths</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#secure-systems-engineering-approach">Secure Systems Engineering Approach</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#security-objectives">Security Objectives</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#isolation">Isolation</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#least-privilege">Least Privilege</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#secure-defaults">Secure Defaults</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#reproducibility">Reproducibility</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#integrity">Integrity</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#accountability">Accountability</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#resilience">Resilience</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#controlled-change">Controlled Change</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#threat-modeling">Threat Modeling</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#compromised-developer-environment">Compromised Developer Environment</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#malicious-developer">Malicious Developer</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#compromised-idp">Compromised IDP</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#trust-boundaries">Trust Boundaries</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#zero-trust-principles">Zero Trust Principles</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#security-requirements">Security Requirements</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#infrastructure-abstraction">Infrastructure Abstraction</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#one-click-platform-deployment">One-Click Platform Deployment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#configuration-as-code">Configuration as Code</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#secure-development-lifecycle">Secure Development Lifecycle</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#security-by-design-principles">Security by Design Principles</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#id1">Least Privilege</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#defense-in-depth">Defense in Depth</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#fail-secure">Fail Secure</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#secure-by-default">Secure by Default</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#minimize-trust">Minimize Trust</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#reduce-blast-radius">Reduce Blast Radius</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#separation-of-duties">Separation of Duties</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#explicit-trust-boundaries">Explicit Trust Boundaries</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#id2">Reproducibility</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#continuous-verification">Continuous Verification</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#development-strategy">Development Strategy</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#architecture">Architecture</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#minimal-platform">Minimal Platform</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#infrastructure-integration">Infrastructure Integration</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#id3">Templates</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#id4">Isolation</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#reproducible-deployment">Reproducible Deployment</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#security-engineering">Security Engineering</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#multi-site">Multi-Site</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#operational-model">Operational Model</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#design-philosophy">Design Philosophy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#final-architecture-concept">Final Architecture Concept</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#project-goal">Project Goal</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../iam_system/iam_system.html">IAM architecture</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../iam_system/iam_architecture.html">IAM Architecture</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#what-is-iam-architecture">What is IAM Architecture?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#security-benefits">Security Benefits</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#security-implications">Security Implications</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#why-use-it">Why use it?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#when-to-use-it">When to use it?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#provisioning-vs-just-in-time">Provisioning vs Just-In-Time</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#provisioning-synchronization">Provisioning / Synchronization</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#just-in-time-provisioning">Just-In-Time Provisioning</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#central-identity-vs-local-authorization">Central Identity vs Local Authorization</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#drawbacks">Drawbacks</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#availability-dependency">Availability dependency</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#excessive-centralization">Excessive centralization</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#synchronization-failures">Synchronization failures</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#how-to-configure-it-according-to-security-best-practices">How to configure it according to security best practices?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#how-to-design-the-component">How to design the component?</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../iam_system/iam_architecture.html#centralized-authorization-architecture">Centralized Authorization Architecture</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#id1">Why use it?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#id2">Security Benefits</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#id3">Security Implications</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../iam_system/iam_architecture.html#decentralized-federated-iam-architecture">Decentralized / Federated IAM Architecture</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#id4">Why use it?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#id5">Security Benefits</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#id6">Security Implications</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../iam_system/iam_architecture.html#comparison-of-iam-architectures">Comparison of IAM Architectures</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#centralized-identity-local-authorization">1. Centralized Identity + Local Authorization</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#pros">Pros</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#cons">Cons</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#when-to-use">When to use</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#when-not-to-use">When not to use</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#best-for">Best for</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#centralized-identity-centralized-authorization">2. Centralized Identity + Centralized Authorization</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#id7">Pros</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#id8">Cons</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#id9">When to use</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#id10">When not to use</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#id11">Best for</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#federated-decentralized-iam">3. Federated / Decentralized IAM</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#id12">Pros</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#id13">Cons</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#id14">When to use</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#id15">When not to use</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#id16">Best for</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../workout_app/workout_app.html">Workout Mobile Application</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html">Workout Application</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../workout_app/overview.html#overview">Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#purpose">Purpose</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#design-principles">Design Principles</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../workout_app/overview.html#simplicity">Simplicity</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../workout_app/overview.html#minimal-data-collection">Minimal Data Collection</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../workout_app/overview.html#structured-training">Structured Training</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../workout_app/overview.html#long-term-progression">Long-Term Progression</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../workout_app/overview.html#user-control">User Control</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../workout_app/overview.html#security">Security</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#application-scope">Application Scope</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#users">Users</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#workout-of-the-day">Workout of the Day</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#training-plans">Training Plans</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#exercise-database">Exercise Database</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#strength-training">Strength Training</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#cycling">Cycling</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#running">Running</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#workout-tracking">Workout Tracking</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#progression">Progression</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#deloading">Deloading</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#custom-training-plans">Custom Training Plans</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#body-composition">Body Composition</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#statistics">Statistics</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#application-architecture">Application Architecture</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#mobile-application">Mobile Application</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#backend">Backend</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#authentication">Authentication</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#authorization">Authorization</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#data-model">Data Model</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#shared-and-user-specific-data">Shared and User-Specific Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#storage">Storage</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#data-privacy">Data Privacy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#environment-separation">Environment Separation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#development-environment">Development Environment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#development-data">Development Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#staging-environment">Staging Environment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#production-environment">Production Environment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#network-architecture">Network Architecture</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#application-data-flow">Application Data Flow</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#security-boundaries">Security Boundaries</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#application-lifecycle">Application Lifecycle</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#future-expansion">Future Expansion</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#final-architecture">Final Architecture</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../provisioning-platform.html">Infrastructure Porvisioning Platform</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../provisioning-platform.html#disk-vs-diskless-servers-initial-boot">Disk vs Diskless servers initial boot</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../provisioning-platform.html#bootstrap-infrastructure">Bootstrap infrastructure</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../seed-server.html">Seed/mgmt server</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../seed-server.html#what-is-a-seed-server">What is a seed server?</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../os-image-builder.html">OS Image Builder</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../os-image-builder.html#tools">Tools</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../os-image-builder.html#mkosi">Mkosi</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../os-image-builder.html#image-structure">Image structure</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../os-image-builder.html#golden-image">Golden Image</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../os-image-builder.html#specialized-image">Specialized Image</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../os-image-builder.html#ansible">Ansible</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../building-secure-system.html">Building a Secure, Production-Grade Web Application (From Idea to Production)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../building-secure-system.html#roles-and-responsibilities">Roles and Responsibilities</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../building-secure-system.html#architecture-engineering-and-implementation-across-levels">Architecture, Engineering, and Implementation Across Levels</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#web-application-level-system-of-systems">Web Application Level (System of Systems)</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#system-sub-system-level">System/Sub-System Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#component-application-level">Component / Application Level</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../building-secure-system.html#threat-modeling-and-risk-analysis-across-levels">Threat Modeling and Risk Analysis Across Levels</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#web-application-level">Web Application Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#id1">System/Sub-System Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#component-implementation-level">Component / Implementation Level</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../building-secure-system.html#qa-qa-automation-and-devsecops">QA, QA Automation, and DevSecOps</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../building-secure-system.html#configuration-management-and-change-control">Configuration Management and Change Control</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#id2">Web Application Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#id3">System / Sub-System Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#component-level">Component Level</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../building-secure-system.html#change-control">Change Control</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#id4">Web Application Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#system-level">System Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#id5">Component Level</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../building-secure-system.html#tools-and-frameworks">Tools and Frameworks</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../file-processing.html">File Processing system</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../file-processing.html#requirements">Requirements</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../file-processing.html#security-principles">Security principles</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../file-processing.html#use-cases">Use Cases</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../file-processing.html#components">Components</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../file-processing.html#file-storage">File storage</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../file-processing.html#id1">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../file-processing.html#message-queue">Message queue</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../file-processing.html#id2">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../file-processing.html#file-processors-slave">File processors (Slave)</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../file-processing.html#id3">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../file-processing.html#job-orchestrator">Job orchestrator</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../file-processing.html#id4">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../file-processing.html#job-storage">Job storage</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../file-processing.html#id5">Requirements</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../programming/programming.html">Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../programming/cpp/cpp.html">C++</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../programming/python/python.html">Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../programming/python/theory/theory.html">Theory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/theory/theory.html#installation">Installation</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/theory/theory.html#custom-installation">Custom Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/theory/theory.html#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/theory/theory.html#faq">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html">Codesnippets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#custom-classes">Custom Classes</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#std-expected">std::expected</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#std-expected-unit-test">std::Expected unit test</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#logger">Logger</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#file-managment">File managment</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#read-files">Read Files</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#csv">CSV</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#txt">txt</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#word">word</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#pdf">pdf</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#write-files">Write Files</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#id1">CSV</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../programming/python/guides/guides.html">Guides</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/guides/web/web.html">Web</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html">How to setup basic FastAPI website</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#installation">Installation</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#main-fastapi-code">main FastAPI code</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#basic-knowledge">Basic knowledge</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#fastapi">FastAPI</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#key-features">Key Features:</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#core-components">Core Components</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#uvicorn">Uvicorn</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#id1">Key Features</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#responsibilities">Responsibilities</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#relationship-between-fastapi-and-uvicorn">Relationship Between FastAPI and Uvicorn</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../wiki/wiki.html">Wiki</a><ul class="simple">
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">mygithubpages</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../cybersecurity.html">Cybersecurity</a></li>
+          <li class="breadcrumb-item"><a href="../../security-engineering.html">Security Engineering</a></li>
+          <li class="breadcrumb-item"><a href="../systems.html">Systems</a></li>
+          <li class="breadcrumb-item"><a href="internal_dev_platform.html">Internal Development Platform</a></li>
+      <li class="breadcrumb-item active">Secure Internal Developer Platform</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/cybersecurity/security-engineering/systems/internal_dev_platform/overview.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="secure-internal-developer-platform">
+<h1>Secure Internal Developer Platform<a class="headerlink" href="#secure-internal-developer-platform" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>This project is the design and development of a <strong>Secure Internal Developer Platform (IDP)</strong> for creating and managing isolated development environments.</p>
+<p>The platform is intended for organizations where multiple development departments need standardized environments for application development, testing, experimentation, and Proof-of-Concept (PoC) work.</p>
+<p>The primary design objective is not simply to automate infrastructure provisioning. The platform is designed as a <strong>security-critical system</strong> where isolation, least privilege, reproducibility, controlled changes, and secure defaults are architectural requirements from the beginning.</p>
+<p>The platform is designed to provide developers with self-service capabilities while keeping the underlying infrastructure and organizational boundaries tightly controlled.</p>
+<p>The core idea is:</p>
+<blockquote>
+<div><p><strong>Centralized standards and governance, independently deployed and strongly isolated developer platforms.</strong></p>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="what-is-this-platform">
+<h1>What is this platform?<a class="headerlink" href="#what-is-this-platform" title="Link to this heading"></a></h1>
+<p>The platform is an <strong>Internal Developer Platform focused on development environments</strong>.</p>
+<p>It provides developers with a controlled interface through which they can:</p>
+<ul class="simple">
+<li><p>Create development environments</p></li>
+<li><p>Start and stop environments</p></li>
+<li><p>Destroy environments</p></li>
+<li><p>Select approved environment templates</p></li>
+<li><p>Create and use development networks</p></li>
+<li><p>Configure permitted resources</p></li>
+<li><p>Create and share templates</p></li>
+<li><p>Connect environments to their existing source-control systems</p></li>
+<li><p>Access standardized development tooling</p></li>
+<li><p>View the status of their environments</p></li>
+</ul>
+<p>The platform does <strong>not</strong> attempt to replace the organization’s existing Git, source-control, IDE, or development workflows.</p>
+<p>Instead, it provides the infrastructure and environment layer around those workflows.</p>
+<p>A developer should be able to continue using their existing:</p>
+<ul class="simple">
+<li><p>GitHub</p></li>
+<li><p>GitLab</p></li>
+<li><p>Azure DevOps</p></li>
+<li><p>IDE</p></li>
+<li><p>Source-code repositories</p></li>
+<li><p>Development workflow</p></li>
+</ul>
+<p>while using the platform to obtain a standardized and controlled environment in which to run their software.</p>
+</section>
+<hr class="docutils" />
+<section id="problem-statement">
+<h1>Problem Statement<a class="headerlink" href="#problem-statement" title="Link to this heading"></a></h1>
+<p>Development departments often create their own environments independently.</p>
+<p>This can result in:</p>
+<ul class="simple">
+<li><p>Different operating systems and versions</p></li>
+<li><p>Different development tools</p></li>
+<li><p>Inconsistent configurations</p></li>
+<li><p>Manually configured infrastructure</p></li>
+<li><p>Inconsistent security controls</p></li>
+<li><p>Difficult-to-reproduce environments</p></li>
+<li><p>Excessive administrative privileges</p></li>
+<li><p>Poor visibility</p></li>
+<li><p>Environment drift</p></li>
+<li><p>Difficult lifecycle management</p></li>
+<li><p>Different security practices between departments</p></li>
+</ul>
+<p>The purpose of this platform is to reduce this inconsistency without forcing every development team to use the exact same development workflow.</p>
+<p>The platform standardizes the <strong>environment and infrastructure layer</strong>, while allowing developers to retain control over their application development process.</p>
+</section>
+<hr class="docutils" />
+<section id="relationship-to-other-platforms">
+<h1>Relationship to Other Platforms<a class="headerlink" href="#relationship-to-other-platforms" title="Link to this heading"></a></h1>
+<p>The Internal Developer Platform is not intended to own the organization’s entire technology infrastructure.</p>
+<p>Instead, it sits between developers and several underlying platforms.</p>
+<figure class="align-center" id="id5">
+<div class="graphviz"><img src="../../../../_images/graphviz-1f76a498027cce653f7a75a63575178076a97ad9.png" alt="digraph architecture {
+
+    rankdir=TB
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    edge [
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    developers [
+        label=&quot;Developers&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    idp [
+        label=&quot;Internal Developer Platform\nSelf-Service\nEnvironments\nTemplates\nProjects\nLifecycle Management&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    infrastructure [
+        label=&quot;Infrastructure Platform\nCompute\nNetwork\nStorage\nVirtualization&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    tooling [
+        label=&quot;Tooling Platform\nRegistry\nPackages\nCI/CD\nMonitoring&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    identity [
+        label=&quot;Identity Platform\nSSO\nIAM\nRBAC\nIdentity&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    developers -&gt; idp [
+        label=&quot;Self-service&quot;
+    ]
+
+    idp -&gt; infrastructure [
+        label=&quot;Infrastructure requests&quot;
+    ]
+
+    idp -&gt; tooling [
+        label=&quot;Tooling integration&quot;
+    ]
+
+    idp -&gt; identity [
+        label=&quot;Authentication /\nAuthorization&quot;
+    ]
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Relationship Between the Internal Developer Platform and Other Platforms</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The IDP therefore acts primarily as an <strong>orchestration and developer experience layer</strong>.</p>
+<p>It consumes capabilities provided by other platforms instead of taking ownership of everything itself.</p>
+</section>
+<hr class="docutils" />
+<section id="platform-boundaries">
+<h1>Platform Boundaries<a class="headerlink" href="#platform-boundaries" title="Link to this heading"></a></h1>
+<p>Clear ownership boundaries are an important part of the architecture.</p>
+<section id="internal-developer-platform">
+<h2>Internal Developer Platform<a class="headerlink" href="#internal-developer-platform" title="Link to this heading"></a></h2>
+<p>The IDP owns:</p>
+<ul class="simple">
+<li><p>Developer self-service</p></li>
+<li><p>Development environments</p></li>
+<li><p>Environment lifecycle</p></li>
+<li><p>Environment templates</p></li>
+<li><p>Template catalog</p></li>
+<li><p>Developer-facing APIs</p></li>
+<li><p>Environment configuration</p></li>
+<li><p>Environment-level authorization</p></li>
+<li><p>Integration with external development services</p></li>
+<li><p>Platform-specific policies</p></li>
+</ul>
+</section>
+<section id="infrastructure-platform">
+<h2>Infrastructure Platform<a class="headerlink" href="#infrastructure-platform" title="Link to this heading"></a></h2>
+<p>The Infrastructure Platform owns:</p>
+<ul class="simple">
+<li><p>Physical infrastructure</p></li>
+<li><p>Compute</p></li>
+<li><p>Virtualization</p></li>
+<li><p>Storage</p></li>
+<li><p>Core networking</p></li>
+<li><p>Infrastructure capacity</p></li>
+<li><p>Infrastructure lifecycle</p></li>
+</ul>
+<p>The IDP consumes infrastructure through defined interfaces.</p>
+<p>It should not need to understand the implementation details of the underlying infrastructure.</p>
+</section>
+<section id="tooling-platform">
+<h2>Tooling Platform<a class="headerlink" href="#tooling-platform" title="Link to this heading"></a></h2>
+<p>The Tooling Platform owns centrally provided development services such as:</p>
+<ul class="simple">
+<li><p>Artifact repositories</p></li>
+<li><p>Package repositories</p></li>
+<li><p>Container registries</p></li>
+<li><p>CI/CD infrastructure</p></li>
+<li><p>Central logging</p></li>
+<li><p>Monitoring</p></li>
+<li><p>Other shared development services</p></li>
+</ul>
+<p>The IDP integrates with these services rather than attempting to replace them.</p>
+</section>
+<section id="identity-platform">
+<h2>Identity Platform<a class="headerlink" href="#identity-platform" title="Link to this heading"></a></h2>
+<p>The Identity Platform provides:</p>
+<ul class="simple">
+<li><p>Authentication</p></li>
+<li><p>Identity lifecycle</p></li>
+<li><p>Organizational identity</p></li>
+<li><p>Single Sign-On</p></li>
+<li><p>Identity federation</p></li>
+<li><p>Enterprise authorization capabilities</p></li>
+</ul>
+<p>The IDP uses these capabilities to implement its own resource-level authorization model.</p>
+</section>
+<section id="source-control">
+<h2>Source Control<a class="headerlink" href="#source-control" title="Link to this heading"></a></h2>
+<p>Source control remains owned by the organization’s existing Git platform.</p>
+<p>The IDP may integrate with:</p>
+<ul class="simple">
+<li><p>GitHub</p></li>
+<li><p>GitLab</p></li>
+<li><p>Azure DevOps</p></li>
+<li><p>Other organizational source-control systems</p></li>
+</ul>
+<p>However, source code and repositories are not owned by the IDP.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="purpose">
+<h1>Purpose<a class="headerlink" href="#purpose" title="Link to this heading"></a></h1>
+<p>The primary purpose of the platform is to provide:</p>
+<blockquote>
+<div><p><strong>Secure, reproducible, standardized and self-service development environments.</strong></p>
+</div></blockquote>
+<p>The platform should make it easy for developers to experiment without making it easy to accidentally compromise other environments.</p>
+<p>A developer should be able to request:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Python Application Environment
+</pre></div>
+</div>
+<p>and receive a complete environment containing the required infrastructure and approved configuration.</p>
+<p>For example:</p>
+<figure class="align-center" id="id6">
+<div class="graphviz"><img src="../../../../_images/graphviz-5ee4dbf89481d3cde8149f198abaea96abd97d9a.png" alt="digraph environment {
+
+    rankdir=TB
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    application [
+        label=&quot;Python Application&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    appvm [
+        label=&quot;Application VM&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    dbvm [
+        label=&quot;Database VM&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    network [
+        label=&quot;Private Network&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    images [
+        label=&quot;Approved Base Images&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    tooling [
+        label=&quot;Standard Tooling&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    monitoring [
+        label=&quot;Monitoring&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    baseline [
+        label=&quot;Security Baseline&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    application -&gt; appvm
+    application -&gt; dbvm
+
+    appvm -&gt; network
+    dbvm -&gt; network
+
+    appvm -&gt; images
+    dbvm -&gt; images
+
+    appvm -&gt; tooling
+    appvm -&gt; monitoring
+
+    appvm -&gt; baseline
+    dbvm -&gt; baseline
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Example Development Environment</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The developer should not need to manually configure the underlying infrastructure.</p>
+</section>
+<hr class="docutils" />
+<section id="multi-department-architecture">
+<h1>Multi-Department Architecture<a class="headerlink" href="#multi-department-architecture" title="Link to this heading"></a></h1>
+<p>A key requirement is that each development department receives an independently deployed and strongly isolated IDP instance.</p>
+<p>The platform therefore does not rely solely on logical multi-tenancy inside one large shared IDP.</p>
+<p>Instead:</p>
+<figure class="align-center" id="id7">
+<div class="graphviz"><img src="../../../../_images/graphviz-0cb226b551bcf91b6ab3edec099d614311958897.png" alt="digraph architecture {
+
+    rankdir=TB
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    edge [
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    central [
+        label=&quot;Central Platform\nStandards / Releases / Governance&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    idpa [
+        label=&quot;IDP-A\nDepartment A\nIsolated Resources&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    idpb [
+        label=&quot;IDP-B\nDepartment B\nIsolated Resources&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    idpc [
+        label=&quot;IDP-C\nDepartment C\nIsolated Resources&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    central -&gt; idpa [
+        label=&quot;Controlled deployment&quot;
+    ]
+
+    central -&gt; idpb [
+        label=&quot;Controlled deployment&quot;
+    ]
+
+    central -&gt; idpc [
+        label=&quot;Controlled deployment&quot;
+    ]
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Isolated Internal Developer Platform Instances</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Each IDP instance represents a distinct security boundary.</p>
+<p>A compromise of one department’s IDP should not automatically provide access to another department’s IDP.</p>
+<p>For example:</p>
+<figure class="align-center" id="id8">
+<div class="graphviz"><img src="../../../../_images/graphviz-b678d163d354e613b82a09f5b1f553c3709df800.png" alt="digraph isolation {
+
+    rankdir=LR
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    developer [
+        label=&quot;Developer A&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    idpa [
+        label=&quot;IDP-A\nDepartment A&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    idpb [
+        label=&quot;IDP-B\nDepartment B&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    resources [
+        label=&quot;Department B\nResources&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    developer -&gt; idpa
+
+    idpa -&gt; idpb [
+        label=&quot;DENY&quot;,
+        style=dashed
+    ]
+
+    idpa -&gt; resources [
+        label=&quot;DENY&quot;,
+        style=dashed
+    ]
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Department Isolation</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>This follows the principle of <strong>blast-radius reduction</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="central-governance-local-execution">
+<h1>Central Governance, Local Execution<a class="headerlink" href="#central-governance-local-execution" title="Link to this heading"></a></h1>
+<p>The architecture deliberately separates central governance from local execution.</p>
+<p>The central platform defines:</p>
+<ul class="simple">
+<li><p>Security standards</p></li>
+<li><p>Platform releases</p></li>
+<li><p>Approved components</p></li>
+<li><p>Security baselines</p></li>
+<li><p>Official templates</p></li>
+<li><p>Policies</p></li>
+<li><p>Deployment mechanisms</p></li>
+</ul>
+<p>Individual IDP instances provide:</p>
+<ul class="simple">
+<li><p>Local developers</p></li>
+<li><p>Local projects</p></li>
+<li><p>Local environments</p></li>
+<li><p>Local templates</p></li>
+<li><p>Local resource allocation</p></li>
+<li><p>Local environment lifecycle</p></li>
+</ul>
+<p>This results in:</p>
+<blockquote>
+<div><p><strong>Centralized governance with decentralized execution.</strong></p>
+</div></blockquote>
+<p>A department can therefore have autonomy without becoming completely independent from the organization’s security and engineering standards.</p>
+<figure class="align-center" id="id9">
+<div class="graphviz"><img src="../../../../_images/graphviz-36f8e99e71a9050affbcf41a5f77cd0a44015069.png" alt="digraph governance {
+
+    rankdir=TB
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    central [
+        label=&quot;Central Governance\nSecurity Standards\nPolicies\nReleases\nOfficial Templates\nDeployment Definitions&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    idpa [
+        label=&quot;IDP-A\nLocal Execution&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    idpb [
+        label=&quot;IDP-B\nLocal Execution&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    idpc [
+        label=&quot;IDP-C\nLocal Execution&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    central -&gt; idpa
+    central -&gt; idpb
+    central -&gt; idpc
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Central Governance and Local Execution</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<hr class="docutils" />
+<section id="templates">
+<h1>Templates<a class="headerlink" href="#templates" title="Link to this heading"></a></h1>
+<p>Templates are a central part of the platform.</p>
+<p>A template describes a standardized development environment.</p>
+<p>Example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cpp-development</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+
+<span class="nt">resources</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">vms</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">development</span>
+<span class="w">      </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">      </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8192</span>
+
+<span class="nt">network</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">isolated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="nt">software</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">compiler</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">approved</span>
+<span class="w">  </span><span class="nt">cmake</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">approved</span>
+<span class="w">  </span><span class="nt">debugger</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">approved</span>
+</pre></div>
+</div>
+<p>A developer can select:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Create Environment
+
+Template:
+[ C++ Development ]
+
+Project:
+[ MyProject ]
+
+Site:
+[ Department A ]
+
+Create
+</pre></div>
+</div>
+<p>The platform then translates the template into infrastructure and configuration.</p>
+</section>
+<hr class="docutils" />
+<section id="template-governance">
+<h1>Template Governance<a class="headerlink" href="#template-governance" title="Link to this heading"></a></h1>
+<p>Templates are treated as potentially untrusted input.</p>
+<p>Developers may be allowed to create their own templates, but templates must pass appropriate controls before becoming broadly available.</p>
+<p>A template lifecycle can be:</p>
+<figure class="align-center" id="id10">
+<div class="graphviz"><img src="../../../../_images/graphviz-9dfdf865f21472b51f4dad13824dd96357c8c287.png" alt="digraph template_lifecycle {
+
+    rankdir=LR
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    draft [
+        label=&quot;Draft&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    validation [
+        label=&quot;Validation&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    security [
+        label=&quot;Security Analysis&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    review [
+        label=&quot;Review&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    approved [
+        label=&quot;Approved&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    published [
+        label=&quot;Published&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    versioned [
+        label=&quot;Versioned&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    draft -&gt; validation
+    validation -&gt; security
+    security -&gt; review
+    review -&gt; approved
+    approved -&gt; published
+    published -&gt; versioned
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Template Lifecycle</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Templates can have different scopes:</p>
+<figure class="align-center" id="id11">
+<div class="graphviz"><img src="../../../../_images/graphviz-44bd938f01b10c3de0d5e06636cd8fefd838dcd4.png" alt="digraph template_scope {
+
+    rankdir=TB
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    official [
+        label=&quot;Official\nOrganization-wide&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    department [
+        label=&quot;Department\nDepartment-specific&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    team [
+        label=&quot;Team\nTeam-specific&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    private [
+        label=&quot;Private\nIndividual Developer&quot;,
+        fillcolor=&quot;#FADBD8&quot;
+    ]
+
+    official -&gt; department
+    department -&gt; team
+    team -&gt; private
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Template Scope</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>This allows experimentation while maintaining control over officially supported environments.</p>
+</section>
+<hr class="docutils" />
+<section id="golden-paths">
+<h1>Golden Paths<a class="headerlink" href="#golden-paths" title="Link to this heading"></a></h1>
+<p>The platform should provide predefined <strong>Golden Paths</strong> for common development scenarios.</p>
+<p>For example:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Create Application
+
+[ Python API ]
+[ C++ Application ]
+[ Web Application ]
+[ Microservice ]
+[ Database Application ]
+[ Kubernetes POC ]
+[ Empty Linux Environment ]
+</pre></div>
+</div>
+<p>A Golden Path may automatically provide:</p>
+<ul class="simple">
+<li><p>Approved base image</p></li>
+<li><p>Standard tooling</p></li>
+<li><p>Network configuration</p></li>
+<li><p>Monitoring</p></li>
+<li><p>Logging</p></li>
+<li><p>Security configuration</p></li>
+<li><p>Resource limits</p></li>
+<li><p>Required policies</p></li>
+</ul>
+<p>The goal is not to prevent developers from experimenting.</p>
+<p>The goal is to make the <strong>secure and standardized option the easiest option</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="secure-systems-engineering-approach">
+<h1>Secure Systems Engineering Approach<a class="headerlink" href="#secure-systems-engineering-approach" title="Link to this heading"></a></h1>
+<p>Security is treated as a system property rather than a collection of security tools.</p>
+<p>The development process follows a security-oriented systems engineering lifecycle:</p>
+<figure class="align-center" id="id12">
+<div class="graphviz"><img src="../../../../_images/graphviz-f6e252bb1f6739302861a3efa8bd5e77c7488b6b.png" alt="digraph lifecycle {
+
+    rankdir=TB
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    mission [
+        label=&quot;Mission / Purpose&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    stakeholder [
+        label=&quot;Stakeholder Requirements&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    objectives [
+        label=&quot;Security Objectives&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    assets [
+        label=&quot;Asset Identification&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    boundaries [
+        label=&quot;Trust Boundaries&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    threat [
+        label=&quot;Threat Modeling&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    requirements [
+        label=&quot;Security Requirements&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    architecture [
+        label=&quot;Architecture&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    controls [
+        label=&quot;Security Controls&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    implementation [
+        label=&quot;Implementation&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    verification [
+        label=&quot;Verification &amp; Validation&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    deployment [
+        label=&quot;Deployment&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    monitoring [
+        label=&quot;Monitoring&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    maintenance [
+        label=&quot;Maintenance&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    reassessment [
+        label=&quot;Continuous Reassessment&quot;,
+        shape=ellipse,
+        fillcolor=&quot;#FADBD8&quot;
+    ]
+
+    mission -&gt; stakeholder
+    stakeholder -&gt; objectives
+    objectives -&gt; assets
+    assets -&gt; boundaries
+    boundaries -&gt; threat
+    threat -&gt; requirements
+    requirements -&gt; architecture
+    architecture -&gt; controls
+    controls -&gt; implementation
+    implementation -&gt; verification
+    verification -&gt; deployment
+    deployment -&gt; monitoring
+    monitoring -&gt; maintenance
+    maintenance -&gt; reassessment
+
+    reassessment -&gt; objectives [
+        label=&quot;Reassess&quot;
+    ]
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Secure Systems Engineering Lifecycle</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Security decisions are therefore made before implementation wherever possible.</p>
+</section>
+<hr class="docutils" />
+<section id="security-objectives">
+<h1>Security Objectives<a class="headerlink" href="#security-objectives" title="Link to this heading"></a></h1>
+<p>The platform is designed around several primary security objectives.</p>
+<section id="isolation">
+<h2>Isolation<a class="headerlink" href="#isolation" title="Link to this heading"></a></h2>
+<p>A developer or department must not be able to access resources outside its authorized security boundary.</p>
+</section>
+<section id="least-privilege">
+<h2>Least Privilege<a class="headerlink" href="#least-privilege" title="Link to this heading"></a></h2>
+<p>Users, services and automation receive only the permissions required to perform their functions.</p>
+</section>
+<section id="secure-defaults">
+<h2>Secure Defaults<a class="headerlink" href="#secure-defaults" title="Link to this heading"></a></h2>
+<p>New environments should be secure by default.</p>
+</section>
+<section id="reproducibility">
+<h2>Reproducibility<a class="headerlink" href="#reproducibility" title="Link to this heading"></a></h2>
+<p>Infrastructure and environments should be reproducible from version-controlled definitions.</p>
+</section>
+<section id="integrity">
+<h2>Integrity<a class="headerlink" href="#integrity" title="Link to this heading"></a></h2>
+<p>Only approved and verified platform components should be deployed.</p>
+</section>
+<section id="accountability">
+<h2>Accountability<a class="headerlink" href="#accountability" title="Link to this heading"></a></h2>
+<p>Security-relevant actions must be attributable to an authenticated identity.</p>
+</section>
+<section id="resilience">
+<h2>Resilience<a class="headerlink" href="#resilience" title="Link to this heading"></a></h2>
+<p>A compromise or failure of one development environment should have a limited impact on other environments.</p>
+</section>
+<section id="controlled-change">
+<h2>Controlled Change<a class="headerlink" href="#controlled-change" title="Link to this heading"></a></h2>
+<p>Changes to platform components, policies and official templates must follow a controlled lifecycle.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="threat-modeling">
+<h1>Threat Modeling<a class="headerlink" href="#threat-modeling" title="Link to this heading"></a></h1>
+<p>Threat modeling is performed before implementing major components.</p>
+<p>Important threat scenarios include:</p>
+<section id="compromised-developer-environment">
+<h2>Compromised Developer Environment<a class="headerlink" href="#compromised-developer-environment" title="Link to this heading"></a></h2>
+<figure class="align-center" id="id13">
+<div class="graphviz"><img src="../../../../_images/graphviz-363209618efca7203b74de755ec0ec1e33ed9a42.png" alt="digraph threat {
+
+    rankdir=LR
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    vm [
+        label=&quot;Compromised VM&quot;,
+        fillcolor=&quot;#FADBD8&quot;
+    ]
+
+    idp [
+        label=&quot;IDP&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    authorization [
+        label=&quot;Authorization&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    deny [
+        label=&quot;DENY&quot;,
+        shape=ellipse,
+        fillcolor=&quot;#FADBD8&quot;
+    ]
+
+    vm -&gt; idp [
+        label=&quot;Attempt access&quot;
+    ]
+
+    idp -&gt; authorization
+    authorization -&gt; deny
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Compromised Development Environment</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>A compromised development VM must not automatically become a trusted platform client.</p>
+</section>
+<section id="malicious-developer">
+<h2>Malicious Developer<a class="headerlink" href="#malicious-developer" title="Link to this heading"></a></h2>
+<p>A developer may attempt to:</p>
+<ul class="simple">
+<li><p>Access another developer’s environment</p></li>
+<li><p>Access another department</p></li>
+<li><p>Escalate privileges</p></li>
+<li><p>Create excessive infrastructure</p></li>
+<li><p>Bypass network restrictions</p></li>
+<li><p>Create unsafe templates</p></li>
+<li><p>Access platform secrets</p></li>
+</ul>
+<p>These scenarios are explicitly considered during architecture and testing.</p>
+</section>
+<section id="compromised-idp">
+<h2>Compromised IDP<a class="headerlink" href="#compromised-idp" title="Link to this heading"></a></h2>
+<p>If IDP-A is compromised:</p>
+<figure class="align-center" id="id14">
+<div class="graphviz"><img src="../../../../_images/graphviz-0aa0de58d8cfddb1fde4f1381448d7ef09a37730.png" alt="digraph compromised_idp {
+
+    rankdir=LR
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    idpa [
+        label=&quot;Compromised IDP-A&quot;,
+        fillcolor=&quot;#FADBD8&quot;
+    ]
+
+    idpb [
+        label=&quot;IDP-B&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    central [
+        label=&quot;Central Platform&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    idpa -&gt; idpb [
+        label=&quot;DENY&quot;,
+        style=dashed
+    ]
+
+    idpa -&gt; central [
+        label=&quot;DENY&quot;,
+        style=dashed
+    ]
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Compromised IDP and Blast Radius</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The architecture should minimize the privileges and connectivity available to the compromised instance.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="trust-boundaries">
+<h1>Trust Boundaries<a class="headerlink" href="#trust-boundaries" title="Link to this heading"></a></h1>
+<p>Important trust boundaries include:</p>
+<figure class="align-center" id="id15">
+<div class="graphviz"><img src="../../../../_images/graphviz-509a13fbd601b553f4b93c446253919ea67b6c87.png" alt="digraph boundaries {
+
+    rankdir=TB
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    developer [
+        label=&quot;Developer&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    idp [
+        label=&quot;Developer Platform&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    infrastructure [
+        label=&quot;Infrastructure Platform&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    developer -&gt; idp [
+        label=&quot;Trust Boundary&quot;
+    ]
+
+    idp -&gt; infrastructure [
+        label=&quot;Trust Boundary&quot;
+    ]
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Developer Platform Trust Boundaries</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Between IDP instances:</p>
+<figure class="align-center" id="id16">
+<div class="graphviz"><img src="../../../../_images/graphviz-521764e43664a22074f65bdc37d8462e49c0c437.png" alt="digraph idp_boundary {
+
+    rankdir=LR
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    idpa [
+        label=&quot;IDP-A&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    idpb [
+        label=&quot;IDP-B&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    boundary [
+        label=&quot;Security Boundary&quot;,
+        shape=box,
+        style=&quot;dashed&quot;
+    ]
+
+    idpa -&gt; boundary [
+        arrowhead=none
+    ]
+
+    boundary -&gt; idpb
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Inter-IDP Security Boundary</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Between the central platform and each IDP:</p>
+<figure class="align-center" id="id17">
+<div class="graphviz"><img src="../../../../_images/graphviz-0aa1c6403771c828357cbc14f2bfbf5ce734c7bf.png" alt="digraph central_boundary {
+
+    rankdir=TB
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    central [
+        label=&quot;Central Platform&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    idp [
+        label=&quot;IDP Instance&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    central -&gt; idp [
+        label=&quot;Controlled Interface&quot;
+    ]
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Central Platform to IDP Boundary</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Each boundary must have explicit security assumptions and controls.</p>
+</section>
+<hr class="docutils" />
+<section id="zero-trust-principles">
+<h1>Zero Trust Principles<a class="headerlink" href="#zero-trust-principles" title="Link to this heading"></a></h1>
+<p>The platform follows Zero Trust principles where appropriate.</p>
+<p>The system should not assume that a request is trustworthy simply because it originates from an internal network.</p>
+<p>Authorization decisions should consider:</p>
+<ul class="simple">
+<li><p>Identity</p></li>
+<li><p>Resource</p></li>
+<li><p>Action</p></li>
+<li><p>Context</p></li>
+<li><p>Scope</p></li>
+<li><p>Policy</p></li>
+</ul>
+<p>A simplified model is:</p>
+<figure class="align-center" id="id18">
+<div class="graphviz"><img src="../../../../_images/graphviz-9ec183a61f9a4097c0bbebd4648c24424f6b4b1a.png" alt="digraph authorization {
+
+    rankdir=TB
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    request [
+        label=&quot;Request&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    authenticate [
+        label=&quot;Authenticate&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    authorize [
+        label=&quot;Authorize&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    policy [
+        label=&quot;Policy Evaluation&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    resource [
+        label=&quot;Resource Access&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    request -&gt; authenticate
+    authenticate -&gt; authorize
+    authorize -&gt; policy
+    policy -&gt; resource
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Request Authorization Flow</span><a class="headerlink" href="#id18" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Network location alone should not determine trust.</p>
+</section>
+<hr class="docutils" />
+<section id="security-requirements">
+<h1>Security Requirements<a class="headerlink" href="#security-requirements" title="Link to this heading"></a></h1>
+<p>Security requirements are written as testable requirements.</p>
+<p>Example:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>SR-001
+
+A developer assigned to IDP-A shall not be authorized
+to access resources belonging to IDP-B.
+</pre></div>
+</div>
+<p>Verification:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>TEST-001
+
+1. Create developer-A.
+2. Assign developer-A to IDP-A.
+3. Create resource-B in IDP-B.
+4. Attempt access using developer-A.
+
+Expected result:
+
+Access denied.
+</pre></div>
+</div>
+<p>Another requirement:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>SR-002
+
+A developer shall not be able to create infrastructure
+outside the resource quota assigned to their project.
+</pre></div>
+</div>
+<p>Another:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>SR-003
+
+All administrative actions shall generate an auditable event
+containing the authenticated identity, action, resource,
+timestamp and result.
+</pre></div>
+</div>
+<p>Security requirements therefore become part of the verification strategy.</p>
+</section>
+<hr class="docutils" />
+<section id="infrastructure-abstraction">
+<h1>Infrastructure Abstraction<a class="headerlink" href="#infrastructure-abstraction" title="Link to this heading"></a></h1>
+<p>The IDP should not become tightly coupled to a specific infrastructure implementation.</p>
+<p>The platform should communicate with an infrastructure abstraction such as:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Infrastructure Provider Interface
+
+create_vm()
+delete_vm()
+start_vm()
+stop_vm()
+
+create_network()
+delete_network()
+
+get_resource_status()
+</pre></div>
+</div>
+<p>An implementation may initially use one infrastructure provider.</p>
+<p>Additional providers can be introduced later without redesigning the developer-facing platform.</p>
+<p>This separation keeps the responsibilities of the IDP and Infrastructure Platform clear.</p>
+<figure class="align-center" id="id19">
+<div class="graphviz"><img src="../../../../_images/graphviz-a2f21fdb9e47bc60a61c3eed7d405afdb7a0e6e0.png" alt="digraph infrastructure_abstraction {
+
+    rankdir=TB
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    idp [
+        label=&quot;Internal Developer Platform&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    interface [
+        label=&quot;Infrastructure Provider Interface&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    provider [
+        label=&quot;Infrastructure Provider&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    compute [
+        label=&quot;Compute / Network / Storage&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    idp -&gt; interface
+    interface -&gt; provider
+    provider -&gt; compute
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Infrastructure Abstraction</span><a class="headerlink" href="#id19" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<hr class="docutils" />
+<section id="one-click-platform-deployment">
+<h1>One-Click Platform Deployment<a class="headerlink" href="#one-click-platform-deployment" title="Link to this heading"></a></h1>
+<p>A major objective is that a new IDP instance should be deployable in a standardized and controlled manner.</p>
+<p>Conceptually:</p>
+<figure class="align-center" id="id20">
+<div class="graphviz"><img src="../../../../_images/graphviz-007693b7f3e1e2b7016c67ef792b782e314efb31.png" alt="digraph deployment {
+
+    rankdir=TB
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    department [
+        label=&quot;New Department&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    configuration [
+        label=&quot;Approved IDP Configuration&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    validation [
+        label=&quot;Validation&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    policy [
+        label=&quot;Security Policy Validation&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    infrastructure [
+        label=&quot;Infrastructure Provisioning&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    deployment [
+        label=&quot;IDP Deployment&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    configure [
+        label=&quot;Configuration&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    verification [
+        label=&quot;Security Verification&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    ready [
+        label=&quot;IDP Ready&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    department -&gt; configuration
+    configuration -&gt; validation
+    validation -&gt; policy
+    policy -&gt; infrastructure
+    infrastructure -&gt; deployment
+    deployment -&gt; configure
+    configure -&gt; verification
+    verification -&gt; ready
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">IDP Instance Deployment</span><a class="headerlink" href="#id20" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The goal is not merely convenience.</p>
+<p>Reproducible deployment reduces configuration drift and manual configuration errors.</p>
+<p>A new department should receive an instance based on the same approved platform definition.</p>
+</section>
+<hr class="docutils" />
+<section id="configuration-as-code">
+<h1>Configuration as Code<a class="headerlink" href="#configuration-as-code" title="Link to this heading"></a></h1>
+<p>Platform configuration should be declarative and version controlled.</p>
+<p>For example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">department</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">department-a</span>
+
+<span class="nt">idp</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0.0</span>
+
+<span class="nt">site</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">site-a</span>
+
+<span class="nt">policies</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">network_isolation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">required</span>
+<span class="w">  </span><span class="nt">public_ip</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">disabled</span>
+<span class="w">  </span><span class="nt">resource_quotas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">required</span>
+</pre></div>
+</div>
+<p>The desired state is then used to deploy the IDP.</p>
+<p>This provides:</p>
+<ul class="simple">
+<li><p>Reproducibility</p></li>
+<li><p>Change tracking</p></li>
+<li><p>Review</p></li>
+<li><p>Auditability</p></li>
+<li><p>Rollback capability</p></li>
+<li><p>Reduced manual configuration</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="secure-development-lifecycle">
+<h1>Secure Development Lifecycle<a class="headerlink" href="#secure-development-lifecycle" title="Link to this heading"></a></h1>
+<p>Development follows a Secure Systems Engineering lifecycle.</p>
+<p>Each major component goes through:</p>
+<figure class="align-center" id="id21">
+<div class="graphviz"><img src="../../../../_images/graphviz-3411b26dcf716a783d3539896d4fcefcb7ee4a5b.png" alt="digraph development {
+
+    rankdir=LR
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    requirements [
+        label=&quot;Requirements&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    architecture [
+        label=&quot;Architecture&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    threat [
+        label=&quot;Threat Model&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    security [
+        label=&quot;Security Design&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    implementation [
+        label=&quot;Implementation&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    review [
+        label=&quot;Code Review&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    testing [
+        label=&quot;Security Testing&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    integration [
+        label=&quot;Integration Testing&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    deployment [
+        label=&quot;Deployment&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    monitoring [
+        label=&quot;Operational Monitoring&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    requirements -&gt; architecture
+    architecture -&gt; threat
+    threat -&gt; security
+    security -&gt; implementation
+    implementation -&gt; review
+    review -&gt; testing
+    testing -&gt; integration
+    integration -&gt; deployment
+    deployment -&gt; monitoring
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Component Development Lifecycle</span><a class="headerlink" href="#id21" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Security testing should include, where appropriate:</p>
+<ul class="simple">
+<li><p>Unit testing</p></li>
+<li><p>Integration testing</p></li>
+<li><p>Authorization testing</p></li>
+<li><p>Isolation testing</p></li>
+<li><p>API security testing</p></li>
+<li><p>Configuration validation</p></li>
+<li><p>Infrastructure testing</p></li>
+<li><p>Dependency analysis</p></li>
+<li><p>Static analysis</p></li>
+<li><p>Container/image analysis</p></li>
+<li><p>Policy testing</p></li>
+<li><p>Negative testing</p></li>
+<li><p>Failure testing</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="security-by-design-principles">
+<h1>Security by Design Principles<a class="headerlink" href="#security-by-design-principles" title="Link to this heading"></a></h1>
+<p>The platform follows principles including:</p>
+<section id="id1">
+<h2>Least Privilege<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>No component receives more privileges than necessary.</p>
+</section>
+<section id="defense-in-depth">
+<h2>Defense in Depth<a class="headerlink" href="#defense-in-depth" title="Link to this heading"></a></h2>
+<p>Security does not depend on a single control.</p>
+</section>
+<section id="fail-secure">
+<h2>Fail Secure<a class="headerlink" href="#fail-secure" title="Link to this heading"></a></h2>
+<p>When an authorization or policy decision cannot be safely determined, access should fail closed where practical.</p>
+</section>
+<section id="secure-by-default">
+<h2>Secure by Default<a class="headerlink" href="#secure-by-default" title="Link to this heading"></a></h2>
+<p>New environments receive secure baseline configuration automatically.</p>
+</section>
+<section id="minimize-trust">
+<h2>Minimize Trust<a class="headerlink" href="#minimize-trust" title="Link to this heading"></a></h2>
+<p>Components should trust as little as possible.</p>
+</section>
+<section id="reduce-blast-radius">
+<h2>Reduce Blast Radius<a class="headerlink" href="#reduce-blast-radius" title="Link to this heading"></a></h2>
+<p>A compromise should have a limited impact.</p>
+</section>
+<section id="separation-of-duties">
+<h2>Separation of Duties<a class="headerlink" href="#separation-of-duties" title="Link to this heading"></a></h2>
+<p>Highly privileged operations should be separated where appropriate.</p>
+</section>
+<section id="explicit-trust-boundaries">
+<h2>Explicit Trust Boundaries<a class="headerlink" href="#explicit-trust-boundaries" title="Link to this heading"></a></h2>
+<p>Security boundaries are documented and technically enforced.</p>
+</section>
+<section id="id2">
+<h2>Reproducibility<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>Infrastructure should be created from known, versioned definitions.</p>
+</section>
+<section id="continuous-verification">
+<h2>Continuous Verification<a class="headerlink" href="#continuous-verification" title="Link to this heading"></a></h2>
+<p>Security assumptions are continuously tested rather than assumed to remain valid.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="development-strategy">
+<h1>Development Strategy<a class="headerlink" href="#development-strategy" title="Link to this heading"></a></h1>
+<p>The platform is developed incrementally.</p>
+<p>The initial implementation deliberately focuses on a small set of capabilities.</p>
+<section id="architecture">
+<h2>Architecture<a class="headerlink" href="#architecture" title="Link to this heading"></a></h2>
+<p>Define:</p>
+<ul class="simple">
+<li><p>System purpose</p></li>
+<li><p>Scope</p></li>
+<li><p>Stakeholders</p></li>
+<li><p>Assets</p></li>
+<li><p>Trust boundaries</p></li>
+<li><p>Threat model</p></li>
+<li><p>Security objectives</p></li>
+<li><p>Security requirements</p></li>
+</ul>
+<p>No major implementation begins before these are documented.</p>
+</section>
+<section id="minimal-platform">
+<h2>Minimal Platform<a class="headerlink" href="#minimal-platform" title="Link to this heading"></a></h2>
+<p>Implement:</p>
+<ul class="simple">
+<li><p>Basic platform API</p></li>
+<li><p>Environment model</p></li>
+<li><p>Authentication</p></li>
+<li><p>Authorization</p></li>
+<li><p>Basic environment lifecycle</p></li>
+</ul>
+</section>
+<section id="infrastructure-integration">
+<h2>Infrastructure Integration<a class="headerlink" href="#infrastructure-integration" title="Link to this heading"></a></h2>
+<p>Implement:</p>
+<ul class="simple">
+<li><p>VM provisioning</p></li>
+<li><p>Network provisioning</p></li>
+<li><p>Resource lifecycle</p></li>
+<li><p>Infrastructure abstraction</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>Templates<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>Implement:</p>
+<ul class="simple">
+<li><p>Template format</p></li>
+<li><p>Template validation</p></li>
+<li><p>Template catalog</p></li>
+<li><p>Template versioning</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>Isolation<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<p>Implement and verify:</p>
+<ul class="simple">
+<li><p>Department isolation</p></li>
+<li><p>Project isolation</p></li>
+<li><p>Network isolation</p></li>
+<li><p>Resource authorization</p></li>
+<li><p>Quotas</p></li>
+</ul>
+</section>
+<section id="reproducible-deployment">
+<h2>Reproducible Deployment<a class="headerlink" href="#reproducible-deployment" title="Link to this heading"></a></h2>
+<p>Implement:</p>
+<ul class="simple">
+<li><p>IDP configuration</p></li>
+<li><p>Automated deployment</p></li>
+<li><p>Infrastructure as Code</p></li>
+<li><p>Versioned platform releases</p></li>
+</ul>
+</section>
+<section id="security-engineering">
+<h2>Security Engineering<a class="headerlink" href="#security-engineering" title="Link to this heading"></a></h2>
+<p>Add:</p>
+<ul class="simple">
+<li><p>Policy enforcement</p></li>
+<li><p>Security testing</p></li>
+<li><p>Audit logging</p></li>
+<li><p>Secrets management</p></li>
+<li><p>Image validation</p></li>
+<li><p>Dependency security</p></li>
+<li><p>Security monitoring</p></li>
+</ul>
+</section>
+<section id="multi-site">
+<h2>Multi-Site<a class="headerlink" href="#multi-site" title="Link to this heading"></a></h2>
+<p>Validate deployment of independent IDP instances across multiple sites and development departments.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="operational-model">
+<h1>Operational Model<a class="headerlink" href="#operational-model" title="Link to this heading"></a></h1>
+<p>The platform should be treated as a product rather than a one-time infrastructure project.</p>
+<p>The platform therefore requires:</p>
+<ul class="simple">
+<li><p>Versioned releases</p></li>
+<li><p>Change management</p></li>
+<li><p>Security updates</p></li>
+<li><p>Vulnerability management</p></li>
+<li><p>Monitoring</p></li>
+<li><p>Logging</p></li>
+<li><p>Incident response</p></li>
+<li><p>Backup and recovery</p></li>
+<li><p>Configuration management</p></li>
+<li><p>Lifecycle management</p></li>
+<li><p>Periodic security review</p></li>
+</ul>
+<p>Each IDP instance should have a clearly defined lifecycle:</p>
+<figure class="align-center" id="id22">
+<div class="graphviz"><img src="../../../../_images/graphviz-6cf3e75ec0e463cd6d6bc227968b5fd586388f23.png" alt="digraph lifecycle {
+
+    rankdir=LR
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    provision [
+        label=&quot;Provision&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    operate [
+        label=&quot;Operate&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    update [
+        label=&quot;Update&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    review [
+        label=&quot;Security Review&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    retire [
+        label=&quot;Retire&quot;,
+        fillcolor=&quot;#FADBD8&quot;
+    ]
+
+    provision -&gt; operate
+    operate -&gt; update
+    update -&gt; review
+    review -&gt; operate
+    review -&gt; retire
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">IDP Instance Lifecycle</span><a class="headerlink" href="#id22" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<hr class="docutils" />
+<section id="design-philosophy">
+<h1>Design Philosophy<a class="headerlink" href="#design-philosophy" title="Link to this heading"></a></h1>
+<p>The central design philosophy is:</p>
+<blockquote>
+<div><p><strong>Make the secure path the easiest path.</strong></p>
+</div></blockquote>
+<p>Developers should not have to become infrastructure or security experts simply to create a development environment.</p>
+<p>At the same time, developer freedom should not require unrestricted access to infrastructure.</p>
+<p>The platform therefore aims to provide:</p>
+<figure class="align-center" id="id23">
+<div class="graphviz"><img src="../../../../_images/graphviz-f14bd79a18ab89b47b410993a3f4e982a45fde03.png" alt="digraph philosophy {
+
+    rankdir=LR
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    freedom [
+        label=&quot;Developer Freedom&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    standardization [
+        label=&quot;Standardization&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    isolation [
+        label=&quot;Isolation&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    security [
+        label=&quot;Security&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    automation [
+        label=&quot;Automation&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    platform [
+        label=&quot;Secure Developer Platform&quot;,
+        shape=ellipse,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    freedom -&gt; platform
+    standardization -&gt; platform
+    isolation -&gt; platform
+    security -&gt; platform
+    automation -&gt; platform
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Platform Design Philosophy</span><a class="headerlink" href="#id23" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The platform is intentionally designed so that developers can experiment inside controlled boundaries.</p>
+<p>The objective is not to eliminate experimentation.</p>
+<p>The objective is to make experimentation <strong>safe, reproducible and disposable</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="final-architecture-concept">
+<h1>Final Architecture Concept<a class="headerlink" href="#final-architecture-concept" title="Link to this heading"></a></h1>
+<p>The intended architecture can be summarized as:</p>
+<figure class="align-center" id="id24">
+<div class="graphviz"><img src="../../../../_images/graphviz-cba317d627b42c65773ac51fbcb1554501c286e1.png" alt="digraph architecture {
+
+    rankdir=TB
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    edge [
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    governance [
+        label=&quot;Central Governance\n\nPlatform Standards\nSecurity Policies\nApproved Templates\nReleases\nDeployment Definitions&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    idpa [
+        label=&quot;IDP Instance A\nDepartment A\n\nProjects\nEnvironments\nTemplates&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    idpb [
+        label=&quot;IDP Instance B\nDepartment B\n\nProjects\nEnvironments\nTemplates&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    idpc [
+        label=&quot;IDP Instance C\nDepartment C\n\nProjects\nEnvironments\nTemplates&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    infra [
+        label=&quot;Infrastructure Platform\n\nCompute\nNetwork\nStorage&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    governance -&gt; idpa [
+        label=&quot;Controlled deployment&quot;
+    ]
+
+    governance -&gt; idpb [
+        label=&quot;Controlled deployment&quot;
+    ]
+
+    governance -&gt; idpc [
+        label=&quot;Controlled deployment&quot;
+    ]
+
+    idpa -&gt; infra [
+        label=&quot;Infrastructure interface&quot;
+    ]
+
+    idpb -&gt; infra [
+        label=&quot;Infrastructure interface&quot;
+    ]
+
+    idpc -&gt; infra [
+        label=&quot;Infrastructure interface&quot;
+    ]
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">High-Level Secure Internal Developer Platform Architecture</span><a class="headerlink" href="#id24" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The architecture therefore separates:</p>
+<p><strong>Governance</strong></p>
+<p>from</p>
+<p><strong>Developer self-service</strong></p>
+<p>from</p>
+<p><strong>Infrastructure execution</strong></p>
+<p>while maintaining strong security boundaries between development departments.</p>
+</section>
+<hr class="docutils" />
+<section id="project-goal">
+<h1>Project Goal<a class="headerlink" href="#project-goal" title="Link to this heading"></a></h1>
+<p>The long-term goal is to demonstrate how a <strong>Secure Internal Developer Platform can be engineered as a security-critical system from the beginning</strong>, rather than building a conventional developer platform first and attempting to secure it afterward.</p>
+<p>The project therefore focuses equally on:</p>
+<ul class="simple">
+<li><p>Platform Engineering</p></li>
+<li><p>Systems Engineering</p></li>
+<li><p>Secure Systems Engineering</p></li>
+<li><p>Infrastructure as Code</p></li>
+<li><p>Automation</p></li>
+<li><p>Identity and Access Management</p></li>
+<li><p>Network Security</p></li>
+<li><p>Isolation</p></li>
+<li><p>Threat Modeling</p></li>
+<li><p>Security Architecture</p></li>
+<li><p>Verification and Validation</p></li>
+<li><p>Operational Security</p></li>
+</ul>
+<p>The resulting system should demonstrate not only that a developer platform can be built, but that it can be <strong>designed, implemented, verified and operated using a security-first engineering methodology</strong>.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="internal_dev_platform.html" class="btn btn-neutral float-left" title="Internal Development Platform" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../iam_system/iam_system.html" class="btn btn-neutral float-right" title="IAM architecture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, prevLanky.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

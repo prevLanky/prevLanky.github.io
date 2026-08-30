@@ -1,0 +1,1722 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workout Application &mdash; mygithubpages  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=8a448e45"></script>
+      <script src="../../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../../_static/dark_mode_js/default_dark.js?v=fd565c74"></script>
+      <script src="../../../../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Infrastructure Porvisioning Platform" href="../provisioning-platform.html" />
+    <link rel="prev" title="Workout Mobile Application" href="workout_app.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            mygithubpages
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../cybersecurity.html">Cybersecurity</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../platforms/platforms.html">Platforms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../platforms/microsoft/microsoft.html">Microsoft</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../platforms/microsoft/services/services.html">Microsoft services</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../platforms/microsoft/services/azure/azure.html">Azure</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/compute.html">Compute</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/virtual_machines/virtual_machines.html">Virtual machines</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/containers.html">Containers</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/container/container.html">Container</a><ul>
+<li class="toctree-l9"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/container/container.html#some-more-title">Some more title</a></li>
+</ul>
+</li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html">Azure Kubernetes Service (AKS) Confidential Containers</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#what-is-azure-kubernetes-service-aks-confidential-containers">What is Azure Kubernetes Service (AKS) Confidential Containers?</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#why-use-it">Why use it?</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#when-to-use-it">When to use it?</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#drawbacks">Drawbacks</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#real-life-use-cases">Real life use cases</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#how-to-configure-it-according-to-security-best-practices">How to configure it according to security best practices?</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#how-to-design-the-component">How to design the component?</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#how-to-design-the-supporting-infrastructure">How to design the supporting infrastructure?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/services/azure/networking/networking.html">Networking</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/services/azure/identity/identity.html">Entra ID</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/services/azure/security/security.html">Security</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/services/azure/security/defender/defender.html">Defender</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/services/azure/security/sentinel/sentinel.html">Sentinel</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/services/azure/security/key_vault/key_vault.html">key Vault</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../platforms/microsoft/services/defender/defender.html">Defender</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/services/defender/endpoint/endpoint.html">Microsoft Defender for Endpoints</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/cve_writeups.html">CVE Writeups</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html">CVE-2024-21403</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#cve-description">CVE description</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#which-services-are-vulnerable">Which services are vulnerable</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#what-is-it">What is it?</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#how-does-these-services-interact-with-other">How does these services interact with other</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#what-type-of-vulnerability">What type of vulnerability</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#attack-vector">Attack vector</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#impact">Impact</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#affected-assets">Affected assets</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#direct-affected">Direct affected</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#indirect-affected">Indirect affected</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#exploitation-scenario">Exploitation scenario</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#detection">Detection</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#azure">Azure</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#kubernetes">Kubernetes</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#host">Host</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#patching-remediation">Patching/Remediation</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#compensating-controls">Compensating controls</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#reduce-exposure">Reduce exposure</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#kubernetes-hardening">Kubernetes hardening</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#azure-identity">Azure identity</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#monitoring">Monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#verification">Verification</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#how-could-architecture-or-design-decisions-have-prevented-or-minimized-it">How could architecture or design decisions have prevented or minimized it?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#how-to-know-if-exploited">How to know if exploited?</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#id1">Kubernetes</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#id2">Azure</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#network">Network</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../security-engineering.html">Security Engineering</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../systems.html">Systems</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../internal_dev_platform/internal_dev_platform.html">Internal Development Platform</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html">Secure Internal Developer Platform</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#overview">Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#what-is-this-platform">What is this platform?</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#problem-statement">Problem Statement</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#relationship-to-other-platforms">Relationship to Other Platforms</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#platform-boundaries">Platform Boundaries</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#internal-developer-platform">Internal Developer Platform</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#infrastructure-platform">Infrastructure Platform</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#tooling-platform">Tooling Platform</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#identity-platform">Identity Platform</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#source-control">Source Control</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#purpose">Purpose</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#multi-department-architecture">Multi-Department Architecture</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#central-governance-local-execution">Central Governance, Local Execution</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#templates">Templates</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#template-governance">Template Governance</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#golden-paths">Golden Paths</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#secure-systems-engineering-approach">Secure Systems Engineering Approach</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#security-objectives">Security Objectives</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#isolation">Isolation</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#least-privilege">Least Privilege</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#secure-defaults">Secure Defaults</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#reproducibility">Reproducibility</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#integrity">Integrity</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#accountability">Accountability</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#resilience">Resilience</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#controlled-change">Controlled Change</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#threat-modeling">Threat Modeling</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#compromised-developer-environment">Compromised Developer Environment</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#malicious-developer">Malicious Developer</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#compromised-idp">Compromised IDP</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#trust-boundaries">Trust Boundaries</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#zero-trust-principles">Zero Trust Principles</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#security-requirements">Security Requirements</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#infrastructure-abstraction">Infrastructure Abstraction</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#one-click-platform-deployment">One-Click Platform Deployment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#configuration-as-code">Configuration as Code</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#secure-development-lifecycle">Secure Development Lifecycle</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#security-by-design-principles">Security by Design Principles</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#id1">Least Privilege</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#defense-in-depth">Defense in Depth</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#fail-secure">Fail Secure</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#secure-by-default">Secure by Default</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#minimize-trust">Minimize Trust</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#reduce-blast-radius">Reduce Blast Radius</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#separation-of-duties">Separation of Duties</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#explicit-trust-boundaries">Explicit Trust Boundaries</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#id2">Reproducibility</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#continuous-verification">Continuous Verification</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#development-strategy">Development Strategy</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#architecture">Architecture</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#minimal-platform">Minimal Platform</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#infrastructure-integration">Infrastructure Integration</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#id3">Templates</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#id4">Isolation</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#reproducible-deployment">Reproducible Deployment</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#security-engineering">Security Engineering</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#multi-site">Multi-Site</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#operational-model">Operational Model</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#design-philosophy">Design Philosophy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#final-architecture-concept">Final Architecture Concept</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#project-goal">Project Goal</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../iam_system/iam_system.html">IAM architecture</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../iam_system/iam_architecture.html">IAM Architecture</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#what-is-iam-architecture">What is IAM Architecture?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#security-benefits">Security Benefits</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#security-implications">Security Implications</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#why-use-it">Why use it?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#when-to-use-it">When to use it?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#provisioning-vs-just-in-time">Provisioning vs Just-In-Time</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#provisioning-synchronization">Provisioning / Synchronization</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#just-in-time-provisioning">Just-In-Time Provisioning</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#central-identity-vs-local-authorization">Central Identity vs Local Authorization</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#drawbacks">Drawbacks</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#availability-dependency">Availability dependency</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#excessive-centralization">Excessive centralization</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#synchronization-failures">Synchronization failures</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#how-to-configure-it-according-to-security-best-practices">How to configure it according to security best practices?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#how-to-design-the-component">How to design the component?</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../iam_system/iam_architecture.html#centralized-authorization-architecture">Centralized Authorization Architecture</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#id1">Why use it?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#id2">Security Benefits</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#id3">Security Implications</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../iam_system/iam_architecture.html#decentralized-federated-iam-architecture">Decentralized / Federated IAM Architecture</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#id4">Why use it?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#id5">Security Benefits</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#id6">Security Implications</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../iam_system/iam_architecture.html#comparison-of-iam-architectures">Comparison of IAM Architectures</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#centralized-identity-local-authorization">1. Centralized Identity + Local Authorization</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#pros">Pros</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#cons">Cons</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#when-to-use">When to use</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#when-not-to-use">When not to use</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#best-for">Best for</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#centralized-identity-centralized-authorization">2. Centralized Identity + Centralized Authorization</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#id7">Pros</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#id8">Cons</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#id9">When to use</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#id10">When not to use</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#id11">Best for</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../iam_system/iam_architecture.html#federated-decentralized-iam">3. Federated / Decentralized IAM</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#id12">Pros</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#id13">Cons</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#id14">When to use</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#id15">When not to use</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../iam_system/iam_architecture.html#id16">Best for</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4 current"><a class="reference internal" href="workout_app.html">Workout Mobile Application</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Workout Application</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#overview">Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#purpose">Purpose</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#design-principles">Design Principles</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#simplicity">Simplicity</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#minimal-data-collection">Minimal Data Collection</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#structured-training">Structured Training</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#long-term-progression">Long-Term Progression</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#user-control">User Control</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#security">Security</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#application-scope">Application Scope</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#users">Users</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#workout-of-the-day">Workout of the Day</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#training-plans">Training Plans</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#exercise-database">Exercise Database</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#strength-training">Strength Training</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#cycling">Cycling</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#running">Running</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#workout-tracking">Workout Tracking</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#progression">Progression</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#deloading">Deloading</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#custom-training-plans">Custom Training Plans</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#body-composition">Body Composition</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#statistics">Statistics</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#application-architecture">Application Architecture</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mobile-application">Mobile Application</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#backend">Backend</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#authentication">Authentication</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#authorization">Authorization</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#data-model">Data Model</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#shared-and-user-specific-data">Shared and User-Specific Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#storage">Storage</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#data-privacy">Data Privacy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#environment-separation">Environment Separation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#development-environment">Development Environment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#development-data">Development Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#staging-environment">Staging Environment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#production-environment">Production Environment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#network-architecture">Network Architecture</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#application-data-flow">Application Data Flow</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#security-boundaries">Security Boundaries</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#application-lifecycle">Application Lifecycle</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#future-expansion">Future Expansion</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#final-architecture">Final Architecture</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../provisioning-platform.html">Infrastructure Porvisioning Platform</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../provisioning-platform.html#disk-vs-diskless-servers-initial-boot">Disk vs Diskless servers initial boot</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../provisioning-platform.html#bootstrap-infrastructure">Bootstrap infrastructure</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../seed-server.html">Seed/mgmt server</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../seed-server.html#what-is-a-seed-server">What is a seed server?</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../os-image-builder.html">OS Image Builder</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../os-image-builder.html#tools">Tools</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../os-image-builder.html#mkosi">Mkosi</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../os-image-builder.html#image-structure">Image structure</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../os-image-builder.html#golden-image">Golden Image</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../os-image-builder.html#specialized-image">Specialized Image</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../os-image-builder.html#ansible">Ansible</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../building-secure-system.html">Building a Secure, Production-Grade Web Application (From Idea to Production)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../building-secure-system.html#roles-and-responsibilities">Roles and Responsibilities</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../building-secure-system.html#architecture-engineering-and-implementation-across-levels">Architecture, Engineering, and Implementation Across Levels</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#web-application-level-system-of-systems">Web Application Level (System of Systems)</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#system-sub-system-level">System/Sub-System Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#component-application-level">Component / Application Level</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../building-secure-system.html#threat-modeling-and-risk-analysis-across-levels">Threat Modeling and Risk Analysis Across Levels</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#web-application-level">Web Application Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#id1">System/Sub-System Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#component-implementation-level">Component / Implementation Level</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../building-secure-system.html#qa-qa-automation-and-devsecops">QA, QA Automation, and DevSecOps</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../building-secure-system.html#configuration-management-and-change-control">Configuration Management and Change Control</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#id2">Web Application Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#id3">System / Sub-System Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#component-level">Component Level</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../building-secure-system.html#change-control">Change Control</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#id4">Web Application Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#system-level">System Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#id5">Component Level</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../building-secure-system.html#tools-and-frameworks">Tools and Frameworks</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../file-processing.html">File Processing system</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../file-processing.html#requirements">Requirements</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../file-processing.html#security-principles">Security principles</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../file-processing.html#use-cases">Use Cases</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../file-processing.html#components">Components</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../file-processing.html#file-storage">File storage</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../file-processing.html#id1">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../file-processing.html#message-queue">Message queue</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../file-processing.html#id2">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../file-processing.html#file-processors-slave">File processors (Slave)</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../file-processing.html#id3">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../file-processing.html#job-orchestrator">Job orchestrator</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../file-processing.html#id4">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../file-processing.html#job-storage">Job storage</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../file-processing.html#id5">Requirements</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../programming/programming.html">Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../programming/cpp/cpp.html">C++</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../programming/python/python.html">Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../programming/python/theory/theory.html">Theory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/theory/theory.html#installation">Installation</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/theory/theory.html#custom-installation">Custom Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/theory/theory.html#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/theory/theory.html#faq">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html">Codesnippets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#custom-classes">Custom Classes</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#std-expected">std::expected</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#std-expected-unit-test">std::Expected unit test</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#logger">Logger</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#file-managment">File managment</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#read-files">Read Files</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#csv">CSV</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#txt">txt</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#word">word</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#pdf">pdf</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#write-files">Write Files</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#id1">CSV</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../programming/python/guides/guides.html">Guides</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/guides/web/web.html">Web</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html">How to setup basic FastAPI website</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#installation">Installation</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#main-fastapi-code">main FastAPI code</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#basic-knowledge">Basic knowledge</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#fastapi">FastAPI</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#key-features">Key Features:</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#core-components">Core Components</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#uvicorn">Uvicorn</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#id1">Key Features</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#responsibilities">Responsibilities</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#relationship-between-fastapi-and-uvicorn">Relationship Between FastAPI and Uvicorn</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../wiki/wiki.html">Wiki</a><ul class="simple">
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">mygithubpages</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../cybersecurity.html">Cybersecurity</a></li>
+          <li class="breadcrumb-item"><a href="../../security-engineering.html">Security Engineering</a></li>
+          <li class="breadcrumb-item"><a href="../systems.html">Systems</a></li>
+          <li class="breadcrumb-item"><a href="workout_app.html">Workout Mobile Application</a></li>
+      <li class="breadcrumb-item active">Workout Application</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/cybersecurity/security-engineering/systems/workout_app/overview.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="workout-application">
+<h1>Workout Application<a class="headerlink" href="#workout-application" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>This project is a mobile workout application designed to help users plan, perform and track their training over time.</p>
+<p>The application supports multiple forms of training, including strength training, cycling and running. It combines predefined training plans, custom workouts, workout tracking, progression, body composition tracking and statistics into a single application.</p>
+<p>The application is designed around a simple user experience with minimal unnecessary onboarding and minimal collection of personal information.</p>
+<p>The mobile application provides the primary user interface, while backend services provide authentication, persistent data storage, authorization and other functionality required by the application.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="purpose">
+<h1>Purpose<a class="headerlink" href="#purpose" title="Link to this heading"></a></h1>
+<p>The purpose of the application is to provide users with a structured system for training and tracking their long-term development.</p>
+<p>The application should help users:</p>
+<ul class="simple">
+<li><p>Follow structured training plans</p></li>
+<li><p>Perform individual workouts</p></li>
+<li><p>Record completed workouts</p></li>
+<li><p>Track training progression</p></li>
+<li><p>Track body composition</p></li>
+<li><p>View training statistics</p></li>
+<li><p>Create custom training plans</p></li>
+<li><p>Use predefined training plans</p></li>
+<li><p>Receive a Workout of the Day</p></li>
+<li><p>Monitor long-term progress</p></li>
+</ul>
+<p>The application should reduce the amount of manual planning required from the user while still allowing the user to control their training.</p>
+</section>
+<hr class="docutils" />
+<section id="design-principles">
+<h1>Design Principles<a class="headerlink" href="#design-principles" title="Link to this heading"></a></h1>
+<p>The application is designed around several principles.</p>
+<section id="simplicity">
+<h2>Simplicity<a class="headerlink" href="#simplicity" title="Link to this heading"></a></h2>
+<p>The application should provide useful functionality without unnecessary complexity.</p>
+<p>Users should be able to open the application and understand what they should do without completing extensive setup or questionnaires.</p>
+</section>
+<section id="minimal-data-collection">
+<h2>Minimal Data Collection<a class="headerlink" href="#minimal-data-collection" title="Link to this heading"></a></h2>
+<p>The application should only collect information that is necessary for its functionality.</p>
+<p>An account should not require unnecessary personal information.</p>
+</section>
+<section id="structured-training">
+<h2>Structured Training<a class="headerlink" href="#structured-training" title="Link to this heading"></a></h2>
+<p>Training should have a clear structure rather than being limited to individual, disconnected workouts.</p>
+<p>The application should allow users to follow training plans and progress through them over time.</p>
+</section>
+<section id="long-term-progression">
+<h2>Long-Term Progression<a class="headerlink" href="#long-term-progression" title="Link to this heading"></a></h2>
+<p>The application should help users understand how their training changes over time.</p>
+<p>Progression should be based on recorded training rather than requiring the user to manually calculate everything.</p>
+</section>
+<section id="user-control">
+<h2>User Control<a class="headerlink" href="#user-control" title="Link to this heading"></a></h2>
+<p>Automation should simplify training rather than remove user control.</p>
+<p>Users should be able to modify and customize their training when required.</p>
+</section>
+<section id="security">
+<h2>Security<a class="headerlink" href="#security" title="Link to this heading"></a></h2>
+<p>User-specific information must be protected from unauthorized access.</p>
+<p>The application should treat the mobile client as an untrusted environment and enforce authorization on the backend.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="application-scope">
+<h1>Application Scope<a class="headerlink" href="#application-scope" title="Link to this heading"></a></h1>
+<p>The application covers several areas of training.</p>
+<figure class="align-center" id="id1">
+<div class="graphviz"><img src="../../../../_images/graphviz-e0679fe1220635f42a7a925f28a1a6e8fc05db42.png" alt="digraph application {
+
+    rankdir=TB
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    application [
+        label=&quot;Workout Application&quot;
+    ]
+
+    strength [
+        label=&quot;Strength Training&quot;
+    ]
+
+    cycling [
+        label=&quot;Cycling&quot;
+    ]
+
+    running [
+        label=&quot;Running&quot;
+    ]
+
+    plans [
+        label=&quot;Training Plans&quot;
+    ]
+
+    tracking [
+        label=&quot;Workout Tracking&quot;
+    ]
+
+    body [
+        label=&quot;Body Composition&quot;
+    ]
+
+    statistics [
+        label=&quot;Statistics&quot;
+    ]
+
+    application -&gt; strength
+    application -&gt; cycling
+    application -&gt; running
+    application -&gt; plans
+    application -&gt; tracking
+    application -&gt; body
+    application -&gt; statistics
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Application Scope</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The different training areas share common concepts such as:</p>
+<ul class="simple">
+<li><p>Training plans</p></li>
+<li><p>Workouts</p></li>
+<li><p>Sessions</p></li>
+<li><p>Progression</p></li>
+<li><p>History</p></li>
+<li><p>Statistics</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="users">
+<h1>Users<a class="headerlink" href="#users" title="Link to this heading"></a></h1>
+<p>The application supports both users who do not have an account and authenticated users.</p>
+<p>Functionality that does not require persistent user data should remain available without requiring an account.</p>
+<p>An account is required when functionality depends on persistent user-specific information.</p>
+<figure class="align-center" id="id2">
+<div class="graphviz"><img src="../../../../_images/graphviz-c446ed00d100bf4bc5846bf20c0ca09dce2e6da7.png" alt="digraph users {
+
+    rankdir=TB
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    user [
+        label=&quot;Application User&quot;
+    ]
+
+    anonymous [
+        label=&quot;Anonymous User&quot;
+    ]
+
+    authenticated [
+        label=&quot;Authenticated User&quot;
+    ]
+
+    user -&gt; anonymous
+    user -&gt; authenticated
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">User Model</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Authenticated users can store and retrieve their personal training information across sessions and devices.</p>
+</section>
+<hr class="docutils" />
+<section id="workout-of-the-day">
+<h1>Workout of the Day<a class="headerlink" href="#workout-of-the-day" title="Link to this heading"></a></h1>
+<p>The Workout of the Day provides users with a predefined workout without requiring them to manually construct a workout.</p>
+<p>The purpose of the feature is to provide a clear training activity that fits into the application’s overall training model.</p>
+<p>The Workout of the Day can form part of a broader weekly training structure.</p>
+<p>The feature requires access to backend services when the workout needs to be retrieved or generated dynamically.</p>
+</section>
+<hr class="docutils" />
+<section id="training-plans">
+<h1>Training Plans<a class="headerlink" href="#training-plans" title="Link to this heading"></a></h1>
+<p>Training plans provide structure over a period of time.</p>
+<p>A plan can consist of multiple training periods, sessions and workouts.</p>
+<figure class="align-center" id="id3">
+<div class="graphviz"><img src="../../../../_images/graphviz-5d8e18c30177325df2f3caff9bf91280691c4ec6.png" alt="digraph plan {
+
+    rankdir=TB
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    plan [
+        label=&quot;Training Plan&quot;
+    ]
+
+    period [
+        label=&quot;Training Period&quot;
+    ]
+
+    sessions [
+        label=&quot;Training Sessions&quot;
+    ]
+
+    workouts [
+        label=&quot;Workouts&quot;
+    ]
+
+    activities [
+        label=&quot;Exercises / Activities&quot;
+    ]
+
+    plan -&gt; period
+    period -&gt; sessions
+    sessions -&gt; workouts
+    workouts -&gt; activities
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Training Plan Structure</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The application can provide predefined training plans as well as allow users to create custom plans.</p>
+<p>Predefined plans can cover different training objectives and activities.</p>
+<p>Examples include:</p>
+<ul class="simple">
+<li><p>General fitness</p></li>
+<li><p>Strength training</p></li>
+<li><p>Cycling</p></li>
+<li><p>Running</p></li>
+</ul>
+<p>The exact training plans can evolve independently from the underlying application architecture.</p>
+</section>
+<hr class="docutils" />
+<section id="exercise-database">
+<h1>Exercise Database<a class="headerlink" href="#exercise-database" title="Link to this heading"></a></h1>
+<p>The application maintains a database of exercises and other training activities.</p>
+<p>An exercise can contain information such as:</p>
+<ul class="simple">
+<li><p>Name</p></li>
+<li><p>Description</p></li>
+<li><p>Muscle groups</p></li>
+<li><p>Equipment</p></li>
+<li><p>Movement category</p></li>
+<li><p>Instructions</p></li>
+<li><p>Training characteristics</p></li>
+</ul>
+<p>The exercise database provides a consistent set of exercises that can be used throughout the application.</p>
+<p>Exercises can be referenced by predefined workouts, training plans and custom workouts.</p>
+</section>
+<hr class="docutils" />
+<section id="strength-training">
+<h1>Strength Training<a class="headerlink" href="#strength-training" title="Link to this heading"></a></h1>
+<p>Strength training is based around exercises, sets, repetitions and resistance.</p>
+<p>A strength workout may contain:</p>
+<ul class="simple">
+<li><p>Exercises</p></li>
+<li><p>Sets</p></li>
+<li><p>Repetitions</p></li>
+<li><p>Weight or resistance</p></li>
+<li><p>Rest periods</p></li>
+<li><p>Notes</p></li>
+</ul>
+<p>The application can use the recorded performance to determine progression in future workouts.</p>
+</section>
+<hr class="docutils" />
+<section id="cycling">
+<h1>Cycling<a class="headerlink" href="#cycling" title="Link to this heading"></a></h1>
+<p>Cycling is treated as an endurance training activity.</p>
+<p>Cycling workouts can contain measurements such as:</p>
+<ul class="simple">
+<li><p>Duration</p></li>
+<li><p>Distance</p></li>
+<li><p>Speed</p></li>
+<li><p>Power</p></li>
+<li><p>Heart rate</p></li>
+<li><p>Training intensity</p></li>
+</ul>
+<p>The exact measurements available depend on the information available to the application.</p>
+<p>Cycling activities can be included in training plans and recorded as completed training sessions.</p>
+</section>
+<hr class="docutils" />
+<section id="running">
+<h1>Running<a class="headerlink" href="#running" title="Link to this heading"></a></h1>
+<p>Running is treated as another endurance training activity.</p>
+<p>Running workouts can contain measurements such as:</p>
+<ul class="simple">
+<li><p>Duration</p></li>
+<li><p>Distance</p></li>
+<li><p>Pace</p></li>
+<li><p>Speed</p></li>
+<li><p>Heart rate</p></li>
+<li><p>Training intensity</p></li>
+</ul>
+<p>Running activities can be included in training plans and recorded as completed training sessions.</p>
+</section>
+<hr class="docutils" />
+<section id="workout-tracking">
+<h1>Workout Tracking<a class="headerlink" href="#workout-tracking" title="Link to this heading"></a></h1>
+<p>Users can record completed workouts and training sessions.</p>
+<p>The information recorded depends on the type of activity.</p>
+<figure class="align-center" id="id4">
+<div class="graphviz"><img src="../../../../_images/graphviz-6c5238b2272164e106d4ce0fa8330c1cf5af50b6.png" alt="digraph tracking {
+
+    rankdir=LR
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    user [
+        label=&quot;User&quot;
+    ]
+
+    workout [
+        label=&quot;Workout&quot;
+    ]
+
+    session [
+        label=&quot;Completed Session&quot;
+    ]
+
+    history [
+        label=&quot;Training History&quot;
+    ]
+
+    statistics [
+        label=&quot;Statistics&quot;
+    ]
+
+    user -&gt; workout
+    workout -&gt; session
+    session -&gt; history
+    history -&gt; statistics
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Workout Tracking</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Workout history provides the foundation for progression and statistics.</p>
+</section>
+<hr class="docutils" />
+<section id="progression">
+<h1>Progression<a class="headerlink" href="#progression" title="Link to this heading"></a></h1>
+<p>Progression allows training to change as the user becomes more capable.</p>
+<p>Depending on the type of training, progression can include:</p>
+<ul class="simple">
+<li><p>Increasing resistance</p></li>
+<li><p>Increasing repetitions</p></li>
+<li><p>Increasing duration</p></li>
+<li><p>Increasing distance</p></li>
+<li><p>Increasing training volume</p></li>
+<li><p>Increasing intensity</p></li>
+<li><p>Changing training targets</p></li>
+</ul>
+<p>The progression system should reduce the amount of manual calculation required from the user.</p>
+<p>Users should still be able to adjust their training when necessary.</p>
+</section>
+<hr class="docutils" />
+<section id="deloading">
+<h1>Deloading<a class="headerlink" href="#deloading" title="Link to this heading"></a></h1>
+<p>Training plans can include periods where training stress is deliberately reduced.</p>
+<p>A deload can reduce:</p>
+<ul class="simple">
+<li><p>Training volume</p></li>
+<li><p>Training intensity</p></li>
+<li><p>Resistance</p></li>
+<li><p>Duration</p></li>
+</ul>
+<p>The purpose is to provide periods of reduced training stress before normal progression resumes.</p>
+<figure class="align-center" id="id5">
+<div class="graphviz"><img src="../../../../_images/graphviz-a234be2a3122f01954e8f1b78ebf3e1020d4e6c9.png" alt="digraph progression {
+
+    rankdir=LR
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    training [
+        label=&quot;Training&quot;
+    ]
+
+    progression1 [
+        label=&quot;Progression&quot;
+    ]
+
+    progression2 [
+        label=&quot;Progression&quot;
+    ]
+
+    deload [
+        label=&quot;Deload&quot;
+    ]
+
+    progression3 [
+        label=&quot;Progression&quot;
+    ]
+
+    training -&gt; progression1
+    progression1 -&gt; progression2
+    progression2 -&gt; deload
+    deload -&gt; progression3
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Training Progression</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<hr class="docutils" />
+<section id="custom-training-plans">
+<h1>Custom Training Plans<a class="headerlink" href="#custom-training-plans" title="Link to this heading"></a></h1>
+<p>Users can create training plans based on their own requirements.</p>
+<p>A custom plan can use the same exercises and activities available to predefined plans.</p>
+<p>Users can determine aspects such as:</p>
+<ul class="simple">
+<li><p>Training days</p></li>
+<li><p>Exercises</p></li>
+<li><p>Workouts</p></li>
+<li><p>Sets</p></li>
+<li><p>Repetitions</p></li>
+<li><p>Training targets</p></li>
+<li><p>Progression</p></li>
+</ul>
+<p>Custom plans allow the application to support users who do not want to follow a predefined training program.</p>
+</section>
+<hr class="docutils" />
+<section id="body-composition">
+<h1>Body Composition<a class="headerlink" href="#body-composition" title="Link to this heading"></a></h1>
+<p>The application allows users to record body measurements over time.</p>
+<p>Measurements can include:</p>
+<ul class="simple">
+<li><p>Body weight</p></li>
+<li><p>Waist</p></li>
+<li><p>Stomach</p></li>
+<li><p>Chest</p></li>
+<li><p>Shoulders</p></li>
+<li><p>Arms</p></li>
+<li><p>Forearms</p></li>
+<li><p>Legs</p></li>
+<li><p>Calves</p></li>
+</ul>
+<p>Measurements are stored historically so users can observe changes over time.</p>
+<p>Body composition tracking is separate from workout performance but can be viewed alongside training history.</p>
+</section>
+<hr class="docutils" />
+<section id="statistics">
+<h1>Statistics<a class="headerlink" href="#statistics" title="Link to this heading"></a></h1>
+<p>The application provides statistics based on historical training and measurement data.</p>
+<p>Statistics can include:</p>
+<ul class="simple">
+<li><p>Training frequency</p></li>
+<li><p>Training volume</p></li>
+<li><p>Exercise progression</p></li>
+<li><p>Personal records</p></li>
+<li><p>Running performance</p></li>
+<li><p>Cycling performance</p></li>
+<li><p>Body weight trends</p></li>
+<li><p>Measurement trends</p></li>
+<li><p>Training consistency</p></li>
+</ul>
+<p>Statistics should be derived from recorded information where possible rather than requiring users to manually calculate their progress.</p>
+</section>
+<hr class="docutils" />
+<section id="application-architecture">
+<h1>Application Architecture<a class="headerlink" href="#application-architecture" title="Link to this heading"></a></h1>
+<p>The application consists of a mobile client, backend services and persistent application data.</p>
+<figure class="align-center" id="id6">
+<div class="graphviz"><img src="../../../../_images/graphviz-61cdf6a137be97a6c24b4da7a872cf92187c239f.png" alt="digraph architecture {
+
+    rankdir=TB
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    mobile [
+        label=&quot;Mobile Application\n\nUser Interface\nApplication Logic\nWorkout Interaction&quot;
+    ]
+
+    backend [
+        label=&quot;Backend Services\n\nAuthentication\nApplication Services\nAuthorization&quot;
+    ]
+
+    data [
+        label=&quot;Application Data\n\nUsers\nExercises\nWorkouts\nPlans\nMeasurements\nStatistics&quot;
+    ]
+
+    mobile -&gt; backend
+    backend -&gt; data
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">High-Level Application Architecture</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The mobile application provides the primary user interface.</p>
+<p>Backend services provide functionality that requires persistent storage, authentication, authorization or server-side processing.</p>
+</section>
+<hr class="docutils" />
+<section id="mobile-application">
+<h1>Mobile Application<a class="headerlink" href="#mobile-application" title="Link to this heading"></a></h1>
+<p>The mobile application is the primary interface through which users interact with the system.</p>
+<p>The mobile application is responsible for functionality such as:</p>
+<ul class="simple">
+<li><p>Navigation</p></li>
+<li><p>User interface</p></li>
+<li><p>Workout interaction</p></li>
+<li><p>Workout logging</p></li>
+<li><p>Training plan presentation</p></li>
+<li><p>Progression information</p></li>
+<li><p>Statistics</p></li>
+<li><p>Body composition tracking</p></li>
+<li><p>Local application state</p></li>
+</ul>
+<p>The application communicates with backend services when persistent data or backend functionality is required.</p>
+<p>The mobile application should not contain privileged backend credentials.</p>
+</section>
+<hr class="docutils" />
+<section id="backend">
+<h1>Backend<a class="headerlink" href="#backend" title="Link to this heading"></a></h1>
+<p>The backend provides services required by the mobile application.</p>
+<p>These services include:</p>
+<ul class="simple">
+<li><p>Authentication</p></li>
+<li><p>Persistent data storage</p></li>
+<li><p>Application data access</p></li>
+<li><p>Authorization</p></li>
+<li><p>Backend application logic</p></li>
+<li><p>File storage</p></li>
+</ul>
+<p>The backend is responsible for protecting persistent user data and enforcing authorization.</p>
+</section>
+<hr class="docutils" />
+<section id="authentication">
+<h1>Authentication<a class="headerlink" href="#authentication" title="Link to this heading"></a></h1>
+<p>Authentication establishes the identity of an authenticated user.</p>
+<p>The application uses authentication for functionality that requires persistent user-specific information.</p>
+<p>The authentication system should be separated from authorization.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Authentication
+      |
+      v
+Who is the user?
+      |
+      v
+Authorization
+      |
+      v
+What is the user allowed to access?
+</pre></div>
+</div>
+<p>A user’s identity should be associated with their application data.</p>
+</section>
+<hr class="docutils" />
+<section id="authorization">
+<h1>Authorization<a class="headerlink" href="#authorization" title="Link to this heading"></a></h1>
+<p>Authorization determines which resources a user is allowed to access.</p>
+<p>The mobile application should not be considered a trusted environment.</p>
+<p>A user should only be able to access data for which they have permission.</p>
+<figure class="align-center" id="id7">
+<div class="graphviz"><img src="../../../../_images/graphviz-8d3a98841dd62da6fd165fc0ccd75ceaa7fc0e52.png" alt="digraph authorization {
+
+    rankdir=LR
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    user [
+        label=&quot;User&quot;
+    ]
+
+    application [
+        label=&quot;Mobile Application&quot;
+    ]
+
+    backend [
+        label=&quot;Backend&quot;
+    ]
+
+    authorization [
+        label=&quot;Authorization&quot;
+    ]
+
+    data [
+        label=&quot;Protected Data&quot;
+    ]
+
+    user -&gt; application
+    application -&gt; backend
+    backend -&gt; authorization
+    authorization -&gt; data
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Authorization Model</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Authorization must be enforced by backend services rather than relying solely on the mobile application.</p>
+</section>
+<hr class="docutils" />
+<section id="data-model">
+<h1>Data Model<a class="headerlink" href="#data-model" title="Link to this heading"></a></h1>
+<p>The application’s data is organized around several primary concepts.</p>
+<figure class="align-center" id="id8">
+<div class="graphviz"><img src="../../../../_images/graphviz-51646f2e7efa15f9ace37761ec82c41a46564b6e.png" alt="digraph data {
+
+    rankdir=LR
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    user [
+        label=&quot;User&quot;
+    ]
+
+    profile [
+        label=&quot;Profile&quot;
+    ]
+
+    plan [
+        label=&quot;Training Plan&quot;
+    ]
+
+    workout [
+        label=&quot;Workout&quot;
+    ]
+
+    exercise [
+        label=&quot;Exercise&quot;
+    ]
+
+    session [
+        label=&quot;Workout Session&quot;
+    ]
+
+    measurement [
+        label=&quot;Body Measurement&quot;
+    ]
+
+    statistics [
+        label=&quot;Statistics&quot;
+    ]
+
+    user -&gt; profile
+    user -&gt; plan
+    plan -&gt; workout
+    workout -&gt; exercise
+    user -&gt; session
+    session -&gt; workout
+    user -&gt; measurement
+    user -&gt; statistics
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">High-Level Data Model</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The exact implementation of the data model can evolve as the application develops.</p>
+<p>The conceptual model is centered around users, training plans, workouts, recorded sessions and historical progress.</p>
+</section>
+<hr class="docutils" />
+<section id="shared-and-user-specific-data">
+<h1>Shared and User-Specific Data<a class="headerlink" href="#shared-and-user-specific-data" title="Link to this heading"></a></h1>
+<p>The application contains both shared application data and user-specific data.</p>
+<p>Shared application data can include:</p>
+<ul class="simple">
+<li><p>Exercises</p></li>
+<li><p>Exercise descriptions</p></li>
+<li><p>Training plan definitions</p></li>
+<li><p>Workout definitions</p></li>
+</ul>
+<p>User-specific data can include:</p>
+<ul class="simple">
+<li><p>Profile information</p></li>
+<li><p>Workout history</p></li>
+<li><p>Completed sessions</p></li>
+<li><p>Custom training plans</p></li>
+<li><p>Body measurements</p></li>
+<li><p>Statistics</p></li>
+<li><p>Preferences</p></li>
+</ul>
+<figure class="align-center" id="id9">
+<div class="graphviz"><img src="../../../../_images/graphviz-530ffec5f59913ba0832ece5579866354b1eed48.png" alt="digraph data {
+
+    rankdir=TB
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    application [
+        label=&quot;Application&quot;
+    ]
+
+    shared [
+        label=&quot;Shared Data\n\nExercises\nTraining Plans\nWorkout Definitions&quot;
+    ]
+
+    user [
+        label=&quot;User Data\n\nWorkout History\nMeasurements\nPreferences\nCompleted Workouts&quot;
+    ]
+
+    application -&gt; shared
+    application -&gt; user
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Shared and User-Specific Data</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>User-specific data must remain isolated between users.</p>
+</section>
+<hr class="docutils" />
+<section id="storage">
+<h1>Storage<a class="headerlink" href="#storage" title="Link to this heading"></a></h1>
+<p>Structured application information is stored as application data.</p>
+<p>Files and other objects that do not belong in the structured data model can be stored separately.</p>
+<p>Examples include:</p>
+<ul class="simple">
+<li><p>Exercise images</p></li>
+<li><p>Profile images</p></li>
+<li><p>Other application assets</p></li>
+<li><p>User-uploaded files</p></li>
+</ul>
+<p>Access to user-specific files must follow the same authorization principles as other user data.</p>
+</section>
+<hr class="docutils" />
+<section id="data-privacy">
+<h1>Data Privacy<a class="headerlink" href="#data-privacy" title="Link to this heading"></a></h1>
+<p>The application follows a data minimization approach.</p>
+<p>Only information required for application functionality should be collected.</p>
+<p>The application should avoid requiring unnecessary:</p>
+<ul class="simple">
+<li><p>Personal information</p></li>
+<li><p>Profile information</p></li>
+<li><p>Questionnaires</p></li>
+<li><p>Onboarding information</p></li>
+</ul>
+<p>User-generated training information should be treated as private application data.</p>
+</section>
+<hr class="docutils" />
+<section id="environment-separation">
+<h1>Environment Separation<a class="headerlink" href="#environment-separation" title="Link to this heading"></a></h1>
+<p>The application uses separate environments for development, staging and production.</p>
+<p>Development uses a local environment and synthetic data.</p>
+<p>Staging is used for testing and verification.</p>
+<p>Production contains real user data.</p>
+<figure class="align-center" id="id10">
+<div class="graphviz"><img src="../../../../_images/graphviz-407b9b5aaf3dea7a5c05c879a98cca96d21e6e5a.png" alt="digraph environments {
+
+    rankdir=LR
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    development [
+        label=&quot;Development\n\nLocal Environment\nSynthetic Data&quot;
+    ]
+
+    staging [
+        label=&quot;Staging\n\nTest Environment\nSynthetic Data&quot;
+    ]
+
+    production [
+        label=&quot;Production\n\nLive Environment\nReal User Data&quot;
+    ]
+
+    development -&gt; staging
+    staging -&gt; production
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Environment Separation</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The environments are logically separated.</p>
+<p>Production data must not be used as development or test data.</p>
+</section>
+<hr class="docutils" />
+<section id="development-environment">
+<h1>Development Environment<a class="headerlink" href="#development-environment" title="Link to this heading"></a></h1>
+<p>The development environment allows the application to be developed without requiring access to production data.</p>
+<p>The local environment contains a local representation of the backend and database.</p>
+<figure class="align-center" id="id11">
+<div class="graphviz"><img src="../../../../_images/graphviz-6428201fa91f06d3f38b66b938ab7de5388e3993.png" alt="digraph development {
+
+    rankdir=TB
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    mobile [
+        label=&quot;Mobile Application&quot;
+    ]
+
+    backend [
+        label=&quot;Local Backend&quot;
+    ]
+
+    database [
+        label=&quot;Local Data\nSynthetic Data&quot;
+    ]
+
+    mobile -&gt; backend
+    backend -&gt; database
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Development Environment</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Development data can be recreated from controlled seed data.</p>
+<p>This allows multiple developers to work with consistent data without sharing real user information.</p>
+</section>
+<hr class="docutils" />
+<section id="development-data">
+<h1>Development Data<a class="headerlink" href="#development-data" title="Link to this heading"></a></h1>
+<p>Development data is synthetic data created specifically for development and testing.</p>
+<p>Examples include:</p>
+<ul class="simple">
+<li><p>Test User</p></li>
+<li><p>Test Workout</p></li>
+<li><p>Test Training Plan</p></li>
+<li><p>Test Exercise</p></li>
+<li><p>Test Measurement</p></li>
+<li><p>Test Workout History</p></li>
+</ul>
+<p>The development dataset can contain different scenarios required for testing application behavior.</p>
+<p>For example:</p>
+<ul class="simple">
+<li><p>A new user without training history</p></li>
+<li><p>A user with completed workouts</p></li>
+<li><p>A user with a long training history</p></li>
+<li><p>A user with multiple training plans</p></li>
+<li><p>A user with body measurements</p></li>
+<li><p>Edge cases and invalid data</p></li>
+</ul>
+<p>Development data should be reproducible so that a new development environment can be created consistently.</p>
+</section>
+<hr class="docutils" />
+<section id="staging-environment">
+<h1>Staging Environment<a class="headerlink" href="#staging-environment" title="Link to this heading"></a></h1>
+<p>The staging environment represents the application in a controlled environment before production.</p>
+<p>It is used to verify:</p>
+<ul class="simple">
+<li><p>Application functionality</p></li>
+<li><p>Backend behavior</p></li>
+<li><p>Data handling</p></li>
+<li><p>Authentication</p></li>
+<li><p>Authorization</p></li>
+<li><p>Integration between application components</p></li>
+</ul>
+<p>Staging uses synthetic test data.</p>
+<p>Staging must remain separate from production.</p>
+</section>
+<hr class="docutils" />
+<section id="production-environment">
+<h1>Production Environment<a class="headerlink" href="#production-environment" title="Link to this heading"></a></h1>
+<p>The production environment is the live application environment.</p>
+<p>It contains real users and real application data.</p>
+<p>Production data can include:</p>
+<ul class="simple">
+<li><p>User accounts</p></li>
+<li><p>Workout history</p></li>
+<li><p>Training plans</p></li>
+<li><p>Completed sessions</p></li>
+<li><p>Body measurements</p></li>
+<li><p>Statistics</p></li>
+<li><p>User preferences</p></li>
+</ul>
+<p>Production therefore requires stronger access controls than development and staging.</p>
+</section>
+<hr class="docutils" />
+<section id="network-architecture">
+<h1>Network Architecture<a class="headerlink" href="#network-architecture" title="Link to this heading"></a></h1>
+<p>The mobile application communicates with backend services over a network connection.</p>
+<figure class="align-center" id="id12">
+<div class="graphviz"><img src="../../../../_images/graphviz-76deb348e1a04b3ac565295e4d84a105a5126526.png" alt="digraph network {
+
+    rankdir=LR
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    mobile [
+        label=&quot;Mobile Device\n\nWorkout Application&quot;
+    ]
+
+    network [
+        label=&quot;Network&quot;
+    ]
+
+    backend [
+        label=&quot;Backend Services&quot;
+    ]
+
+    data [
+        label=&quot;Application Data&quot;
+    ]
+
+    mobile -&gt; network
+    network -&gt; backend
+    backend -&gt; data
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Mobile Application Network Architecture</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Communication between the mobile application and backend services should use secure transport.</p>
+<p>The mobile application does not require a traditional web server architecture.</p>
+<p>The underlying infrastructure required to operate managed backend services is provided by the backend platform.</p>
+</section>
+<hr class="docutils" />
+<section id="application-data-flow">
+<h1>Application Data Flow<a class="headerlink" href="#application-data-flow" title="Link to this heading"></a></h1>
+<p>A typical workout operation follows a flow similar to:</p>
+<figure class="align-center" id="id13">
+<div class="graphviz"><img src="../../../../_images/graphviz-930f9a013307a441bc477d780190404295c4fbf5.png" alt="digraph dataflow {
+
+    rankdir=LR
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    user [
+        label=&quot;User&quot;
+    ]
+
+    mobile [
+        label=&quot;Mobile Application&quot;
+    ]
+
+    authentication [
+        label=&quot;Authentication&quot;
+    ]
+
+    backend [
+        label=&quot;Backend Services&quot;
+    ]
+
+    authorization [
+        label=&quot;Authorization&quot;
+    ]
+
+    data [
+        label=&quot;Workout Data&quot;
+    ]
+
+    user -&gt; mobile [
+        label=&quot;Record workout&quot;
+    ]
+
+    mobile -&gt; authentication [
+        label=&quot;User session&quot;
+    ]
+
+    mobile -&gt; backend [
+        label=&quot;Request&quot;
+    ]
+
+    backend -&gt; authorization [
+        label=&quot;Verify access&quot;
+    ]
+
+    authorization -&gt; data [
+        label=&quot;Authorized access&quot;
+    ]
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Workout Data Flow</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The backend remains responsible for determining whether the requested operation is permitted.</p>
+</section>
+<hr class="docutils" />
+<section id="security-boundaries">
+<h1>Security Boundaries<a class="headerlink" href="#security-boundaries" title="Link to this heading"></a></h1>
+<p>The application contains several security boundaries.</p>
+<p>The mobile device is controlled by the user and must therefore be treated as an untrusted environment.</p>
+<p>The backend is responsible for enforcing access to protected data.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>User
+ |
+ v
+Mobile Application
+ |
+ v
+Backend
+ |
+ v
+Authorization
+ |
+ v
+Protected Data
+</pre></div>
+</div>
+<p>The application should not rely on client-side controls as the only protection for sensitive operations.</p>
+</section>
+<hr class="docutils" />
+<section id="application-lifecycle">
+<h1>Application Lifecycle<a class="headerlink" href="#application-lifecycle" title="Link to this heading"></a></h1>
+<p>The application is designed to evolve continuously as new functionality is introduced and existing functionality is improved.</p>
+<p>The general lifecycle consists of:</p>
+<figure class="align-center" id="id14">
+<div class="graphviz"><img src="../../../../_images/graphviz-93a11e85cbd5fb46abc9dd7fcb382c40a87cfeba.png" alt="digraph lifecycle {
+
+    rankdir=LR
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    requirements [
+        label=&quot;Requirements&quot;
+    ]
+
+    design [
+        label=&quot;Design&quot;
+    ]
+
+    implementation [
+        label=&quot;Implementation&quot;
+    ]
+
+    verification [
+        label=&quot;Verification&quot;
+    ]
+
+    release [
+        label=&quot;Release&quot;
+    ]
+
+    operation [
+        label=&quot;Operation&quot;
+    ]
+
+    improvement [
+        label=&quot;Improvement&quot;
+    ]
+
+    requirements -&gt; design
+    design -&gt; implementation
+    implementation -&gt; verification
+    verification -&gt; release
+    release -&gt; operation
+    operation -&gt; improvement
+    improvement -&gt; requirements
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Application Lifecycle</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Changes to application functionality should consider both functional requirements and the security of user data.</p>
+</section>
+<hr class="docutils" />
+<section id="future-expansion">
+<h1>Future Expansion<a class="headerlink" href="#future-expansion" title="Link to this heading"></a></h1>
+<p>The architecture is intended to allow additional functionality to be introduced without fundamentally changing the application.</p>
+<p>Potential future capabilities may include:</p>
+<ul class="simple">
+<li><p>Additional training types</p></li>
+<li><p>Additional exercise categories</p></li>
+<li><p>More advanced progression models</p></li>
+<li><p>Additional statistics</p></li>
+<li><p>Training recommendations</p></li>
+<li><p>Additional user customization</p></li>
+<li><p>Integration with external fitness data</p></li>
+<li><p>Additional application services</p></li>
+</ul>
+<p>New functionality should follow the existing principles of simplicity, data minimization, user control and secure handling of user data.</p>
+</section>
+<hr class="docutils" />
+<section id="final-architecture">
+<h1>Final Architecture<a class="headerlink" href="#final-architecture" title="Link to this heading"></a></h1>
+<p>The overall application can be represented as:</p>
+<figure class="align-center" id="id15">
+<div class="graphviz"><img src="../../../../_images/graphviz-618bcaa1aca7024c7d1d826884bb824d1b960219.png" alt="digraph architecture {
+
+    rankdir=TB
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    mobile [
+        label=&quot;Mobile Application\n\nTraining\nWorkouts\nPlans\nTracking\nStatistics&quot;
+    ]
+
+    backend [
+        label=&quot;Backend Services\n\nAuthentication\nApplication Services\nAuthorization&quot;
+    ]
+
+    data [
+        label=&quot;Application Data\n\nUsers\nExercises\nWorkouts\nPlans\nMeasurements\nStatistics&quot;
+    ]
+
+    storage [
+        label=&quot;File Storage\n\nApplication Assets\nUser Files&quot;
+    ]
+
+    mobile -&gt; backend
+    backend -&gt; data
+    backend -&gt; storage
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Workout Application Architecture</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The application provides a single mobile interface for structured training, workout tracking and long-term progression.</p>
+<p>The architecture separates the mobile application from backend services and persistent data while maintaining a simple user experience.</p>
+<p>The system is designed to support multiple types of training, protect user-specific information and allow the application to evolve as new training functionality is introduced.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="workout_app.html" class="btn btn-neutral float-left" title="Workout Mobile Application" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../provisioning-platform.html" class="btn btn-neutral float-right" title="Infrastructure Porvisioning Platform" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, prevLanky.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

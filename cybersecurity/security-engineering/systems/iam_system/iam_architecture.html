@@ -1,0 +1,1234 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IAM Architecture &mdash; mygithubpages  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=8a448e45"></script>
+      <script src="../../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../../_static/dark_mode_js/default_dark.js?v=fd565c74"></script>
+      <script src="../../../../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Workout Mobile Application" href="../workout_app/workout_app.html" />
+    <link rel="prev" title="IAM architecture" href="iam_system.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            mygithubpages
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../cybersecurity.html">Cybersecurity</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../platforms/platforms.html">Platforms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../platforms/microsoft/microsoft.html">Microsoft</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../platforms/microsoft/services/services.html">Microsoft services</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../platforms/microsoft/services/azure/azure.html">Azure</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/compute.html">Compute</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/virtual_machines/virtual_machines.html">Virtual machines</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/containers.html">Containers</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/container/container.html">Container</a><ul>
+<li class="toctree-l9"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/container/container.html#some-more-title">Some more title</a></li>
+</ul>
+</li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html">Azure Kubernetes Service (AKS) Confidential Containers</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#what-is-azure-kubernetes-service-aks-confidential-containers">What is Azure Kubernetes Service (AKS) Confidential Containers?</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#why-use-it">Why use it?</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#when-to-use-it">When to use it?</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#drawbacks">Drawbacks</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#real-life-use-cases">Real life use cases</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#how-to-configure-it-according-to-security-best-practices">How to configure it according to security best practices?</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#how-to-design-the-component">How to design the component?</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#how-to-design-the-supporting-infrastructure">How to design the supporting infrastructure?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/services/azure/networking/networking.html">Networking</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/services/azure/identity/identity.html">Entra ID</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/services/azure/security/security.html">Security</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/services/azure/security/defender/defender.html">Defender</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/services/azure/security/sentinel/sentinel.html">Sentinel</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/services/azure/security/key_vault/key_vault.html">key Vault</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../platforms/microsoft/services/defender/defender.html">Defender</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/services/defender/endpoint/endpoint.html">Microsoft Defender for Endpoints</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/cve_writeups.html">CVE Writeups</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html">CVE-2024-21403</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#cve-description">CVE description</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#which-services-are-vulnerable">Which services are vulnerable</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#what-is-it">What is it?</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#how-does-these-services-interact-with-other">How does these services interact with other</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#what-type-of-vulnerability">What type of vulnerability</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#attack-vector">Attack vector</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#impact">Impact</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#affected-assets">Affected assets</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#direct-affected">Direct affected</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#indirect-affected">Indirect affected</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#exploitation-scenario">Exploitation scenario</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#detection">Detection</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#azure">Azure</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#kubernetes">Kubernetes</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#host">Host</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#patching-remediation">Patching/Remediation</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#compensating-controls">Compensating controls</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#reduce-exposure">Reduce exposure</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#kubernetes-hardening">Kubernetes hardening</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#azure-identity">Azure identity</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#monitoring">Monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#verification">Verification</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#how-could-architecture-or-design-decisions-have-prevented-or-minimized-it">How could architecture or design decisions have prevented or minimized it?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#how-to-know-if-exploited">How to know if exploited?</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#id1">Kubernetes</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#id2">Azure</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../platforms/microsoft/cve_writeups/content/cve-2024-21403.html#network">Network</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../security-engineering.html">Security Engineering</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../systems.html">Systems</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../internal_dev_platform/internal_dev_platform.html">Internal Development Platform</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html">Secure Internal Developer Platform</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#overview">Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#what-is-this-platform">What is this platform?</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#problem-statement">Problem Statement</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#relationship-to-other-platforms">Relationship to Other Platforms</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#platform-boundaries">Platform Boundaries</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#internal-developer-platform">Internal Developer Platform</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#infrastructure-platform">Infrastructure Platform</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#tooling-platform">Tooling Platform</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#identity-platform">Identity Platform</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#source-control">Source Control</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#purpose">Purpose</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#multi-department-architecture">Multi-Department Architecture</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#central-governance-local-execution">Central Governance, Local Execution</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#templates">Templates</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#template-governance">Template Governance</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#golden-paths">Golden Paths</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#secure-systems-engineering-approach">Secure Systems Engineering Approach</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#security-objectives">Security Objectives</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#isolation">Isolation</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#least-privilege">Least Privilege</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#secure-defaults">Secure Defaults</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#reproducibility">Reproducibility</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#integrity">Integrity</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#accountability">Accountability</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#resilience">Resilience</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#controlled-change">Controlled Change</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#threat-modeling">Threat Modeling</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#compromised-developer-environment">Compromised Developer Environment</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#malicious-developer">Malicious Developer</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#compromised-idp">Compromised IDP</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#trust-boundaries">Trust Boundaries</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#zero-trust-principles">Zero Trust Principles</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#security-requirements">Security Requirements</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#infrastructure-abstraction">Infrastructure Abstraction</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#one-click-platform-deployment">One-Click Platform Deployment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#configuration-as-code">Configuration as Code</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#secure-development-lifecycle">Secure Development Lifecycle</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#security-by-design-principles">Security by Design Principles</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#id1">Least Privilege</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#defense-in-depth">Defense in Depth</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#fail-secure">Fail Secure</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#secure-by-default">Secure by Default</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#minimize-trust">Minimize Trust</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#reduce-blast-radius">Reduce Blast Radius</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#separation-of-duties">Separation of Duties</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#explicit-trust-boundaries">Explicit Trust Boundaries</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#id2">Reproducibility</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#continuous-verification">Continuous Verification</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#development-strategy">Development Strategy</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#architecture">Architecture</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#minimal-platform">Minimal Platform</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#infrastructure-integration">Infrastructure Integration</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#id3">Templates</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#id4">Isolation</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#reproducible-deployment">Reproducible Deployment</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#security-engineering">Security Engineering</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../internal_dev_platform/overview.html#multi-site">Multi-Site</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#operational-model">Operational Model</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#design-philosophy">Design Philosophy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#final-architecture-concept">Final Architecture Concept</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../internal_dev_platform/overview.html#project-goal">Project Goal</a></li>
+</ul>
+</li>
+<li class="toctree-l4 current"><a class="reference internal" href="iam_system.html">IAM architecture</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">IAM Architecture</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#what-is-iam-architecture">What is IAM Architecture?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#security-benefits">Security Benefits</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#security-implications">Security Implications</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#why-use-it">Why use it?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#when-to-use-it">When to use it?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#provisioning-vs-just-in-time">Provisioning vs Just-In-Time</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#provisioning-synchronization">Provisioning / Synchronization</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#just-in-time-provisioning">Just-In-Time Provisioning</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#central-identity-vs-local-authorization">Central Identity vs Local Authorization</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#drawbacks">Drawbacks</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#availability-dependency">Availability dependency</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#excessive-centralization">Excessive centralization</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#synchronization-failures">Synchronization failures</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#how-to-configure-it-according-to-security-best-practices">How to configure it according to security best practices?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#how-to-design-the-component">How to design the component?</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#centralized-authorization-architecture">Centralized Authorization Architecture</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#id1">Why use it?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#id2">Security Benefits</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#id3">Security Implications</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#decentralized-federated-iam-architecture">Decentralized / Federated IAM Architecture</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#id4">Why use it?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#id5">Security Benefits</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#id6">Security Implications</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#comparison-of-iam-architectures">Comparison of IAM Architectures</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#centralized-identity-local-authorization">1. Centralized Identity + Local Authorization</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#pros">Pros</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#cons">Cons</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#when-to-use">When to use</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#when-not-to-use">When not to use</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#best-for">Best for</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#centralized-identity-centralized-authorization">2. Centralized Identity + Centralized Authorization</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#id7">Pros</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#id8">Cons</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#id9">When to use</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#id10">When not to use</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#id11">Best for</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#federated-decentralized-iam">3. Federated / Decentralized IAM</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#id12">Pros</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#id13">Cons</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#id14">When to use</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#id15">When not to use</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#id16">Best for</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../workout_app/workout_app.html">Workout Mobile Application</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html">Workout Application</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../workout_app/overview.html#overview">Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#purpose">Purpose</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#design-principles">Design Principles</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../workout_app/overview.html#simplicity">Simplicity</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../workout_app/overview.html#minimal-data-collection">Minimal Data Collection</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../workout_app/overview.html#structured-training">Structured Training</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../workout_app/overview.html#long-term-progression">Long-Term Progression</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../workout_app/overview.html#user-control">User Control</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../workout_app/overview.html#security">Security</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#application-scope">Application Scope</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#users">Users</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#workout-of-the-day">Workout of the Day</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#training-plans">Training Plans</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#exercise-database">Exercise Database</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#strength-training">Strength Training</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#cycling">Cycling</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#running">Running</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#workout-tracking">Workout Tracking</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#progression">Progression</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#deloading">Deloading</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#custom-training-plans">Custom Training Plans</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#body-composition">Body Composition</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#statistics">Statistics</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#application-architecture">Application Architecture</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#mobile-application">Mobile Application</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#backend">Backend</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#authentication">Authentication</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#authorization">Authorization</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#data-model">Data Model</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#shared-and-user-specific-data">Shared and User-Specific Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#storage">Storage</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#data-privacy">Data Privacy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#environment-separation">Environment Separation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#development-environment">Development Environment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#development-data">Development Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#staging-environment">Staging Environment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#production-environment">Production Environment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#network-architecture">Network Architecture</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#application-data-flow">Application Data Flow</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#security-boundaries">Security Boundaries</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#application-lifecycle">Application Lifecycle</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#future-expansion">Future Expansion</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../workout_app/overview.html#final-architecture">Final Architecture</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../provisioning-platform.html">Infrastructure Porvisioning Platform</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../provisioning-platform.html#disk-vs-diskless-servers-initial-boot">Disk vs Diskless servers initial boot</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../provisioning-platform.html#bootstrap-infrastructure">Bootstrap infrastructure</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../seed-server.html">Seed/mgmt server</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../seed-server.html#what-is-a-seed-server">What is a seed server?</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../os-image-builder.html">OS Image Builder</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../os-image-builder.html#tools">Tools</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../os-image-builder.html#mkosi">Mkosi</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../os-image-builder.html#image-structure">Image structure</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../os-image-builder.html#golden-image">Golden Image</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../os-image-builder.html#specialized-image">Specialized Image</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../os-image-builder.html#ansible">Ansible</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../building-secure-system.html">Building a Secure, Production-Grade Web Application (From Idea to Production)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../building-secure-system.html#roles-and-responsibilities">Roles and Responsibilities</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../building-secure-system.html#architecture-engineering-and-implementation-across-levels">Architecture, Engineering, and Implementation Across Levels</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#web-application-level-system-of-systems">Web Application Level (System of Systems)</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#system-sub-system-level">System/Sub-System Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#component-application-level">Component / Application Level</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../building-secure-system.html#threat-modeling-and-risk-analysis-across-levels">Threat Modeling and Risk Analysis Across Levels</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#web-application-level">Web Application Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#id1">System/Sub-System Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#component-implementation-level">Component / Implementation Level</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../building-secure-system.html#qa-qa-automation-and-devsecops">QA, QA Automation, and DevSecOps</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../building-secure-system.html#configuration-management-and-change-control">Configuration Management and Change Control</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#id2">Web Application Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#id3">System / Sub-System Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#component-level">Component Level</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../building-secure-system.html#change-control">Change Control</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#id4">Web Application Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#system-level">System Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../building-secure-system.html#id5">Component Level</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../building-secure-system.html#tools-and-frameworks">Tools and Frameworks</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../file-processing.html">File Processing system</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../file-processing.html#requirements">Requirements</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../file-processing.html#security-principles">Security principles</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../file-processing.html#use-cases">Use Cases</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../file-processing.html#components">Components</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../file-processing.html#file-storage">File storage</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../file-processing.html#id1">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../file-processing.html#message-queue">Message queue</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../file-processing.html#id2">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../file-processing.html#file-processors-slave">File processors (Slave)</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../file-processing.html#id3">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../file-processing.html#job-orchestrator">Job orchestrator</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../file-processing.html#id4">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../file-processing.html#job-storage">Job storage</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../file-processing.html#id5">Requirements</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../programming/programming.html">Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../programming/cpp/cpp.html">C++</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../programming/python/python.html">Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../programming/python/theory/theory.html">Theory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/theory/theory.html#installation">Installation</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/theory/theory.html#custom-installation">Custom Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/theory/theory.html#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/theory/theory.html#faq">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html">Codesnippets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#custom-classes">Custom Classes</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#std-expected">std::expected</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#std-expected-unit-test">std::Expected unit test</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#logger">Logger</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#file-managment">File managment</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#read-files">Read Files</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#csv">CSV</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#txt">txt</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#word">word</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#pdf">pdf</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#write-files">Write Files</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#id1">CSV</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../programming/python/guides/guides.html">Guides</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/guides/web/web.html">Web</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html">How to setup basic FastAPI website</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#installation">Installation</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#main-fastapi-code">main FastAPI code</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#basic-knowledge">Basic knowledge</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#fastapi">FastAPI</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#key-features">Key Features:</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#core-components">Core Components</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#uvicorn">Uvicorn</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#id1">Key Features</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#responsibilities">Responsibilities</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#relationship-between-fastapi-and-uvicorn">Relationship Between FastAPI and Uvicorn</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../wiki/wiki.html">Wiki</a><ul class="simple">
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">mygithubpages</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../cybersecurity.html">Cybersecurity</a></li>
+          <li class="breadcrumb-item"><a href="../../security-engineering.html">Security Engineering</a></li>
+          <li class="breadcrumb-item"><a href="../systems.html">Systems</a></li>
+          <li class="breadcrumb-item"><a href="iam_system.html">IAM architecture</a></li>
+      <li class="breadcrumb-item active">IAM Architecture</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/cybersecurity/security-engineering/systems/iam_system/iam_architecture.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="iam-architecture">
+<h1>IAM Architecture<a class="headerlink" href="#iam-architecture" title="Link to this heading"></a></h1>
+<section id="what-is-iam-architecture">
+<h2>What is IAM Architecture?<a class="headerlink" href="#what-is-iam-architecture" title="Link to this heading"></a></h2>
+<p>IAM (Identity and Access Management) is the architecture used to manage identities, authentication, authorization, access lifecycle, and accountability across an organization’s systems.</p>
+<p>A mature IAM architecture separates several different responsibilities:</p>
+<ul class="simple">
+<li><p>Identity management</p></li>
+<li><p>Authentication</p></li>
+<li><p>Authorization</p></li>
+<li><p>Identity governance</p></li>
+<li><p>Privileged access management</p></li>
+<li><p>Directory services</p></li>
+<li><p>Federation and SSO</p></li>
+<li><p>Network authentication</p></li>
+<li><p>Auditing and accountability</p></li>
+</ul>
+<p>One of the most important principles in IAM is to centralize identity and identity lifecycle management while allowing individual systems to enforce their own authorization policies.</p>
+<p>The central identity infrastructure maintains the user’s identity and relevant attributes, while individual systems decide what that user is allowed to do within their own environment. This keeps the IAM architecture manageable and avoids forcing one central system to understand every permission and business rule across the organization.</p>
+<p>A useful way to think about this is that identity should be centralized, but authorization does not necessarily need to be.</p>
+<p>Authentication and authorization should also remain separate concepts. Authentication establishes the identity of a user, while authorization determines what that identity is permitted to access or perform.</p>
+</section>
+<section id="security-benefits">
+<h2>Security Benefits<a class="headerlink" href="#security-benefits" title="Link to this heading"></a></h2>
+<p>A well-designed IAM architecture can provide several important security benefits:</p>
+<ul class="simple">
+<li><p>Reduced attack surface: Centralized identity management reduces the need for independent accounts and credentials across many systems.</p></li>
+<li><p>Least privilege: Access can be controlled based on what a user actually needs to perform their role.</p></li>
+<li><p>Stronger authentication: Authentication policies such as MFA can be applied consistently.</p></li>
+<li><p>Reliable deprovisioning: Access can be removed when an identity is disabled or no longer requires access.</p></li>
+<li><p>Reduced credential exposure: SSO and federation can reduce the number of credentials users need to manage.</p></li>
+<li><p>Better visibility: Authentication, authorization, and access changes can be logged and monitored centrally.</p></li>
+<li><p>Privileged access protection: Administrative access can be separated, restricted, monitored, and made temporary where appropriate.</p></li>
+<li><p>Improved accountability: Access and administrative actions can be associated with specific identities.</p></li>
+<li><p>Better access governance: Access reviews and separation of duties can help prevent excessive or inappropriate access.</p></li>
+</ul>
+<p>The security benefit comes primarily from having consistent control over the identity lifecycle and access, rather than simply having a centralized identity database.</p>
+</section>
+<section id="security-implications">
+<h2>Security Implications<a class="headerlink" href="#security-implications" title="Link to this heading"></a></h2>
+<p>IAM is also a critical security boundary and therefore needs to be protected accordingly.</p>
+<p>Because many systems may depend on the central identity infrastructure, compromising it can have a significant impact. An attacker who gains control of privileged IAM accounts may be able to access multiple applications and resources.</p>
+<p>This makes IAM infrastructure itself a high-value target.</p>
+<p>Important security considerations include:</p>
+<ul class="simple">
+<li><p>Protect privileged IAM administration with strong authentication and least privilege.</p></li>
+<li><p>Separate administrative identities from normal user identities where appropriate.</p></li>
+<li><p>Monitor authentication and privileged activity.</p></li>
+<li><p>Protect service and machine identities.</p></li>
+<li><p>Carefully control federation and trust relationships.</p></li>
+<li><p>Minimize the identity information shared with applications.</p></li>
+<li><p>Regularly review access and privileges.</p></li>
+<li><p>Ensure deprovisioning works reliably.</p></li>
+<li><p>Monitor provisioning and synchronization failures.</p></li>
+<li><p>Protect emergency and break-glass access.</p></li>
+<li><p>Design IAM for high availability and recovery.</p></li>
+<li><p>Regularly test identity revocation and privilege removal.</p></li>
+</ul>
+<p>Centralization also creates an availability consideration. If many systems depend on the same authentication infrastructure, an IAM outage can affect access across the organization. High availability, redundancy, recovery procedures, and appropriate emergency access therefore become important parts of the architecture.</p>
+<p>The central IAM system should also not automatically be treated as the authority for every authorization decision. Applications and resource owners still need to enforce their own security policies where appropriate.</p>
+<p>A good IAM architecture therefore tries to balance centralized control, local enforcement, security, availability, and operational simplicity.</p>
+</section>
+<section id="why-use-it">
+<h2>Why use it?<a class="headerlink" href="#why-use-it" title="Link to this heading"></a></h2>
+<p>Without a centralized IAM architecture, organizations can end up managing identities separately across applications, databases, infrastructure, networks, and other systems.</p>
+<p>As the organization grows, this becomes increasingly difficult to manage securely. Different systems can end up with different accounts, different access rules, and different processes for removing access.</p>
+<p>The identity lifecycle is particularly important. When someone joins the organization, they need the appropriate access. When their responsibilities change, their access needs to change as well. When they leave, their access needs to be removed.</p>
+<p>Without proper lifecycle management, accounts can remain active after they are no longer required. These are commonly referred to as orphaned accounts and can become an unnecessary attack path.</p>
+<p>A centralized IAM architecture provides a consistent way to manage this lifecycle while also making it easier to enforce security controls such as strong authentication, MFA, least privilege, access reviews, separation of duties, and privileged access management.</p>
+<p>The goal is not to centralize every security decision. Instead, the goal is to centralize the parts of identity management where central control provides the most value.</p>
+</section>
+<section id="when-to-use-it">
+<h2>When to use it?<a class="headerlink" href="#when-to-use-it" title="Link to this heading"></a></h2>
+<p>IAM architecture should be used whenever an organization has multiple users, systems, applications, networks, or resources that require controlled access.</p>
+<p>It becomes increasingly important as the organization grows and the number of identities and systems increases.</p>
+<p>IAM is particularly important when an organization has:</p>
+<ul class="simple">
+<li><p>Large numbers of users</p></li>
+<li><p>Multiple applications</p></li>
+<li><p>Multiple environments</p></li>
+<li><p>Cloud and on-premises systems</p></li>
+<li><p>External users</p></li>
+<li><p>Contractors</p></li>
+<li><p>Privileged administrators</p></li>
+<li><p>Sensitive information</p></li>
+<li><p>Regulatory requirements</p></li>
+<li><p>Complex authorization requirements</p></li>
+<li><p>Multiple organizations or security domains</p></li>
+</ul>
+<p>It is especially important for systems containing:</p>
+<ul class="simple">
+<li><p>Financial information</p></li>
+<li><p>Customer information</p></li>
+<li><p>Intellectual property</p></li>
+<li><p>Administrative interfaces</p></li>
+<li><p>Production infrastructure</p></li>
+<li><p>Security infrastructure</p></li>
+<li><p>Sensitive business systems</p></li>
+</ul>
+<p>IAM should be designed around principles such as least privilege, separation of duties, strong authentication, centralized lifecycle management, and continuous monitoring.</p>
+</section>
+<section id="provisioning-vs-just-in-time">
+<h2>Provisioning vs Just-In-Time<a class="headerlink" href="#provisioning-vs-just-in-time" title="Link to this heading"></a></h2>
+<p>There are two common approaches to providing identities and access to systems: provisioning and Just-In-Time (JIT) provisioning.</p>
+<section id="provisioning-synchronization">
+<h3>Provisioning / Synchronization<a class="headerlink" href="#provisioning-synchronization" title="Link to this heading"></a></h3>
+<p>With provisioning, the IAM or IGA system creates, updates, or removes an account or access assignment in a target system.</p>
+<p>This is useful when the target system requires a local account to exist before access can be provided, or when the organization needs explicit control over the complete account lifecycle.</p>
+<p>Provisioning provides strong lifecycle control because changes can be automatically propagated to connected systems.</p>
+<p>The main drawback is the additional synchronization dependency. Every connected system introduces another integration that can fail, become outdated, or require maintenance.</p>
+<p>For security-critical access, provisioning and deprovisioning should therefore be monitored and regularly tested.</p>
+</section>
+<section id="just-in-time-provisioning">
+<h3>Just-In-Time Provisioning<a class="headerlink" href="#just-in-time-provisioning" title="Link to this heading"></a></h3>
+<p>With Just-In-Time provisioning, a local account can be created when a user successfully authenticates to a target system.
+This can reduce the number of accounts that need to exist before they are actually required and can simplify access to systems that support federation.
+However, JIT provisioning should not be considered a replacement for identity lifecycle management.
+There must still be a reliable mechanism for ensuring that an identity that is no longer valid cannot continue accessing the system.</p>
+<p>It is also important to distinguish between JIT provisioning and JIT privileged access.
+– JIT provisioning concerns when an account is created.
+– JIT privileged access concerns when elevated privileges are granted and how long those privileges remain active.
+These are separate security mechanisms that solve different problems.</p>
+</section>
+</section>
+<section id="central-identity-vs-local-authorization">
+<h2>Central Identity vs Local Authorization<a class="headerlink" href="#central-identity-vs-local-authorization" title="Link to this heading"></a></h2>
+<p>A key architectural decision is determining which responsibilities belong in the central IAM infrastructure and which should remain within individual systems.
+The central IAM infrastructure should generally be responsible for:</p>
+<ul class="simple">
+<li><p>Identity</p></li>
+<li><p>Identity lifecycle</p></li>
+<li><p>Authentication</p></li>
+<li><p>Relevant identity attributes</p></li>
+<li><p>Organizational relationships</p></li>
+<li><p>Central access governance</p></li>
+</ul>
+<p>Individual systems should generally remain responsible for:</p>
+<ul class="simple">
+<li><p>Resource-specific authorization</p></li>
+<li><p>Application roles</p></li>
+<li><p>Business rules</p></li>
+<li><p>Resource permissions</p></li>
+<li><p>Context-specific authorization decisions</p></li>
+</ul>
+<p>This creates a useful separation between identity authority and resource authorization.</p>
+<p>The central IAM system does not need to understand every permission and business rule within every application. Instead, it provides the identity and relevant context to the target system, while the target system evaluates whether the requested operation should be allowed.</p>
+<p>This is particularly important because individual applications understand their own resources and business logic better than a central IAM system ever could.</p>
+<p>A good general principle is to centralize identity and governance, while keeping resource-specific authorization close to the resource being protected.
+This also reduces unnecessary coupling between applications and the central IAM infrastructure.</p>
+</section>
+<section id="drawbacks">
+<h2>Drawbacks<a class="headerlink" href="#drawbacks" title="Link to this heading"></a></h2>
+<p>Centralizing IAM provides significant security and operational benefits, but it also introduces several risks.</p>
+<ul class="simple">
+<li><p>Central IAM becomes a high-value target</p></li>
+<li><p>The central identity infrastructure becomes a critical security boundary.</p></li>
+<li><p>If it is compromised, an attacker may potentially gain access to multiple applications and systems.</p></li>
+</ul>
+<p>IAM infrastructure should therefore receive strong security controls, including:</p>
+<ul class="simple">
+<li><p>Strong administrative authentication</p></li>
+<li><p>Least privilege</p></li>
+<li><p>Privileged access management</p></li>
+<li><p>Network protection</p></li>
+<li><p>Continuous monitoring</p></li>
+<li><p>Security logging</p></li>
+<li><p>Configuration protection</p></li>
+<li><p>Regular security assessments</p></li>
+</ul>
+<p>The administrative layer protecting IAM should itself be treated as highly sensitive.</p>
+</section>
+<section id="availability-dependency">
+<h2>Availability dependency<a class="headerlink" href="#availability-dependency" title="Link to this heading"></a></h2>
+<p>Applications that depend on centralized authentication can be affected if the IAM infrastructure becomes unavailable.
+This makes the availability and resilience of IAM particularly important.</p>
+<p>The architecture should consider:</p>
+<ul class="simple">
+<li><p>High availability</p></li>
+<li><p>Redundancy</p></li>
+<li><p>Disaster recovery</p></li>
+<li><p>Backup and recovery</p></li>
+<li><p>Monitoring</p></li>
+<li><p>Dependency management</p></li>
+<li><p>Emergency access procedures</p></li>
+</ul>
+<p>The organization should also understand which systems depend on centralized authentication and what the consequences would be if that authentication service became unavailable.</p>
+</section>
+<section id="excessive-centralization">
+<h2>Excessive centralization<a class="headerlink" href="#excessive-centralization" title="Link to this heading"></a></h2>
+<p>Centralizing too much can also become a problem.
+Trying to manage every authorization decision centrally can create a highly complex system with strong dependencies between the IAM infrastructure and individual applications. It is generally better to centralize identity, authentication, and governance while allowing applications and resource owners to manage their own resource-specific authorization policies. This creates a more modular architecture and reduces the impact of changes within individual applications.</p>
+</section>
+<section id="synchronization-failures">
+<h2>Synchronization failures<a class="headerlink" href="#synchronization-failures" title="Link to this heading"></a></h2>
+<p>Provisioning and synchronization introduce additional failure modes.
+If an identity or access change is not successfully propagated to a target system, that system may contain outdated access information.
+This is particularly concerning during deprovisioning because an account may remain active after access should have been revoked.
+Provisioning and deprovisioning should therefore be monitored, logged, and regularly tested.</p>
+</section>
+<section id="how-to-configure-it-according-to-security-best-practices">
+<h2>How to configure it according to security best practices?<a class="headerlink" href="#how-to-configure-it-according-to-security-best-practices" title="Link to this heading"></a></h2>
+<p>The exact implementation depends on the organization’s environment, but the architecture should generally follow these principles:</p>
+<ul class="simple">
+<li><p>Establish a clearly defined authoritative source for identities.</p></li>
+<li><p>Give every identity a unique and stable identifier.</p></li>
+<li><p>Separate authentication from authorization.</p></li>
+<li><p>Use strong authentication, especially for privileged access.</p></li>
+<li><p>Apply MFA where the risk justifies it.</p></li>
+<li><p>Use SSO and federation where appropriate.</p></li>
+<li><p>Minimize the identity attributes shared with applications.</p></li>
+<li><p>Follow the principle of least privilege.</p></li>
+<li><p>Use role-based or attribute-based authorization where appropriate.</p></li>
+<li><p>Keep application-specific authorization policies within the application or resource domain.</p></li>
+<li><p>Use automated provisioning and deprovisioning where possible.</p></li>
+<li><p>Make deprovisioning reliable and observable.</p></li>
+<li><p>Prefer temporary privileged access over permanent administrative privileges.</p></li>
+<li><p>Implement regular access reviews for sensitive access.</p></li>
+<li><p>Implement separation of duties for critical operations.</p></li>
+<li><p>Protect emergency and break-glass access separately.</p></li>
+<li><p>Log authentication, authorization, provisioning, deprovisioning, and privilege changes.</p></li>
+<li><p>Monitor IAM infrastructure as a critical security boundary.</p></li>
+<li><p>Protect service identities using least-privilege principles.</p></li>
+<li><p>Avoid unnecessary synchronization of identity data.</p></li>
+<li><p>Encrypt sensitive identity information in transit and at rest.</p></li>
+<li><p>Design the IAM infrastructure for high availability and recovery.</p></li>
+<li><p>Regularly test account revocation and privilege-removal processes.</p></li>
+<li><p>Regularly review integrations and remove unused or obsolete connections.</p></li>
+<li><p>Strongly protect administrative access to the IAM infrastructure.</p></li>
+<li><p>Monitor changes to IAM configuration and authorization policies.</p></li>
+<li><p>Ensure that access decisions can be traced back to an identity, policy, and authorization event.</p></li>
+</ul>
+<p>The overall goal should be to minimize unnecessary trust. Applications should receive only the identity information they actually need, and authorization decisions should be based on the minimum information and privileges necessary to perform the requested operation.</p>
+</section>
+<section id="how-to-design-the-component">
+<h2>How to design the component?<a class="headerlink" href="#how-to-design-the-component" title="Link to this heading"></a></h2>
+<p>The IAM architecture should be separated into logical security domains.</p>
+<figure class="align-center" id="id17">
+<div class="graphviz"><img src="../../../../_images/graphviz-61e93a637da8f9fc486e056d07a2ecf2c48b37a1.png" alt="digraph architecture {
+
+    rankdir=TB
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    edge [
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    identity [
+        label=&quot;Central Identity\nIdentity + Attributes&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    authentication [
+        label=&quot;Authentication\nMFA / SSO / Federation&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    iga [
+        label=&quot;IGA\nIdentity Governance\n&amp; Lifecycle&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    provisioning [
+        label=&quot;Provisioning\nCreate / Update / Revoke&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    application [
+        label=&quot;Application / Resource&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    authorization [
+        label=&quot;Local Authorization\nRBAC / ABAC / Policy&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    identity -&gt; authentication [
+        label=&quot;Identity&quot;
+    ]
+
+    identity -&gt; iga [
+        label=&quot;Lifecycle&quot;
+    ]
+
+    iga -&gt; provisioning [
+        label=&quot;Access lifecycle&quot;
+    ]
+
+    provisioning -&gt; application [
+        label=&quot;Provision / revoke&quot;
+    ]
+
+    authentication -&gt; application [
+        label=&quot;Authentication result&quot;
+    ]
+
+    application -&gt; authorization [
+        label=&quot;Evaluate access&quot;
+    ]
+
+    authorization -&gt; application [
+        label=&quot;Allow / deny&quot;
+    ]
+
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">High-Level IAM Architecture</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="centralized-authorization-architecture">
+<h1>Centralized Authorization Architecture<a class="headerlink" href="#centralized-authorization-architecture" title="Link to this heading"></a></h1>
+<p>In a centralized authorization architecture, authorization decisions are handled by a central policy decision component rather than being implemented independently inside every application.</p>
+<p>The applications still enforce the final decision, but they rely on the central authorization service to determine whether access should be allowed.</p>
+<p>This can be useful when an organization wants consistent authorization policies across many applications and resources.</p>
+<section id="id1">
+<h2>Why use it?<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>As an organization grows, having authorization logic implemented independently across many applications can lead to inconsistent policies and duplicated logic.
+Centralized authorization provides a common place to manage and evaluate authorization policies.
+This can make it easier to apply consistent security requirements across multiple applications and resources while reducing duplicated authorization logic.</p>
+</section>
+<section id="id2">
+<h2>Security Benefits<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>A well-designed centralized authorization architecture can provide several security benefits:</p>
+<ul class="simple">
+<li><p>Consistent authorization policies</p></li>
+<li><p>Centralized control over access rules</p></li>
+<li><p>Easier auditing of authorization decisions</p></li>
+<li><p>Reduced duplicated authorization logic</p></li>
+<li><p>Easier enforcement of least privilege</p></li>
+<li><p>Better visibility into access decisions</p></li>
+<li><p>Easier policy changes across multiple systems</p></li>
+<li><p>Reduced risk of applications implementing different versions of the same access policy</p></li>
+</ul>
+<p>Centralized authorization can also make authorization policies easier to review and govern because policies are not completely scattered across individual applications.</p>
+</section>
+<section id="id3">
+<h2>Security Implications<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>Centralized authorization also introduces additional security considerations.
+The authorization infrastructure becomes a high-value security component because multiple applications may depend on it.</p>
+<p>Important considerations include:</p>
+<ul class="simple">
+<li><p>Protect the authorization service itself</p></li>
+<li><p>Apply strong administrative access controls</p></li>
+<li><p>Use least privilege for policy administration</p></li>
+<li><p>Monitor policy changes</p></li>
+<li><p>Log authorization decisions</p></li>
+<li><p>Protect communication between applications and the authorization service</p></li>
+<li><p>Design for high availability</p></li>
+<li><p>Consider what happens if the authorization service becomes unavailable</p></li>
+<li><p>Carefully validate identity attributes and authorization context</p></li>
+<li><p>Prevent applications from bypassing centralized authorization decisions</p></li>
+</ul>
+<p>Authorization policies should also be carefully designed. A central policy engine should not automatically become responsible for every application-specific business rule.</p>
+<figure class="align-center" id="id18">
+<div class="graphviz"><img src="../../../../_images/graphviz-42cd1aaf2dc317376d522ab08c0841a30df39795.png" alt="digraph architecture {
+
+    rankdir=TB
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    edge [
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    identity [
+        label=&quot;Central Identity&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    policy [
+        label=&quot;Central Authorization\nPolicy Engine&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    app1 [
+        label=&quot;Application A&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    app2 [
+        label=&quot;Application B&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    resource [
+        label=&quot;Protected Resources&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    identity -&gt; policy [
+        label=&quot;Identity / Attributes&quot;
+    ]
+
+    app1 -&gt; policy [
+        label=&quot;Authorization request&quot;
+    ]
+
+    app2 -&gt; policy [
+        label=&quot;Authorization request&quot;
+    ]
+
+    policy -&gt; app1 [
+        label=&quot;Allow / Deny&quot;
+    ]
+
+    policy -&gt; app2 [
+        label=&quot;Allow / Deny&quot;
+    ]
+
+    app1 -&gt; resource [
+        label=&quot;Access&quot;
+    ]
+
+    app2 -&gt; resource [
+        label=&quot;Access&quot;
+    ]
+
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Centralized Authorization Architecture</span><a class="headerlink" href="#id18" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The main advantage is consistency. Authorization policies can be managed centrally, making it easier to apply common rules across many systems.</p>
+<p>The main drawback is that applications become more dependent on the central authorization infrastructure. Availability, performance, and policy-engine security therefore become important considerations.</p>
+<p>This architecture is most useful when authorization rules need to be consistent across many systems or when the organization wants centralized control over sensitive access policies.</p>
+</section>
+</section>
+<section id="decentralized-federated-iam-architecture">
+<h1>Decentralized / Federated IAM Architecture<a class="headerlink" href="#decentralized-federated-iam-architecture" title="Link to this heading"></a></h1>
+<p>In a decentralized or federated architecture, multiple identity domains or organizations maintain their own identity infrastructure while establishing trust between them.</p>
+<p>Instead of forcing every identity into one central system, each security domain remains responsible for its own users.</p>
+<p>Federation allows users to authenticate in their own domain while accessing resources in another trusted domain.</p>
+<section id="id4">
+<h2>Why use it?<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<p>Federation is useful when users need to access resources outside their own organization or security domain.
+It avoids the need to create and maintain separate identities for the same user in every organization or environment they need to access.
+This can simplify access management across organizational boundaries while allowing each organization to maintain control over its own users.
+Federation is particularly useful when organizations need to collaborate without merging their identity infrastructures.</p>
+</section>
+<section id="id5">
+<h2>Security Benefits<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<p>A well-designed federated IAM architecture can provide several security benefits:</p>
+<ul class="simple">
+<li><p>Reduced credential duplication: Users do not need separate credentials for every trusted organization or service.</p></li>
+<li><p>Centralized identity control: Each organization maintains control over its own identities and lifecycle.</p></li>
+<li><p>Reduced password exposure: Applications do not need to directly manage credentials belonging to external users.</p></li>
+<li><p>Improved lifecycle management: Access can depend on the user’s identity remaining valid in their home organization.</p></li>
+<li><p>Strong authentication: The identity provider can enforce authentication requirements before issuing a trusted authentication result.</p></li>
+<li><p>Clear trust boundaries: Organizations can explicitly define which identity domains they trust.</p></li>
+<li><p>Better scalability: New services or organizations can be integrated without creating completely separate identities for every user.</p></li>
+<li><p>Improved user experience: Users can access trusted resources using their existing organizational identity.</p></li>
+</ul>
+</section>
+<section id="id6">
+<h2>Security Implications<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+<p>Federation introduces a significant trust relationship between otherwise independent security domains.
+If one identity domain is trusted by another, the receiving organization is relying on that identity domain to authenticate identities correctly and provide trustworthy information.</p>
+<p>Important security considerations include:</p>
+<ul class="simple">
+<li><p>Carefully define trust relationships.</p></li>
+<li><p>Only trust required identity providers.</p></li>
+<li><p>Minimize the attributes and permissions accepted from external domains.</p></li>
+<li><p>Validate authentication and authorization information.</p></li>
+<li><p>Protect federation configuration.</p></li>
+<li><p>Strongly protect administrators managing federation.</p></li>
+<li><p>Monitor federation activity.</p></li>
+<li><p>Monitor changes to trust relationships.</p></li>
+<li><p>Regularly review established trust relationships.</p></li>
+<li><p>Ensure compromised or deactivated identities cannot continue accessing trusted resources.</p></li>
+<li><p>Clearly define responsibilities between the participating organizations.</p></li>
+<li><p>Consider the impact of a compromise of a trusted identity domain.</p></li>
+</ul>
+<p>A particularly important point is that federation does not automatically mean authorization is shared.</p>
+<figure class="align-center" id="id19">
+<div class="graphviz"><img src="../../../../_images/graphviz-673edea62bc4e70c643933d541b58f94b932e7d8.png" alt="digraph architecture {
+
+    rankdir=LR
+
+    fontname=&quot;Helvetica&quot;
+
+    node [
+        shape=box
+        style=&quot;rounded,filled&quot;
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    edge [
+        fontname=&quot;Helvetica&quot;
+    ]
+
+    domainA [
+        label=&quot;Identity Domain A\nUsers + Identity&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    domainB [
+        label=&quot;Identity Domain B\nUsers + Identity&quot;,
+        fillcolor=&quot;#D5F5E3&quot;
+    ]
+
+    trust [
+        label=&quot;Federation / Trust&quot;,
+        fillcolor=&quot;#F9E79F&quot;
+    ]
+
+    resourceA [
+        label=&quot;Resources\nDomain A&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    resourceB [
+        label=&quot;Resources\nDomain B&quot;,
+        fillcolor=&quot;#D7BDE2&quot;
+    ]
+
+    domainA -&gt; trust [
+        label=&quot;Trusted identity&quot;
+    ]
+
+    domainB -&gt; trust [
+        label=&quot;Trusted identity&quot;
+    ]
+
+    trust -&gt; resourceA [
+        label=&quot;Access&quot;
+    ]
+
+    trust -&gt; resourceB [
+        label=&quot;Access&quot;
+    ]
+
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Decentralized / Federated IAM Architecture</span><a class="headerlink" href="#id19" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The advantage is that each organization or security domain can maintain control over its own identities without having to merge identity databases.</p>
+<p>This is particularly useful in environments involving:</p>
+<ul class="simple">
+<li><p>Multiple organizations</p></li>
+<li><p>Business partners</p></li>
+<li><p>Mergers and acquisitions</p></li>
+<li><p>External users</p></li>
+<li><p>Multi-tenant environments</p></li>
+<li><p>Large organizations with independent security domains</p></li>
+</ul>
+<p>The main challenge is trust management.</p>
+<p>Once two identity domains establish a federation relationship, each side needs to carefully define what identities, attributes, and authentication claims it is willing to trust.</p>
+</section>
+</section>
+<section id="comparison-of-iam-architectures">
+<h1>Comparison of IAM Architectures<a class="headerlink" href="#comparison-of-iam-architectures" title="Link to this heading"></a></h1>
+<section id="centralized-identity-local-authorization">
+<h2>1. Centralized Identity + Local Authorization<a class="headerlink" href="#centralized-identity-local-authorization" title="Link to this heading"></a></h2>
+<section id="pros">
+<h3>Pros<a class="headerlink" href="#pros" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Simple separation of responsibilities</p></li>
+<li><p>Flexible</p></li>
+<li><p>Applications control their own access rules</p></li>
+</ul>
+</section>
+<section id="cons">
+<h3>Cons<a class="headerlink" href="#cons" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Authorization can become inconsistent</p></li>
+<li><p>Each application must implement authorization correctly</p></li>
+</ul>
+</section>
+<section id="when-to-use">
+<h3>When to use<a class="headerlink" href="#when-to-use" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Most organizations</p></li>
+<li><p>Many applications with different access requirements</p></li>
+</ul>
+</section>
+<section id="when-not-to-use">
+<h3>When not to use<a class="headerlink" href="#when-not-to-use" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>When the same authorization policies must be enforced everywhere</p></li>
+</ul>
+</section>
+</section>
+<section id="best-for">
+<h2>Best for<a class="headerlink" href="#best-for" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Most organizations</p></li>
+</ul>
+</section>
+<section id="centralized-identity-centralized-authorization">
+<h2>2. Centralized Identity + Centralized Authorization<a class="headerlink" href="#centralized-identity-centralized-authorization" title="Link to this heading"></a></h2>
+<section id="id7">
+<h3>Pros<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Consistent policies</p></li>
+<li><p>Centralized control</p></li>
+<li><p>Easier to manage common access rules</p></li>
+</ul>
+</section>
+<section id="id8">
+<h3>Cons<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Central dependency</p></li>
+<li><p>More complex</p></li>
+<li><p>Central authorization becomes a high-value target</p></li>
+</ul>
+</section>
+<section id="id9">
+<h3>When to use<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>When consistent authorization is important</p></li>
+<li><p>Highly sensitive resources</p></li>
+</ul>
+</section>
+<section id="id10">
+<h3>When not to use<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
+<p>When applications have very different authorization requirements</p>
+</section>
+<section id="id11">
+<h3>Best for<a class="headerlink" href="#id11" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Consistent policies</p></li>
+</ul>
+</section>
+</section>
+<section id="federated-decentralized-iam">
+<h2>3. Federated / Decentralized IAM<a class="headerlink" href="#federated-decentralized-iam" title="Link to this heading"></a></h2>
+<section id="id12">
+<h3>Pros<a class="headerlink" href="#id12" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Works across organizations</p></li>
+<li><p>Each organization keeps control of its identities</p></li>
+<li><p>Good for external users and partners</p></li>
+</ul>
+</section>
+<section id="id13">
+<h3>Cons<a class="headerlink" href="#id13" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>More complex</p></li>
+<li><p>Requires careful trust management</p></li>
+</ul>
+</section>
+<section id="id14">
+<h3>When to use<a class="headerlink" href="#id14" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Multiple organizations</p></li>
+<li><p>Partners</p></li>
+<li><p>Multiple independent identity domains</p></li>
+</ul>
+</section>
+<section id="id15">
+<h3>When not to use<a class="headerlink" href="#id15" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Small environments with one identity domain</p></li>
+</ul>
+</section>
+<section id="id16">
+<h3>Best for<a class="headerlink" href="#id16" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Multiple organizations</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="iam_system.html" class="btn btn-neutral float-left" title="IAM architecture" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../workout_app/workout_app.html" class="btn btn-neutral float-right" title="Workout Mobile Application" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, prevLanky.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
