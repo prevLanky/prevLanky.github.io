@@ -1,8 +1,8 @@
-Internal Development Platform
+IAM architecture
 ==================
 ```{toctree}
 :maxdepth: 10
 :caption: Table of Contents
 
-overview
+iam_architecture
 ```
