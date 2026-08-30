@@ -1,9 +1,9 @@
-Microsoft services
+Defender
 ==================
 ```{toctree}
 :maxdepth: 10
 :caption: Table of Contents
 
-azure/azure
-defender/defender
+endpoint/endpoint
+
 ```

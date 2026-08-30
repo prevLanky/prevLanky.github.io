@@ -1,9 +1,8 @@
-Microsoft services
+Internal Development Platform
 ==================
 ```{toctree}
 :maxdepth: 10
 :caption: Table of Contents
 
-azure/azure
-defender/defender
+system_overview
 ```
