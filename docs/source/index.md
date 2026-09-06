@@ -39,5 +39,5 @@ I find that documenting something forces me to understand it properly rather tha
 
 cybersecurity/cybersecurity
 programming/programming
-wiki/wiki
+projects/projects
 ```
