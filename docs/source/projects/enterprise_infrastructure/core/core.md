@@ -1,4 +1,4 @@
-# Platform Cell — Enterprise Architecture Concept
+# Overview — Enterprise Architecture Concept
 
 ## Overview
 
