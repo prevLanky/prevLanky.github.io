@@ -6,6 +6,9 @@ Enterprise infrastructure
 :maxdepth: 10
 :caption: Table of Contents
 
+core/core
+central_platform/central_platform
+
 ```
 A key objective of this project is to develop the ability to design and build enterprise infrastructure from an end-to-end perspective. Rather than focusing only on individual technologies, I want to develop the ability to understand how the different technical, security, operational and governance aspects of an enterprise environment fit together.
 
