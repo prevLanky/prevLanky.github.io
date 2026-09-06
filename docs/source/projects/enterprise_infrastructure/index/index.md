@@ -81,7 +81,6 @@ The objective is to be able to move between these perspectives without losing th
 ## Overall Goal
 
 The ultimate goal is to develop into an engineer who can:
-
 Understand the whole system → design it correctly → build it → secure it → operate it → govern it → continuously improve it.
 
 The project should therefore be treated not simply as an infrastructure-building exercise, but as an opportunity to develop enterprise architecture, engineering, security, GRC, risk and lifecycle-management skills as one integrated discipline.
