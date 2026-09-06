@@ -12,7 +12,7 @@ central_platform/central_platform
 ```
 A key objective of this project is to develop the ability to design and build enterprise infrastructure from an end-to-end perspective. Rather than focusing only on individual technologies, I want to develop the ability to understand how the different technical, security, operational and governance aspects of an enterprise environment fit together.
 
-Architecture
+## Architecture
 
 Develop the ability to think at the architectural level before implementation:
 
@@ -25,7 +25,7 @@ Understand how architectural decisions affect the system throughout its lifecycl
 
 Goal: Learn to see the entire system before building it and make decisions that prevent expensive problems later.
 
-Engineering
+## Engineering
 
 Develop the ability to translate architecture into real, functioning infrastructure:
 
@@ -39,7 +39,7 @@ Validate that the implemented environment actually meets the intended requiremen
 
 Goal: Be able to turn an architectural design into a secure, reliable and functional technical implementation.
 
-Security, GRC and Risk
+## Security, GRC and Risk
 
 Develop a broader security and GRC mindset that goes beyond simply checking compliance requirements.
 
@@ -54,7 +54,7 @@ How compliance requirements can be incorporated into the actual infrastructure r
 
 Goal: Use GRC, risk and security thinking as the glue between business requirements, architecture, engineering and operations.
 
-Operational and Lifecycle Thinking
+## Operational and Lifecycle Thinking
 
 Design infrastructure with its entire lifecycle in mind rather than stopping when the system is deployed.
 
@@ -66,7 +66,7 @@ This includes thinking about ownership, access management, monitoring, incident 
 
 Goal: Build systems that are not only functional when deployed, but secure, maintainable, governable and reliable throughout their entire lifecycle.
 
-Security Architecture and Threat Thinking
+## Security Architecture and Threat Thinking
 
 Develop the ability to continuously consider how the environment could be attacked.
 
@@ -76,7 +76,7 @@ Assets → Threats → Attack Surface → Trust Boundaries → Controls → Dete
 
 Security should therefore be considered throughout architecture, engineering and operations rather than added after the system has been built.
 
-Communication and Documentation
+## Communication and Documentation
 
 Develop the ability to communicate the same environment at different levels of abstraction:
 
@@ -88,7 +88,7 @@ Operations: How is the environment maintained, monitored and recovered?
 
 The objective is to be able to move between these perspectives without losing the connection between them.
 
-Overall Goal
+## Overall Goal
 
 The ultimate goal is to develop into an engineer who can:
 
