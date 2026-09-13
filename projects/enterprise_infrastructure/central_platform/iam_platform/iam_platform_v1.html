@@ -1,0 +1,853 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IAM Platform — Version 1 &mdash; mygithubpages  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=8a448e45"></script>
+      <script src="../../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../../_static/dark_mode_js/default_dark.js?v=fd565c74"></script>
+      <script src="../../../../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Area Platform" href="../../area_platform/area_platform.html" />
+    <link rel="prev" title="IAM Platform" href="iam_platform.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            mygithubpages
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../cybersecurity/cybersecurity.html">Cybersecurity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cybersecurity/platforms/platforms.html">Platforms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/microsoft.html">Microsoft</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/services.html">Microsoft services</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/azure/azure.html">Azure</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/azure/compute/compute.html">Compute</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/azure/compute/virtual_machines/virtual_machines.html">Virtual machines</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/azure/compute/containers/containers.html">Containers</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/azure/compute/containers/container/container.html">Container</a><ul>
+<li class="toctree-l9"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/azure/compute/containers/container/container.html#some-more-title">Some more title</a></li>
+</ul>
+</li>
+<li class="toctree-l8"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html">Azure Kubernetes Service (AKS) Confidential Containers</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#what-is-azure-kubernetes-service-aks-confidential-containers">What is Azure Kubernetes Service (AKS) Confidential Containers?</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#why-use-it">Why use it?</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#when-to-use-it">When to use it?</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#drawbacks">Drawbacks</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#real-life-use-cases">Real life use cases</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#how-to-configure-it-according-to-security-best-practices">How to configure it according to security best practices?</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#how-to-design-the-component">How to design the component?</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/azure/compute/containers/azure_kub_service/azure_kub_service.html#how-to-design-the-supporting-infrastructure">How to design the supporting infrastructure?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/azure/networking/networking.html">Networking</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/azure/identity/identity.html">Entra ID</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/azure/security/security.html">Security</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/azure/security/defender/defender.html">Defender</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/azure/security/sentinel/sentinel.html">Sentinel</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/azure/security/key_vault/key_vault.html">key Vault</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/defender/defender.html">Defender</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/services/defender/endpoint/endpoint.html">Microsoft Defender for Endpoints</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/cve_writeups.html">CVE Writeups</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html">CVE-2024-21403</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#cve-description">CVE description</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#which-services-are-vulnerable">Which services are vulnerable</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#what-is-it">What is it?</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#how-does-these-services-interact-with-other">How does these services interact with other</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#what-type-of-vulnerability">What type of vulnerability</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#attack-vector">Attack vector</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#impact">Impact</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#affected-assets">Affected assets</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#direct-affected">Direct affected</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#indirect-affected">Indirect affected</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#exploitation-scenario">Exploitation scenario</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#detection">Detection</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#azure">Azure</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#kubernetes">Kubernetes</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#host">Host</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#patching-remediation">Patching/Remediation</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#compensating-controls">Compensating controls</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#reduce-exposure">Reduce exposure</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#kubernetes-hardening">Kubernetes hardening</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#azure-identity">Azure identity</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#monitoring">Monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#verification">Verification</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#how-could-architecture-or-design-decisions-have-prevented-or-minimized-it">How could architecture or design decisions have prevented or minimized it?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#how-to-know-if-exploited">How to know if exploited?</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#id1">Kubernetes</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#id2">Azure</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/platforms/microsoft/cve_writeups/content/cve-2024-21403.html#network">Network</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cybersecurity/security-engineering/security-engineering.html">Security Engineering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/systems.html">Systems</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/internal_dev_platform.html">Internal Development Platform</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html">Secure Internal Developer Platform</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#overview">Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#what-is-this-platform">What is this platform?</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#problem-statement">Problem Statement</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#relationship-to-other-platforms">Relationship to Other Platforms</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#platform-boundaries">Platform Boundaries</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#internal-developer-platform">Internal Developer Platform</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#infrastructure-platform">Infrastructure Platform</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#tooling-platform">Tooling Platform</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#identity-platform">Identity Platform</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#source-control">Source Control</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#purpose">Purpose</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#multi-department-architecture">Multi-Department Architecture</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#central-governance-local-execution">Central Governance, Local Execution</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#templates">Templates</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#template-governance">Template Governance</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#golden-paths">Golden Paths</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#secure-systems-engineering-approach">Secure Systems Engineering Approach</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#security-objectives">Security Objectives</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#isolation">Isolation</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#least-privilege">Least Privilege</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#secure-defaults">Secure Defaults</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#reproducibility">Reproducibility</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#integrity">Integrity</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#accountability">Accountability</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#resilience">Resilience</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#controlled-change">Controlled Change</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#threat-modeling">Threat Modeling</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#compromised-developer-environment">Compromised Developer Environment</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#malicious-developer">Malicious Developer</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#compromised-idp">Compromised IDP</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#trust-boundaries">Trust Boundaries</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#zero-trust-principles">Zero Trust Principles</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#security-requirements">Security Requirements</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#infrastructure-abstraction">Infrastructure Abstraction</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#one-click-platform-deployment">One-Click Platform Deployment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#configuration-as-code">Configuration as Code</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#secure-development-lifecycle">Secure Development Lifecycle</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#security-by-design-principles">Security by Design Principles</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#id1">Least Privilege</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#defense-in-depth">Defense in Depth</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#fail-secure">Fail Secure</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#secure-by-default">Secure by Default</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#minimize-trust">Minimize Trust</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#reduce-blast-radius">Reduce Blast Radius</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#separation-of-duties">Separation of Duties</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#explicit-trust-boundaries">Explicit Trust Boundaries</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#id2">Reproducibility</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#continuous-verification">Continuous Verification</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#development-strategy">Development Strategy</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#architecture">Architecture</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#minimal-platform">Minimal Platform</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#infrastructure-integration">Infrastructure Integration</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#id3">Templates</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#id4">Isolation</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#reproducible-deployment">Reproducible Deployment</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#security-engineering">Security Engineering</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#multi-site">Multi-Site</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#operational-model">Operational Model</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#design-philosophy">Design Philosophy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#final-architecture-concept">Final Architecture Concept</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/internal_dev_platform/overview.html#project-goal">Project Goal</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_system.html">IAM architecture</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html">IAM Architecture</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#what-is-iam-architecture">What is IAM Architecture?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#security-benefits">Security Benefits</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#security-implications">Security Implications</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#why-use-it">Why use it?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#when-to-use-it">When to use it?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#provisioning-vs-just-in-time">Provisioning vs Just-In-Time</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#provisioning-synchronization">Provisioning / Synchronization</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#just-in-time-provisioning">Just-In-Time Provisioning</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#central-identity-vs-local-authorization">Central Identity vs Local Authorization</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#drawbacks">Drawbacks</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#availability-dependency">Availability dependency</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#excessive-centralization">Excessive centralization</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#synchronization-failures">Synchronization failures</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#how-to-configure-it-according-to-security-best-practices">How to configure it according to security best practices?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#how-to-design-the-component">How to design the component?</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#centralized-authorization-architecture">Centralized Authorization Architecture</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#id1">Why use it?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#id2">Security Benefits</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#id3">Security Implications</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#decentralized-federated-iam-architecture">Decentralized / Federated IAM Architecture</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#id4">Why use it?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#id5">Security Benefits</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#id6">Security Implications</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#comparison-of-iam-architectures">Comparison of IAM Architectures</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#centralized-identity-local-authorization">1. Centralized Identity + Local Authorization</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#pros">Pros</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#cons">Cons</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#when-to-use">When to use</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#when-not-to-use">When not to use</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#best-for">Best for</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#centralized-identity-centralized-authorization">2. Centralized Identity + Centralized Authorization</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#id7">Pros</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#id8">Cons</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#id9">When to use</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#id10">When not to use</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#id11">Best for</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#federated-decentralized-iam">3. Federated / Decentralized IAM</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#id12">Pros</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#id13">Cons</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#id14">When to use</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#id15">When not to use</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/iam_system/iam_architecture.html#id16">Best for</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/workout_app.html">Workout Mobile Application</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html">Workout Application</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#overview">Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#purpose">Purpose</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#design-principles">Design Principles</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#simplicity">Simplicity</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#minimal-data-collection">Minimal Data Collection</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#structured-training">Structured Training</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#long-term-progression">Long-Term Progression</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#user-control">User Control</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#security">Security</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#application-scope">Application Scope</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#users">Users</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#workout-of-the-day">Workout of the Day</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#training-plans">Training Plans</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#exercise-database">Exercise Database</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#strength-training">Strength Training</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#cycling">Cycling</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#running">Running</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#workout-tracking">Workout Tracking</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#progression">Progression</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#deloading">Deloading</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#custom-training-plans">Custom Training Plans</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#body-composition">Body Composition</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#statistics">Statistics</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#application-architecture">Application Architecture</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#mobile-application">Mobile Application</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#backend">Backend</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#authentication">Authentication</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#authorization">Authorization</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#data-model">Data Model</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#shared-and-user-specific-data">Shared and User-Specific Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#storage">Storage</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#data-privacy">Data Privacy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#environment-separation">Environment Separation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#development-environment">Development Environment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#development-data">Development Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#staging-environment">Staging Environment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#production-environment">Production Environment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#network-architecture">Network Architecture</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#application-data-flow">Application Data Flow</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#security-boundaries">Security Boundaries</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#application-lifecycle">Application Lifecycle</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#future-expansion">Future Expansion</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/workout_app/overview.html#final-architecture">Final Architecture</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/provisioning-platform.html">Infrastructure Porvisioning Platform</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/provisioning-platform.html#disk-vs-diskless-servers-initial-boot">Disk vs Diskless servers initial boot</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/provisioning-platform.html#bootstrap-infrastructure">Bootstrap infrastructure</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/seed-server.html">Seed/mgmt server</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/seed-server.html#what-is-a-seed-server">What is a seed server?</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/os-image-builder.html">OS Image Builder</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/os-image-builder.html#tools">Tools</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/os-image-builder.html#mkosi">Mkosi</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/os-image-builder.html#image-structure">Image structure</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/os-image-builder.html#golden-image">Golden Image</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/os-image-builder.html#specialized-image">Specialized Image</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/os-image-builder.html#ansible">Ansible</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/building-secure-system.html">Building a Secure, Production-Grade Web Application (From Idea to Production)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/building-secure-system.html#roles-and-responsibilities">Roles and Responsibilities</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/building-secure-system.html#architecture-engineering-and-implementation-across-levels">Architecture, Engineering, and Implementation Across Levels</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/building-secure-system.html#web-application-level-system-of-systems">Web Application Level (System of Systems)</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/building-secure-system.html#system-sub-system-level">System/Sub-System Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/building-secure-system.html#component-application-level">Component / Application Level</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/building-secure-system.html#threat-modeling-and-risk-analysis-across-levels">Threat Modeling and Risk Analysis Across Levels</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/building-secure-system.html#web-application-level">Web Application Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/building-secure-system.html#id1">System/Sub-System Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/building-secure-system.html#component-implementation-level">Component / Implementation Level</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/building-secure-system.html#qa-qa-automation-and-devsecops">QA, QA Automation, and DevSecOps</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/building-secure-system.html#configuration-management-and-change-control">Configuration Management and Change Control</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/building-secure-system.html#id2">Web Application Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/building-secure-system.html#id3">System / Sub-System Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/building-secure-system.html#component-level">Component Level</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/building-secure-system.html#change-control">Change Control</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/building-secure-system.html#id4">Web Application Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/building-secure-system.html#system-level">System Level</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/building-secure-system.html#id5">Component Level</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/building-secure-system.html#tools-and-frameworks">Tools and Frameworks</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/file-processing.html">File Processing system</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/file-processing.html#requirements">Requirements</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/file-processing.html#security-principles">Security principles</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/file-processing.html#use-cases">Use Cases</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/file-processing.html#components">Components</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/file-processing.html#file-storage">File storage</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/file-processing.html#id1">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/file-processing.html#message-queue">Message queue</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/file-processing.html#id2">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/file-processing.html#file-processors-slave">File processors (Slave)</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/file-processing.html#id3">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/file-processing.html#job-orchestrator">Job orchestrator</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/file-processing.html#id4">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/file-processing.html#job-storage">Job storage</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../cybersecurity/security-engineering/systems/file-processing.html#id5">Requirements</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../programming/programming.html">Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../programming/cpp/cpp.html">C++</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../programming/python/python.html">Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../programming/python/theory/theory.html">Theory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/theory/theory.html#installation">Installation</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/theory/theory.html#custom-installation">Custom Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/theory/theory.html#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/theory/theory.html#faq">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html">Codesnippets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#custom-classes">Custom Classes</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#std-expected">std::expected</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#std-expected-unit-test">std::Expected unit test</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#logger">Logger</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#file-managment">File managment</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#read-files">Read Files</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#csv">CSV</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#txt">txt</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#word">word</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#pdf">pdf</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#write-files">Write Files</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/codesnippets/codesnippets.html#id1">CSV</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../programming/python/guides/guides.html">Guides</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../programming/python/guides/web/web.html">Web</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html">How to setup basic FastAPI website</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#installation">Installation</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#main-fastapi-code">main FastAPI code</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#basic-knowledge">Basic knowledge</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#fastapi">FastAPI</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#key-features">Key Features:</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#core-components">Core Components</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#uvicorn">Uvicorn</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#id1">Key Features</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#responsibilities">Responsibilities</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../programming/python/guides/web/basic-fastapi-website.html#relationship-between-fastapi-and-uvicorn">Relationship Between FastAPI and Uvicorn</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../projects.html">Projects</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../enterprise_infrastructure.html">Enterprise infrastructure</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../index/index.html">Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../index/index.html#architecture">Architecture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../index/index.html#engineering">Engineering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../index/index.html#security-grc-and-risk">Security, GRC and Risk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../index/index.html#operational-and-lifecycle-thinking">Operational and Lifecycle Thinking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../index/index.html#security-architecture-and-threat-thinking">Security Architecture and Threat Thinking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../index/index.html#communication-and-documentation">Communication and Documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../index/index.html#overall-goal">Overall Goal</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/core.html">Overview — Enterprise Architecture Concept</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../core/core.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../core/core.html#architectural-structure">Architectural Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../core/core.html#central-platform">Central Platform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../core/core.html#areas">Areas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../core/core.html#area-platforms">Area Platforms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../core/core.html#labs">Labs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../core/core.html#software-supply-chain">Software Supply Chain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../core/core.html#standardization-and-flexibility">Standardization and Flexibility</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../core/core.html#scalability">Scalability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../core/core.html#core-philosophy">Core Philosophy</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="../central_platform.html">Central Platform</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="iam_platform.html">IAM Platform</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">IAM Platform — Version 1</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#scope">Scope</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#security-engineering">Security Engineering</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#authentication-and-sessions">Authentication and Sessions</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#authorization">Authorization</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#iam-administration">IAM Administration</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#audit-logging">Audit Logging</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#threat-modeling-and-secure-development">Threat Modeling and Secure Development</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#why-build-iam-from-scratch">Why Build IAM From Scratch?</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#v1-outcome">V1 Outcome</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../area_platform/area_platform.html">Area Platform</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../area_platform/area_platform.html#overview">Overview</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">mygithubpages</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../projects.html">Projects</a></li>
+          <li class="breadcrumb-item"><a href="../../enterprise_infrastructure.html">Enterprise infrastructure</a></li>
+          <li class="breadcrumb-item"><a href="../central_platform.html">Central Platform</a></li>
+          <li class="breadcrumb-item"><a href="iam_platform.html">IAM Platform</a></li>
+      <li class="breadcrumb-item active">IAM Platform — Version 1</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/projects/enterprise_infrastructure/central_platform/iam_platform/iam_platform_v1.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="iam-platform-version-1">
+<h1>IAM Platform — Version 1<a class="headerlink" href="#iam-platform-version-1" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Version 1 is a small, self-built Identity and Access Management (IAM) platform designed to explore the fundamentals of identity, authentication, authorization, and secure application design.</p>
+<p>The purpose of the project is not to reproduce a production IAM product, but to understand how the underlying security mechanisms work by designing and implementing them directly.</p>
+<p>The implementation uses <strong>Python, FastAPI, PostgreSQL, Docker Compose, and pytest</strong>.</p>
+<p>The V1 system provides a complete authentication and authorization flow:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Request
+   ↓
+Authentication / Session Validation
+   ↓
+Identify User
+   ↓
+Authorization
+   ↓
+Protected Operation
+   ↓
+Audit Security-Relevant Result
+   ↓
+Response
+</pre></div>
+</div>
+<p>The project therefore goes beyond implementing CRUD endpoints. Security controls are part of the application’s control flow and are tested as security properties.</p>
+</section>
+<section id="scope">
+<h2>Scope<a class="headerlink" href="#scope" title="Link to this heading"></a></h2>
+<p>V1 implements:</p>
+<ul class="simple">
+<li><p>Users</p></li>
+<li><p>Groups</p></li>
+<li><p>Roles</p></li>
+<li><p>Permissions</p></li>
+<li><p>User/group relationships</p></li>
+<li><p>User/role relationships</p></li>
+<li><p>Role/permission relationships</p></li>
+<li><p>Username/password authentication</p></li>
+<li><p>Secure password hashing</p></li>
+<li><p>Login failure protection and throttling</p></li>
+<li><p>Server-side sessions</p></li>
+<li><p>Session expiration and revocation</p></li>
+<li><p>Logout</p></li>
+<li><p>Role-Based Access Control (RBAC)</p></li>
+<li><p>Protected application resources</p></li>
+<li><p>Protected IAM administration</p></li>
+<li><p>Bootstrap administrator</p></li>
+<li><p>Security audit logging</p></li>
+<li><p>Security-focused automated tests</p></li>
+<li><p>Architecture and security documentation</p></li>
+<li><p>Threat modeling</p></li>
+</ul>
+<p>The authorization model is deliberately kept simple:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>User
+  ↓
+Roles
+  ↓
+Role Permissions
+  ↓
+Effective Permissions
+  ↓
+ALLOW / DENY
+</pre></div>
+</div>
+<p>Groups are implemented as an identity-management capability but do not directly grant permissions in V1. This leaves room for future group-to-role mappings without complicating the initial authorization model.</p>
+</section>
+<section id="security-engineering">
+<h2>Security Engineering<a class="headerlink" href="#security-engineering" title="Link to this heading"></a></h2>
+<p>A major objective of V1 is to understand the difference between <strong>implementing a security feature</strong> and <strong>demonstrating that the feature actually provides its intended security property</strong>.</p>
+<p>For example, implementing authorization is only part of the work. The project also tests whether an authenticated user can:</p>
+<ul class="simple">
+<li><p>access resources belonging to another user</p></li>
+<li><p>modify their own privileges</p></li>
+<li><p>assign themselves an administrator role</p></li>
+<li><p>grant themselves privileged permissions</p></li>
+<li><p>bypass authorization by manipulating object IDs</p></li>
+<li><p>access administrative endpoints without sufficient privileges</p></li>
+<li><p>perform protected operations without the required permission</p></li>
+</ul>
+<p>Security tests therefore attempt to violate the intended security boundaries rather than only testing normal application behavior.</p>
+<p>A key security invariant is:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Authentication
+      ↓
+Authorization
+      ↓
+Prevent unauthorized operation
+      ↓
+Execute authorized operation
+      ↓
+Audit result
+</pre></div>
+</div>
+<p>An authorization failure must prevent the protected operation from executing. The audit trail records the security-relevant result but does not act as the preventative control itself.</p>
+</section>
+<section id="authentication-and-sessions">
+<h2>Authentication and Sessions<a class="headerlink" href="#authentication-and-sessions" title="Link to this heading"></a></h2>
+<p>Authentication uses username/password credentials with an established password-hashing library.</p>
+<p>Successful authentication creates a cryptographically random, server-side session.</p>
+<p>Sessions support:</p>
+<ul class="simple">
+<li><p>expiration</p></li>
+<li><p>revocation</p></li>
+<li><p>logout</p></li>
+<li><p>invalid-session rejection</p></li>
+<li><p>protection against session fixation</p></li>
+<li><p>rejection of predictable session identifiers</p></li>
+</ul>
+<p>Authentication failures are deliberately generic so that the system does not reveal whether a particular username exists.</p>
+<p>Login failure protection and throttling are also implemented as application-level security controls.</p>
+</section>
+<section id="authorization">
+<h2>Authorization<a class="headerlink" href="#authorization" title="Link to this heading"></a></h2>
+<p>Authorization is implemented using RBAC.</p>
+<p>Permissions represent specific actions on resources, for example:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>application:read
+application:create
+application:update
+application:delete
+application:deploy
+iam:manage
+</pre></div>
+</div>
+<p>Authorization decisions are centralized conceptually around:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>authorize(user_id, resource, action)
+</pre></div>
+</div>
+<p>The application resolves the user’s roles and their associated permissions before allowing a protected operation to execute.</p>
+<p>The V1 design deliberately avoids introducing a complex policy framework. The goal is to make the authorization mechanism easy to understand, trace, test, and eventually extend.</p>
+</section>
+<section id="iam-administration">
+<h2>IAM Administration<a class="headerlink" href="#iam-administration" title="Link to this heading"></a></h2>
+<p>IAM administration is itself protected by the IAM system.</p>
+<p>An <code class="docutils literal notranslate"><span class="pre">Administrator</span></code> role is assigned the:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>iam:manage
+</pre></div>
+</div>
+<p>permission.</p>
+<p>Administrative operations such as creating users, assigning roles, modifying permissions, and managing group membership therefore require both:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Authenticated session
+        +
+Appropriate authorization
+</pre></div>
+</div>
+<p>This also provides a practical environment for testing privilege-escalation scenarios.</p>
+</section>
+<section id="audit-logging">
+<h2>Audit Logging<a class="headerlink" href="#audit-logging" title="Link to this heading"></a></h2>
+<p>Security audit logging is treated separately from ordinary application/debug logging.</p>
+<p>Security-relevant events include:</p>
+<ul class="simple">
+<li><p>successful and failed authentication</p></li>
+<li><p>logout and session revocation</p></li>
+<li><p>user changes</p></li>
+<li><p>group changes</p></li>
+<li><p>role changes</p></li>
+<li><p>permission changes</p></li>
+<li><p>role and permission assignments</p></li>
+<li><p>authorization failures</p></li>
+<li><p>security-sensitive operations</p></li>
+</ul>
+<p>Audit records are generated by trusted server-side code. Clients cannot submit arbitrary audit events or modify the audit trail through the normal API.</p>
+<p>The audit trail is designed to answer:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Who?
+What?
+When?
+Against what?
+What was the result?
+</pre></div>
+</div>
+<p>Sensitive information such as passwords, password hashes, session identifiers, authentication tokens, and secrets is never logged.</p>
+</section>
+<section id="threat-modeling-and-secure-development">
+<h2>Threat Modeling and Secure Development<a class="headerlink" href="#threat-modeling-and-secure-development" title="Link to this heading"></a></h2>
+<p>The implementation follows a small secure-development lifecycle rather than treating security as a final testing step:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Design
+   ↓
+Identify security risks
+   ↓
+Design security control
+   ↓
+Implement
+   ↓
+Functional tests
+   ↓
+Security tests
+   ↓
+Attempt to bypass
+   ↓
+Fix
+   ↓
+Regression test
+</pre></div>
+</div>
+<p>The project uses principles from OWASP, ASVS, NIST SSDF, and CWE as guidance for the implementation and security review.</p>
+<p>The threat model considers threats including:</p>
+<ul class="simple">
+<li><p>credential attacks</p></li>
+<li><p>authentication bypass</p></li>
+<li><p>session theft and fixation</p></li>
+<li><p>IDOR</p></li>
+<li><p>horizontal privilege escalation</p></li>
+<li><p>vertical privilege escalation</p></li>
+<li><p>SQL injection</p></li>
+<li><p>malicious input</p></li>
+<li><p>audit manipulation</p></li>
+<li><p>information disclosure</p></li>
+<li><p>login-based denial of service</p></li>
+<li><p>compromised administrator accounts</p></li>
+</ul>
+</section>
+<section id="why-build-iam-from-scratch">
+<h2>Why Build IAM From Scratch?<a class="headerlink" href="#why-build-iam-from-scratch" title="Link to this heading"></a></h2>
+<p>The objective is primarily educational.</p>
+<p>Using an existing IAM product would provide a much larger feature set, but it would hide many of the implementation details that this project is intended to explore.</p>
+<p>By implementing a deliberately small IAM system first, I can understand:</p>
+<ul class="simple">
+<li><p>how authentication establishes identity</p></li>
+<li><p>how sessions maintain authenticated state</p></li>
+<li><p>how authorization decisions are made</p></li>
+<li><p>how RBAC is represented in a database</p></li>
+<li><p>where security controls belong in the request flow</p></li>
+<li><p>how privilege boundaries can fail</p></li>
+<li><p>how security events should be recorded</p></li>
+<li><p>how security controls can be tested</p></li>
+<li><p>how an IAM component could eventually integrate with a larger enterprise platform</p></li>
+</ul>
+<p>This implementation is therefore intentionally limited.</p>
+<p>Features such as MFA, OIDC, LDAP, Kerberos, WebAuthn/passkeys, SCIM, JIT/PIM, workload identity, Vault, and PKI are outside the scope of V1.</p>
+<p>They are potential future extensions once the fundamentals have been understood and tested.</p>
+</section>
+<section id="v1-outcome">
+<h2>V1 Outcome<a class="headerlink" href="#v1-outcome" title="Link to this heading"></a></h2>
+<p>The result is a small but complete IAM system that can be recreated from scratch and used as a foundation for further security engineering work.</p>
+<p>More importantly, V1 establishes the security model that later versions can build upon:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Identity
+   ↓
+Authentication
+   ↓
+Session
+   ↓
+Authorization
+   ↓
+Protected Resource
+   ↓
+Audit
+</pre></div>
+</div>
+<p>The next step is not simply to add more IAM features, but to build upon this foundation with stronger security testing, automated security tooling, and eventually DevSecOps practices around the system.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="iam_platform.html" class="btn btn-neutral float-left" title="IAM Platform" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../area_platform/area_platform.html" class="btn btn-neutral float-right" title="Area Platform" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, prevLanky.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
