@@ -1,4 +1,4 @@
-Central Platform
+IAM Platform
 ==================
 
 
@@ -6,6 +6,6 @@ Central Platform
 :maxdepth: 10
 :caption: Table of Contents
 
-iam_platform/iam_platform
+iam_platform_v1
 
 ```
