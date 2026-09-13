@@ -1,4 +1,11 @@
-# Central Platform
-asd
+Central Platform
+==================
 
-## Overview
+
+```{toctree}
+:maxdepth: 10
+:caption: Table of Contents
+
+iam_platform.md
+
+```

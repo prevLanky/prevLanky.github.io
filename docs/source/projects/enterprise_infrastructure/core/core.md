@@ -15,6 +15,7 @@ The architecture is built around a few core principles:
 * **Centralize and standardize whenever possible** — Common capabilities should be provided as standardized central services rather than independently recreated by every Area.
 * **Allow exceptions where justified** — Areas can introduce Area-specific infrastructure or technology when genuine product requirements cannot reasonably be fulfilled by the Central Platform.
 
+
 ## Architectural Structure
 
 At the highest level, the architecture consists of:
